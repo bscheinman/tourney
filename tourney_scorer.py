@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import argparse
+import collections
 import csv
 import decimal
 
@@ -50,7 +51,9 @@ def calculate_win_prob(team1, team2, overrides=None):
 
 
 def read_games_from_file(filepath):
-    with open(args.bracket_file, 'rb') as bracket_file:
+    games = []
+    total_scores = {}
+    with open(filepath, 'rb') as bracket_file:
         reader = csv.reader(bracket_file)
         for row in reader:
             if not len(row):
@@ -69,24 +72,13 @@ def read_games_from_file(filepath):
             else:
                 assert False
     assert(games and not (len(games) & (len(games) - 1)))
+    return games
 
 
-if __name__ == '__main__':
-
-    parser = argparse.ArgumentParser()
-    parser.add_argument('bracket_file')
-    parser.add_argument('--overrides')
-    args = parser.parse_args()
-
-    games = []
-    total_scores = {}
-    overrides = None
-
-    if args.overrides:
-        overrides = OverridesMap()
-        overrides.init_from_file(args.overrides)
-
+def calculate_scores(bracket, overrides=None):
     tourney_round = 0
+    games = list(bracket)
+    total_scores = collections.defaultdict(lambda: 0)
     while len(games) > 1:
         new_games = []
         for i in xrange(len(games) / 2):
@@ -118,6 +110,23 @@ if __name__ == '__main__':
                     print ','.join((team.name, str(round(win_prob, 5))))
                     sum_prob += win_prob
             print 'Sum: ', sum_prob
+    return total_scores
 
-    for team, win_prob in total_scores.iteritems():
+
+if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('bracket_file')
+    parser.add_argument('--overrides')
+    args = parser.parse_args()
+
+    games = read_games_from_file(args.bracket_file)
+    overrides = None
+    if args.overrides:
+        overrides = OverridesMap()
+        overrides.init_from_file(args.overrides)
+
+    team_scores = calculate_scores(games, overrides)
+
+    for team, win_prob in team_scores.iteritems():
         print ','.join((team, str(round(win_prob, 3))))
