@@ -78,7 +78,7 @@ def read_games_from_file(filepath):
 def calculate_scores(bracket, overrides=None):
     tourney_round = 0
     games = list(bracket)
-    total_scores = collections.defaultdict(lambda: 0)
+    total_scores = collections.defaultdict(int)
     while len(games) > 1:
         new_games = []
         for i in xrange(len(games) / 2):
@@ -110,6 +110,7 @@ def calculate_scores(bracket, overrides=None):
                     print ','.join((team.name, str(round(win_prob, 5))))
                     sum_prob += win_prob
             print 'Sum: ', sum_prob
+
     return total_scores
 
 
