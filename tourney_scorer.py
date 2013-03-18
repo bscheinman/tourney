@@ -23,7 +23,7 @@ class OverridesMap:
         with open(filepath, 'rb') as overrides_file:
             reader = csv.reader(overrides_file)
             for row in reader:
-                assert(len(row) == 3)
+                assert len(row) == 3
                 row[2] = decimal.Decimal(row[2])
                 self.add_override(*row)
 
@@ -52,7 +52,6 @@ def calculate_win_prob(team1, team2, overrides=None):
 
 def read_games_from_file(filepath):
     games = []
-    total_scores = {}
     with open(filepath, 'rb') as bracket_file:
         reader = csv.reader(bracket_file)
         for row in reader:
@@ -61,17 +60,14 @@ def read_games_from_file(filepath):
             if len(row) == 2:
                 team = Team(*row)
                 games.append({team: 1})
-                total_scores[team.name] = 0
             elif len(row) == 4:
                 team1 = Team(*row[:2])
                 team2 = Team(*row[2:])
                 win_prob = calculate_win_prob(team1, team2)
                 games.append({team1: win_prob, team2: 1 - win_prob})
-                total_scores[team1.name] = 0
-                total_scores[team2.name] = 0
             else:
                 assert False
-    assert(games and not (len(games) & (len(games) - 1)))
+    assert games and not (len(games) & (len(games) - 1))
     return games
 
 
