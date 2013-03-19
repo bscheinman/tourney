@@ -50,7 +50,7 @@ def calculate_win_prob(team1, team2, overrides=None):
     return (win1 * (1 - win2)) / ((win1 * (1 - win2)) + ((1 - win1) * win2))
 
 
-def read_games_from_file(filepath):
+def read_games_from_file(filepath, overrides=None):
     games = []
     with open(filepath, 'rb') as bracket_file:
         reader = csv.reader(bracket_file)
@@ -63,7 +63,7 @@ def read_games_from_file(filepath):
             elif len(row) == 4:
                 team1 = Team(*row[:2])
                 team2 = Team(*row[2:])
-                win_prob = calculate_win_prob(team1, team2)
+                win_prob = calculate_win_prob(team1, team2, overrides)
                 games.append({team1: win_prob, team2: 1 - win_prob})
             else:
                 assert False
@@ -117,11 +117,11 @@ if __name__ == '__main__':
     parser.add_argument('--overrides')
     args = parser.parse_args()
 
-    games = read_games_from_file(args.bracket_file)
     overrides = None
     if args.overrides:
         overrides = OverridesMap()
         overrides.init_from_file(args.overrides)
+    games = read_games_from_file(args.bracket_file, overrides)
 
     team_scores = calculate_scores(games, overrides)
 
