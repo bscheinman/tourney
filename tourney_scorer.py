@@ -23,6 +23,8 @@ class OverridesMap:
         with open(filepath, 'rb') as overrides_file:
             reader = csv.reader(overrides_file)
             for row in reader:
+                if not row:
+                    continue
                 assert len(row) == 3
                 row[2] = decimal.Decimal(row[2])
                 self.add_override(*row)
