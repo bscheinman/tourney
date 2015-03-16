@@ -3,17 +3,17 @@
 import argparse
 import collections
 import csv
-import decimal
+from decimal import Decimal
 
 DEBUG_PRINT = False
+#DEBUG_PRINT = True
 ROUND_POINTS = [1, 1, 2, 2, 2, 3]
 
 
 class Team:
-    def __init__(self, name, pythag):
+    def __init__(self, name, rating=0.0):
         self.name = name
-        self.pythag = decimal.Decimal(pythag)
-
+        self.rating = Decimal(rating)
 
 class OverridesMap:
     _overrides = {}
@@ -26,7 +26,7 @@ class OverridesMap:
                 if not row:
                     continue
                 assert len(row) == 3
-                row[2] = decimal.Decimal(row[2])
+                row[2] = Decimal(row[2])
                 self.add_override(*row)
 
     def add_override(self, name1, name2, prob):
@@ -42,29 +42,36 @@ class OverridesMap:
             override = self._overrides.get((name2, name1), None)
             return None if override is None else 1 - override
 
+def read_ratings_file(in_file):
+    ratings = {}
+    for line in in_file:
+        team, rating = tuple(field.strip() for field in line.split('|'))
+        ratings[team] = rating
+    return ratings
+
 
 def calculate_win_prob(team1, team2, overrides=None):
     if overrides:
         override = overrides.get_override(team1.name, team2.name)
         if override is not None:
             return override
-    win1, win2 = team1.pythag, team2.pythag
+    win1, win2 = team1.rating, team2.rating
     return (win1 * (1 - win2)) / ((win1 * (1 - win2)) + ((1 - win1) * win2))
 
 
-def read_games_from_file(filepath, overrides=None):
+def read_games_from_file(filepath, ratings, overrides=None):
     games = []
     with open(filepath, 'rb') as bracket_file:
         reader = csv.reader(bracket_file)
         for row in reader:
             if not len(row):
                 continue
-            if len(row) == 2:
-                team = Team(*row)
-                games.append({team: 1})
-            elif len(row) == 4:
-                team1 = Team(*row[:2])
-                team2 = Team(*row[2:])
+            if len(row) == 1:
+                team = Team(name=row[0], rating=ratings[row[0]])
+                games.append({team: Decimal(1)})
+            elif len(row) == 2:
+                team1 = Team(name=row[0], rating=ratings[row[0]])
+                team2 = Team(name=row[1], rating=ratings[row[1]])
                 win_prob = calculate_win_prob(team1, team2, overrides)
                 games.append({team1: win_prob, team2: 1 - win_prob})
             else:
@@ -103,10 +110,13 @@ def calculate_scores(bracket, overrides=None):
         if DEBUG_PRINT:
             print 'Round', tourney_round
             sum_prob = 0
+            team_scores = []
             for game in games:
-                for team, win_prob in game.iteritems():
-                    print ','.join((team.name, str(round(win_prob, 5))))
-                    sum_prob += win_prob
+                for item in game.iteritems():
+                    team_scores.append(item)
+            for team, win_prob in sorted(team_scores, key=lambda g: g[0].name):
+                print ','.join((team.name, str(round(win_prob, 5))))
+                sum_prob += win_prob
             print 'Sum: ', sum_prob
 
     return total_scores
@@ -116,16 +126,20 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument('bracket_file')
+    parser.add_argument('ratings_file')
     parser.add_argument('--overrides')
     args = parser.parse_args()
+
+    with open(args.ratings_file, 'r') as ratings_file:
+        ratings = read_ratings_file(ratings_file)
 
     overrides = None
     if args.overrides:
         overrides = OverridesMap()
         overrides.init_from_file(args.overrides)
-    games = read_games_from_file(args.bracket_file, overrides)
+    games = read_games_from_file(args.bracket_file, ratings, overrides)
 
     team_scores = calculate_scores(games, overrides)
 
-    for team, win_prob in team_scores.iteritems():
+    for team, win_prob in sorted(team_scores.iteritems(), key=lambda g: g[0]):
         print ','.join((team, str(round(win_prob, 3))))
