@@ -95,7 +95,7 @@ def read_games_from_file(filepath, ratings, overrides=None):
 def calculate_scores(bracket, overrides=None):
     tourney_round = 0
     games = list(bracket)
-    total_scores = collections.defaultdict(lambda: Decimal(2))
+    total_scores = collections.defaultdict(lambda: Decimal(0))
     while len(games) > 1:
         new_games = []
         for i in xrange(len(games) / 2):
