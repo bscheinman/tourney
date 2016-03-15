@@ -1,79 +1,64 @@
-Kentucky
-Hampton,Manhattan
-Cincinnati
-Purdue
-
-West Virginia
-Buffalo
-Maryland
-Valparaiso
-
-Butler
-Texas
-Notre Dame
-Northeastern
-
-Wichita St.
-Indiana
 Kansas
-New Mexico St.
-
-Wisconsin
-Coastal Carolina
-Oregon
-Oklahoma St.
-
-Arkansas
-Wofford
-North Carolina
-Harvard
-
-Xavier
-BYU,Mississippi
-Baylor
-Georgia St.
-
-VCU
-Ohio St.
-Arizona
-Texas Southern
-
-Villanova
-Lafayette
-North Carolina St.
-LSU
-
-Northern Iowa
-Wyoming
-Louisville
-UC Irvine
-
+Fairleigh Dickinson,Southern
 Providence
-Boise St.,Dayton
-Oklahoma
-Albany
-
-Michigan St.
-Georgia
-Virginia
-Belmont
-
-Duke
-North Florida,Robert Morris
-San Diego St.
-St. John's
-
+Wichita St.
+California
+Arkansas Little Rock
+Indiana
+UNC Wilmington
+Baylor
+San Diego St.,Michigan
 Utah
+Hawaii
+Dayton
+Connecticut
+Xavier
+Green Bay
+Michigan St.
+Holy Cross,Austin Peay
+Colorado
+Butler
+Duke
 Stephen F. Austin
-Georgetown
-Eastern Washington
-
-SMU
-UCLA
+Texas A&M
+Chattanooga
+Texas
+Yale
+Miami FL
+Buffalo
+Wisconsin
+St. Bonaventure
+Oregon
+Weber St.
+North Carolina
+Florida Gulf Coast
+VCU
+Oregon St.
 Iowa St.
-UAB
-
+South Dakota St.
+Maryland
+Iona
 Iowa
-Davidson
+Temple,Saint Mary's
+West Virginia
+Middle Tennessee
+Saint Joseph's
+Pittsburgh
+Villanova
+UNC Asheville
+Virginia
+Hampton
+Texas Tech
+USC
+Arizona
+Northern Iowa
+Purdue
+Stony Brook
+Seton Hall
+Cincinnati
+Kentucky
+Fresno St.
+Notre Dame
 Gonzaga
-North Dakota St.
+Oklahoma
+Cal St. Bakersfield
