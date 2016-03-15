@@ -1,64 +1,64 @@
 Kansas
-Fairleigh Dickinson,Southern
-Providence
-Wichita St.
-California
-Arkansas Little Rock
-Indiana
-UNC Wilmington
-Baylor
-San Diego St.,Michigan
-Utah
-Hawaii
-Dayton
-Connecticut
-Xavier
-Green Bay
-Michigan St.
-Holy Cross,Austin Peay
+Austin Peay
 Colorado
-Butler
-Duke
-Stephen F. Austin
-Texas A&M
-Chattanooga
-Texas
-Yale
+Connecticut
+Maryland
+South Dakota St.
+California
+Hawaii
+Arizona
+Vanderbilt,Wichita St.
 Miami FL
 Buffalo
-Wisconsin
-St. Bonaventure
-Oregon
-Weber St.
-North Carolina
-Florida Gulf Coast
-VCU
-Oregon St.
-Iowa St.
-South Dakota St.
-Maryland
-Iona
 Iowa
-Temple,Saint Mary's
-West Virginia
-Middle Tennessee
-Saint Joseph's
-Pittsburgh
+Temple
 Villanova
 UNC Asheville
+Oregon
+Holy Cross,Southern
+St. Joseph's
+Cincinnati
+Baylor
+Yale
+Duke
+UNC Wilmington
+Texas
+Northern Iowa
+Texas A&M
+Green Bay
+Oregon St.
+VCU
+Oklahoma
+Cal St. Bakersfield
+North Carolina
+Fairleigh Dickinson,Florida Gulf Coast
+USC
+Providence
+Indiana
+Chattanooga
+Kentucky
+Stony Brook
+Notre Dame
+Michigan,Tulsa
+West Virginia
+Stephen F. Austin
+Wisconsin
+Pittsburgh
+Xavier
+Weber St.
 Virginia
 Hampton
 Texas Tech
-USC
-Arizona
-Northern Iowa
+Butler
 Purdue
-Stony Brook
+Arkansas Little Rock
+Iowa St.
+Iona
 Seton Hall
-Cincinnati
-Kentucky
-Fresno St.
-Notre Dame
 Gonzaga
-Oklahoma
-Cal St. Bakersfield
+Utah
+Fresno St.
+Dayton
+Syracuse
+Michigan St.
+Middle Tennessee
