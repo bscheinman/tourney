@@ -4,11 +4,13 @@ import argparse
 import collections
 import csv
 from decimal import Decimal
+import sys
 
 DEBUG_PRINT = False
 #DEBUG_PRINT = True
 ROUND_POINTS = [1, 1, 2, 2, 2, 3]
 
+total_overrides = 0
 
 class Team:
     def __init__(self, name, rating=0.0):
@@ -19,6 +21,7 @@ class OverridesMap:
     _overrides = {}
 
     def init_from_file(self, filepath):
+        global total_overrides
         self._overrides.clear()
         with open(filepath, 'rb') as overrides_file:
             reader = csv.reader(overrides_file)
@@ -28,6 +31,7 @@ class OverridesMap:
                 assert len(row) == 3
                 row[2] = Decimal(row[2])
                 self.add_override(*row)
+                total_overrides += 1
 
     def add_override(self, name1, name2, prob):
         if name1 < name2:
@@ -36,11 +40,19 @@ class OverridesMap:
             self._overrides[(name2, name1)] = 1 - prob
 
     def get_override(self, name1, name2):
+        global total_overrides
         if name1 < name2:
-            return self._overrides.get((name1, name2), None)
+            override = self._overrides.get((name1, name2), None)
         else:
             override = self._overrides.get((name2, name1), None)
-            return None if override is None else 1 - override
+            if override is not None:
+                override = 1 - override
+        if override is not None:
+            total_overrides -= 1
+            if DEBUG_PRINT:
+                sys.stderr.write('using override for {0} vs. {1}\n'.format(
+                    name1, name2))
+        return override
 
 def read_ratings_file(in_file):
     ratings = {}
@@ -83,7 +95,7 @@ def read_games_from_file(filepath, ratings, overrides=None):
 def calculate_scores(bracket, overrides=None):
     tourney_round = 0
     games = list(bracket)
-    total_scores = collections.defaultdict(int)
+    total_scores = collections.defaultdict(lambda: Decimal(2))
     while len(games) > 1:
         new_games = []
         for i in xrange(len(games) / 2):
@@ -143,3 +155,5 @@ if __name__ == '__main__':
 
     for team, win_prob in sorted(team_scores.iteritems(), key=lambda g: g[0]):
         print ','.join((team, str(round(win_prob, 3))))
+
+    assert total_overrides == 0
