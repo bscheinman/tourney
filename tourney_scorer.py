@@ -13,9 +13,9 @@ ROUND_POINTS = [1, 1, 2, 2, 2, 3]
 total_overrides = 0
 
 class Team:
-    def __init__(self, name, rating=0.0):
+    def __init__(self, name, rating=None):
         self.name = name
-        self.rating = Decimal(rating)
+        self.rating = Decimal(rating) if rating is not None else None
 
 class OverridesMap:
     _overrides = {}
@@ -49,9 +49,11 @@ class OverridesMap:
                 override = 1 - override
         if override is not None:
             total_overrides -= 1
+            '''
             if DEBUG_PRINT:
                 sys.stderr.write('using override for {0} vs. {1}\n'.format(
                     name1, name2))
+            '''
         return override
 
 def read_ratings_file(in_file):
@@ -138,12 +140,15 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument('bracket_file')
-    parser.add_argument('ratings_file')
+    parser.add_argument('ratings_file', nargs='?', default=None)
     parser.add_argument('--overrides')
     args = parser.parse_args()
 
-    with open(args.ratings_file, 'r') as ratings_file:
-        ratings = read_ratings_file(ratings_file)
+    if args.ratings_file:
+        with open(args.ratings_file, 'r') as ratings_file:
+            ratings = read_ratings_file(ratings_file)
+    else:
+        ratings = collections.defaultdict(lambda: None)
 
     overrides = None
     if args.overrides:

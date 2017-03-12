@@ -1,64 +1,64 @@
-VILLANOVA
-MOUNT ST MARY'S,NORTH CAROLINA CENTRAL
+Villanova
+Mount St. Mary's,North Carolina Central
 Northwestern
-Arkansas
-IOWA ST
-MIDDLE TENNESSEE
-Florida St
-EAST TENNESSEE ST
-Michigan
-Syracuse,Rhode Island
-Notre Dame
-IONA
-Maryland
-Vanderbilt
-Baylor
-NORTH DAKOTA
-GONZAGA
-SOUTH DAKOTA ST
-South Carolina
-Oklahoma St
+Oklahoma St.
 Virginia
-UNC WILMINGTON
-Purdue
-WINTHROP
-SMU
-Wake Forest,Kansas ST
-Louisville
-FLORIDA GULF COAST
-Creighton
-Michigan St
-ARIZONA
-UC DAVIS
-North Carolina
-TEXAS ST,NEW ORLEANS
-WICHITA ST
-Dayton
-Cincinnati
-VERMONT
-West Virginia
-PRINCETON
-WISCONSIN
-Xavier
-UCLA
-NORTHERN KENTUCKY
-Miami
-Providence
-KENTUCKY
-KENT ST
-Kansas
-TEXAS SOUTHERN
-Virginia Tech
-VCU
+UNC Wilmington
 Florida
-NEVADA
-Butler
-BUCKNELL
+New Mexico St.
 Saint Mary's
 Marquette
+UCLA
+Northern Kentucky
+Maryland
+VCU
+Duke
+Jacksonville St.
+Gonzaga
+Texas Southern
+Virginia Tech
+Vanderbilt
+Cincinnati
+Vermont
+West Virginia
+Princeton
+Michigan
+Middle Tennessee
+Louisville
+Florida Gulf Coast
+Creighton
+Michigan St.
+Arizona
+North Dakota
+Kansas
+UC Davis,New Orleans
+South Carolina
+Dayton
+Purdue
+Wake Forest,Kansas St.
+Butler
+Bucknell
+Wisconsin
+Rhode Island
+Notre Dame
+Winthrop
+Miami FL
+Xavier
 Oregon
-NEW MEXICO ST
+South Dakota St.
+North Carolina
+Troy
+Wichita St.
+Arkansas
+Iowa St.
+Nevada
+Florida St.
+East Tennessee St.
+SMU
+Syracuse,Providence
+Baylor
+Iona
 Minnesota
 Seton Hall
-DUKE
-JACKSONVILLE ST
+Kentucky
+Kent St.
