@@ -1,0 +1,2278 @@
+Villanova,Mount St. Mary's,0.98
+Villanova,North Carolina Central,0.95
+Villanova,Northwestern,0.8
+Villanova,Oklahoma St.,0.7
+Villanova,Virginia,0.58
+Villanova,UNC Wilmington,0.87
+Villanova,Florida,0.6
+Villanova,New Mexico St.,0.91
+Villanova,Saint Mary's,0.62
+Villanova,Marquette,0.79
+Villanova,UCLA,0.69
+Villanova,Northern Kentucky,0.96
+Villanova,Maryland,0.82
+Villanova,VCU,0.83
+Villanova,Duke,0.63
+Villanova,Jacksonville St.,0.95
+Villanova,Gonzaga,0.45
+Villanova,Texas Southern,0.98
+Villanova,Virginia Tech,0.82
+Villanova,Vanderbilt,0.79
+Villanova,Cincinnati,0.66
+Villanova,Vermont,0.85
+Villanova,West Virginia,0.59
+Villanova,Princeton,0.84
+Villanova,Michigan,0.68
+Villanova,Middle Tennessee,0.81
+Villanova,Louisville,0.59
+Villanova,Florida Gulf Coast,0.92
+Villanova,Creighton,0.75
+Villanova,Michigan St.,0.82
+Villanova,Arizona,0.68
+Villanova,North Dakota,0.97
+Villanova,Kansas,0.62
+Villanova,UC Davis,0.98
+Villanova,New Orleans,0.96
+Villanova,South Carolina,0.79
+Villanova,Dayton,0.81
+Villanova,Purdue,0.65
+Villanova,Wake Forest,0.79
+Villanova,Kansas St.,0.77
+Villanova,Butler,0.71
+Villanova,Bucknell,0.91
+Villanova,Wisconsin,0.66
+Villanova,Rhode Island,0.81
+Villanova,Notre Dame,0.71
+Villanova,Winthrop,0.94
+Villanova,Miami FL,0.77
+Villanova,Xavier,0.81
+Villanova,Oregon,0.66
+Villanova,South Dakota St.,0.97
+Villanova,North Carolina,0.57
+Villanova,Troy,0.95
+Villanova,Wichita St.,0.6
+Villanova,Arkansas,0.81
+Villanova,Iowa St.,0.67
+Villanova,Nevada,0.85
+Villanova,Florida St.,0.69
+Villanova,East Tennessee St.,0.88
+Villanova,SMU,0.64
+Villanova,Syracuse,0.82
+Villanova,Providence,0.84
+Villanova,Baylor,0.62
+Villanova,Iona,0.95
+Villanova,Minnesota,0.8
+Villanova,Seton Hall,0.83
+Villanova,Kentucky,0.6
+Villanova,Kent St.,0.96
+Mount St. Mary's,North Carolina Central,0.38
+Mount St. Mary's,Northwestern,0.13
+Mount St. Mary's,Oklahoma St.,0.05
+Mount St. Mary's,Virginia,0.05
+Mount St. Mary's,UNC Wilmington,0.15
+Mount St. Mary's,Florida,0.03
+Mount St. Mary's,New Mexico St.,0.24
+Mount St. Mary's,Saint Mary's,0.06
+Mount St. Mary's,Marquette,0.09
+Mount St. Mary's,UCLA,0.04
+Mount St. Mary's,Northern Kentucky,0.37
+Mount St. Mary's,Maryland,0.13
+Mount St. Mary's,VCU,0.13
+Mount St. Mary's,Duke,0.04
+Mount St. Mary's,Jacksonville St.,0.39
+Mount St. Mary's,Gonzaga,0.01
+Mount St. Mary's,Texas Southern,0.49
+Mount St. Mary's,Virginia Tech,0.12
+Mount St. Mary's,Vanderbilt,0.12
+Mount St. Mary's,Cincinnati,0.06
+Mount St. Mary's,Vermont,0.18
+Mount St. Mary's,West Virginia,0.03
+Mount St. Mary's,Princeton,0.18
+Mount St. Mary's,Michigan,0.07
+Mount St. Mary's,Middle Tennessee,0.14
+Mount St. Mary's,Louisville,0.03
+Mount St. Mary's,Florida Gulf Coast,0.3
+Mount St. Mary's,Creighton,0.07
+Mount St. Mary's,Michigan St.,0.13
+Mount St. Mary's,Arizona,0.06
+Mount St. Mary's,North Dakota,0.4
+Mount St. Mary's,Kansas,0.03
+Mount St. Mary's,UC Davis,0.51
+Mount St. Mary's,New Orleans,0.41
+Mount St. Mary's,South Carolina,0.1
+Mount St. Mary's,Dayton,0.11
+Mount St. Mary's,Purdue,0.04
+Mount St. Mary's,Wake Forest,0.09
+Mount St. Mary's,Kansas St.,0.1
+Mount St. Mary's,Butler,0.07
+Mount St. Mary's,Bucknell,0.21
+Mount St. Mary's,Wisconsin,0.06
+Mount St. Mary's,Rhode Island,0.12
+Mount St. Mary's,Notre Dame,0.06
+Mount St. Mary's,Winthrop,0.29
+Mount St. Mary's,Miami FL,0.12
+Mount St. Mary's,Xavier,0.12
+Mount St. Mary's,Oregon,0.05
+Mount St. Mary's,South Dakota St.,0.43
+Mount St. Mary's,North Carolina,0.02
+Mount St. Mary's,Troy,0.34
+Mount St. Mary's,Wichita St.,0.03
+Mount St. Mary's,Arkansas,0.11
+Mount St. Mary's,Iowa St.,0.05
+Mount St. Mary's,Nevada,0.14
+Mount St. Mary's,Florida St.,0.04
+Mount St. Mary's,East Tennessee St.,0.16
+Mount St. Mary's,SMU,0.05
+Mount St. Mary's,Syracuse,0.14
+Mount St. Mary's,Providence,0.16
+Mount St. Mary's,Baylor,0.05
+Mount St. Mary's,Iona,0.3
+Mount St. Mary's,Minnesota,0.1
+Mount St. Mary's,Seton Hall,0.14
+Mount St. Mary's,Kentucky,0.02
+Mount St. Mary's,Kent St.,0.36
+North Carolina Central,Northwestern,0.2
+North Carolina Central,Oklahoma St.,0.09
+North Carolina Central,Virginia,0.09
+North Carolina Central,UNC Wilmington,0.24
+North Carolina Central,Florida,0.06
+North Carolina Central,New Mexico St.,0.35
+North Carolina Central,Saint Mary's,0.11
+North Carolina Central,Marquette,0.15
+North Carolina Central,UCLA,0.08
+North Carolina Central,Northern Kentucky,0.49
+North Carolina Central,Maryland,0.21
+North Carolina Central,VCU,0.2
+North Carolina Central,Duke,0.07
+North Carolina Central,Jacksonville St.,0.51
+North Carolina Central,Gonzaga,0.02
+North Carolina Central,Texas Southern,0.61
+North Carolina Central,Virginia Tech,0.2
+North Carolina Central,Vanderbilt,0.19
+North Carolina Central,Cincinnati,0.11
+North Carolina Central,Vermont,0.27
+North Carolina Central,West Virginia,0.06
+North Carolina Central,Princeton,0.27
+North Carolina Central,Michigan,0.12
+North Carolina Central,Middle Tennessee,0.22
+North Carolina Central,Louisville,0.06
+North Carolina Central,Florida Gulf Coast,0.41
+North Carolina Central,Creighton,0.12
+North Carolina Central,Michigan St.,0.2
+North Carolina Central,Arizona,0.1
+North Carolina Central,North Dakota,0.54
+North Carolina Central,Kansas,0.06
+North Carolina Central,UC Davis,0.64
+North Carolina Central,New Orleans,0.53
+North Carolina Central,South Carolina,0.17
+North Carolina Central,Dayton,0.19
+North Carolina Central,Purdue,0.08
+North Carolina Central,Wake Forest,0.15
+North Carolina Central,Kansas St.,0.17
+North Carolina Central,Butler,0.12
+North Carolina Central,Bucknell,0.32
+North Carolina Central,Wisconsin,0.11
+North Carolina Central,Rhode Island,0.2
+North Carolina Central,Notre Dame,0.12
+North Carolina Central,Winthrop,0.41
+North Carolina Central,Miami FL,0.19
+North Carolina Central,Xavier,0.2
+North Carolina Central,Oregon,0.09
+North Carolina Central,South Dakota St.,0.55
+North Carolina Central,North Carolina,0.05
+North Carolina Central,Troy,0.47
+North Carolina Central,Wichita St.,0.06
+North Carolina Central,Arkansas,0.18
+North Carolina Central,Iowa St.,0.09
+North Carolina Central,Nevada,0.22
+North Carolina Central,Florida St.,0.09
+North Carolina Central,East Tennessee St.,0.26
+North Carolina Central,SMU,0.09
+North Carolina Central,Syracuse,0.22
+North Carolina Central,Providence,0.24
+North Carolina Central,Baylor,0.09
+North Carolina Central,Iona,0.43
+North Carolina Central,Minnesota,0.17
+North Carolina Central,Seton Hall,0.22
+North Carolina Central,Kentucky,0.05
+North Carolina Central,Kent St.,0.48
+Northwestern,Oklahoma St.,0.35
+Northwestern,Virginia,0.29
+Northwestern,UNC Wilmington,0.58
+Northwestern,Florida,0.26
+Northwestern,New Mexico St.,0.69
+Northwestern,Saint Mary's,0.32
+Northwestern,Marquette,0.45
+Northwestern,UCLA,0.32
+Northwestern,Northern Kentucky,0.8
+Northwestern,Maryland,0.52
+Northwestern,VCU,0.52
+Northwestern,Duke,0.29
+Northwestern,Jacksonville St.,0.8
+Northwestern,Gonzaga,0.14
+Northwestern,Texas Southern,0.87
+Northwestern,Virginia Tech,0.52
+Northwestern,Vanderbilt,0.49
+Northwestern,Cincinnati,0.34
+Northwestern,Vermont,0.58
+Northwestern,West Virginia,0.25
+Northwestern,Princeton,0.58
+Northwestern,Michigan,0.37
+Northwestern,Middle Tennessee,0.52
+Northwestern,Louisville,0.26
+Northwestern,Florida Gulf Coast,0.73
+Northwestern,Creighton,0.4
+Northwestern,Michigan St.,0.51
+Northwestern,Arizona,0.34
+Northwestern,North Dakota,0.84
+Northwestern,Kansas,0.26
+Northwestern,UC Davis,0.89
+Northwestern,New Orleans,0.82
+Northwestern,South Carolina,0.47
+Northwestern,Dayton,0.5
+Northwestern,Purdue,0.3
+Northwestern,Wake Forest,0.46
+Northwestern,Kansas St.,0.45
+Northwestern,Butler,0.38
+Northwestern,Bucknell,0.66
+Northwestern,Wisconsin,0.34
+Northwestern,Rhode Island,0.51
+Northwestern,Notre Dame,0.37
+Northwestern,Winthrop,0.75
+Northwestern,Miami FL,0.47
+Northwestern,Xavier,0.5
+Northwestern,Oregon,0.32
+Northwestern,South Dakota St.,0.84
+Northwestern,North Carolina,0.22
+Northwestern,Troy,0.78
+Northwestern,Wichita St.,0.26
+Northwestern,Arkansas,0.49
+Northwestern,Iowa St.,0.33
+Northwestern,Nevada,0.56
+Northwestern,Florida St.,0.33
+Northwestern,East Tennessee St.,0.6
+Northwestern,SMU,0.31
+Northwestern,Syracuse,0.53
+Northwestern,Providence,0.56
+Northwestern,Baylor,0.3
+Northwestern,Iona,0.76
+Northwestern,Minnesota,0.48
+Northwestern,Seton Hall,0.54
+Northwestern,Kentucky,0.24
+Northwestern,Kent St.,0.8
+Oklahoma St.,Virginia,0.4
+Oklahoma St.,UNC Wilmington,0.74
+Oklahoma St.,Florida,0.39
+Oklahoma St.,New Mexico St.,0.83
+Oklahoma St.,Saint Mary's,0.44
+Oklahoma St.,Marquette,0.62
+Oklahoma St.,UCLA,0.48
+Oklahoma St.,Northern Kentucky,0.91
+Oklahoma St.,Maryland,0.68
+Oklahoma St.,VCU,0.68
+Oklahoma St.,Duke,0.42
+Oklahoma St.,Jacksonville St.,0.9
+Oklahoma St.,Gonzaga,0.24
+Oklahoma St.,Texas Southern,0.95
+Oklahoma St.,Virginia Tech,0.68
+Oklahoma St.,Vanderbilt,0.64
+Oklahoma St.,Cincinnati,0.47
+Oklahoma St.,Vermont,0.73
+Oklahoma St.,West Virginia,0.38
+Oklahoma St.,Princeton,0.72
+Oklahoma St.,Michigan,0.51
+Oklahoma St.,Middle Tennessee,0.67
+Oklahoma St.,Louisville,0.38
+Oklahoma St.,Florida Gulf Coast,0.85
+Oklahoma St.,Creighton,0.56
+Oklahoma St.,Michigan St.,0.67
+Oklahoma St.,Arizona,0.49
+Oklahoma St.,North Dakota,0.93
+Oklahoma St.,Kansas,0.4
+Oklahoma St.,UC Davis,0.96
+Oklahoma St.,New Orleans,0.92
+Oklahoma St.,South Carolina,0.63
+Oklahoma St.,Dayton,0.66
+Oklahoma St.,Purdue,0.45
+Oklahoma St.,Wake Forest,0.62
+Oklahoma St.,Kansas St.,0.61
+Oklahoma St.,Butler,0.53
+Oklahoma St.,Bucknell,0.81
+Oklahoma St.,Wisconsin,0.47
+Oklahoma St.,Rhode Island,0.66
+Oklahoma St.,Notre Dame,0.53
+Oklahoma St.,Winthrop,0.88
+Oklahoma St.,Miami FL,0.62
+Oklahoma St.,Xavier,0.66
+Oklahoma St.,Oregon,0.46
+Oklahoma St.,South Dakota St.,0.93
+Oklahoma St.,North Carolina,0.35
+Oklahoma St.,Troy,0.9
+Oklahoma St.,Wichita St.,0.39
+Oklahoma St.,Arkansas,0.65
+Oklahoma St.,Iowa St.,0.47
+Oklahoma St.,Nevada,0.72
+Oklahoma St.,Florida St.,0.48
+Oklahoma St.,East Tennessee St.,0.76
+Oklahoma St.,SMU,0.45
+Oklahoma St.,Syracuse,0.69
+Oklahoma St.,Providence,0.72
+Oklahoma St.,Baylor,0.43
+Oklahoma St.,Iona,0.88
+Oklahoma St.,Minnesota,0.64
+Oklahoma St.,Seton Hall,0.7
+Oklahoma St.,Kentucky,0.37
+Oklahoma St.,Kent St.,0.9
+Virginia,UNC Wilmington,0.79
+Virginia,Florida,0.51
+Virginia,New Mexico St.,0.85
+Virginia,Saint Mary's,0.54
+Virginia,Marquette,0.69
+Virginia,UCLA,0.59
+Virginia,Northern Kentucky,0.91
+Virginia,Maryland,0.73
+Virginia,VCU,0.74
+Virginia,Duke,0.53
+Virginia,Jacksonville St.,0.9
+Virginia,Gonzaga,0.36
+Virginia,Texas Southern,0.95
+Virginia,Virginia Tech,0.74
+Virginia,Vanderbilt,0.7
+Virginia,Cincinnati,0.57
+Virginia,Vermont,0.77
+Virginia,West Virginia,0.5
+Virginia,Princeton,0.76
+Virginia,Michigan,0.59
+Virginia,Middle Tennessee,0.73
+Virginia,Louisville,0.5
+Virginia,Florida Gulf Coast,0.86
+Virginia,Creighton,0.65
+Virginia,Michigan St.,0.73
+Virginia,Arizona,0.58
+Virginia,North Dakota,0.94
+Virginia,Kansas,0.52
+Virginia,UC Davis,0.96
+Virginia,New Orleans,0.92
+Virginia,South Carolina,0.7
+Virginia,Dayton,0.72
+Virginia,Purdue,0.55
+Virginia,Wake Forest,0.7
+Virginia,Kansas St.,0.68
+Virginia,Butler,0.62
+Virginia,Bucknell,0.84
+Virginia,Wisconsin,0.57
+Virginia,Rhode Island,0.72
+Virginia,Notre Dame,0.62
+Virginia,Winthrop,0.89
+Virginia,Miami FL,0.68
+Virginia,Xavier,0.72
+Virginia,Oregon,0.56
+Virginia,South Dakota St.,0.93
+Virginia,North Carolina,0.47
+Virginia,Troy,0.9
+Virginia,Wichita St.,0.51
+Virginia,Arkansas,0.72
+Virginia,Iowa St.,0.58
+Virginia,Nevada,0.77
+Virginia,Florida St.,0.59
+Virginia,East Tennessee St.,0.8
+Virginia,SMU,0.55
+Virginia,Syracuse,0.74
+Virginia,Providence,0.76
+Virginia,Baylor,0.53
+Virginia,Iona,0.9
+Virginia,Minnesota,0.71
+Virginia,Seton Hall,0.75
+Virginia,Kentucky,0.5
+Virginia,Kent St.,0.91
+UNC Wilmington,Florida,0.18
+UNC Wilmington,New Mexico St.,0.63
+UNC Wilmington,Saint Mary's,0.25
+UNC Wilmington,Marquette,0.37
+UNC Wilmington,UCLA,0.24
+UNC Wilmington,Northern Kentucky,0.76
+UNC Wilmington,Maryland,0.44
+UNC Wilmington,VCU,0.44
+UNC Wilmington,Duke,0.21
+UNC Wilmington,Jacksonville St.,0.76
+UNC Wilmington,Gonzaga,0.09
+UNC Wilmington,Texas Southern,0.85
+UNC Wilmington,Virginia Tech,0.44
+UNC Wilmington,Vanderbilt,0.41
+UNC Wilmington,Cincinnati,0.26
+UNC Wilmington,Vermont,0.51
+UNC Wilmington,West Virginia,0.17
+UNC Wilmington,Princeton,0.51
+UNC Wilmington,Michigan,0.29
+UNC Wilmington,Middle Tennessee,0.44
+UNC Wilmington,Louisville,0.18
+UNC Wilmington,Florida Gulf Coast,0.67
+UNC Wilmington,Creighton,0.31
+UNC Wilmington,Michigan St.,0.44
+UNC Wilmington,Arizona,0.26
+UNC Wilmington,North Dakota,0.8
+UNC Wilmington,Kansas,0.19
+UNC Wilmington,UC Davis,0.87
+UNC Wilmington,New Orleans,0.79
+UNC Wilmington,South Carolina,0.38
+UNC Wilmington,Dayton,0.42
+UNC Wilmington,Purdue,0.22
+UNC Wilmington,Wake Forest,0.37
+UNC Wilmington,Kansas St.,0.37
+UNC Wilmington,Butler,0.3
+UNC Wilmington,Bucknell,0.6
+UNC Wilmington,Wisconsin,0.26
+UNC Wilmington,Rhode Island,0.43
+UNC Wilmington,Notre Dame,0.29
+UNC Wilmington,Winthrop,0.7
+UNC Wilmington,Miami FL,0.39
+UNC Wilmington,Xavier,0.43
+UNC Wilmington,Oregon,0.24
+UNC Wilmington,South Dakota St.,0.81
+UNC Wilmington,North Carolina,0.15
+UNC Wilmington,Troy,0.74
+UNC Wilmington,Wichita St.,0.18
+UNC Wilmington,Arkansas,0.41
+UNC Wilmington,Iowa St.,0.25
+UNC Wilmington,Nevada,0.48
+UNC Wilmington,Florida St.,0.25
+UNC Wilmington,East Tennessee St.,0.53
+UNC Wilmington,SMU,0.24
+UNC Wilmington,Syracuse,0.45
+UNC Wilmington,Providence,0.49
+UNC Wilmington,Baylor,0.23
+UNC Wilmington,Iona,0.71
+UNC Wilmington,Minnesota,0.39
+UNC Wilmington,Seton Hall,0.46
+UNC Wilmington,Kentucky,0.16
+UNC Wilmington,Kent St.,0.75
+Florida,New Mexico St.,0.88
+Florida,Saint Mary's,0.54
+Florida,Marquette,0.71
+Florida,UCLA,0.59
+Florida,Northern Kentucky,0.94
+Florida,Maryland,0.76
+Florida,VCU,0.77
+Florida,Duke,0.53
+Florida,Jacksonville St.,0.93
+Florida,Gonzaga,0.34
+Florida,Texas Southern,0.97
+Florida,Virginia Tech,0.76
+Florida,Vanderbilt,0.73
+Florida,Cincinnati,0.57
+Florida,Vermont,0.8
+Florida,West Virginia,0.49
+Florida,Princeton,0.8
+Florida,Michigan,0.6
+Florida,Middle Tennessee,0.76
+Florida,Louisville,0.49
+Florida,Florida Gulf Coast,0.9
+Florida,Creighton,0.67
+Florida,Michigan St.,0.76
+Florida,Arizona,0.59
+Florida,North Dakota,0.96
+Florida,Kansas,0.51
+Florida,UC Davis,0.98
+Florida,New Orleans,0.95
+Florida,South Carolina,0.72
+Florida,Dayton,0.75
+Florida,Purdue,0.56
+Florida,Wake Forest,0.72
+Florida,Kansas St.,0.7
+Florida,Butler,0.63
+Florida,Bucknell,0.87
+Florida,Wisconsin,0.57
+Florida,Rhode Island,0.75
+Florida,Notre Dame,0.63
+Florida,Winthrop,0.92
+Florida,Miami FL,0.71
+Florida,Xavier,0.75
+Florida,Oregon,0.56
+Florida,South Dakota St.,0.96
+Florida,North Carolina,0.46
+Florida,Troy,0.93
+Florida,Wichita St.,0.5
+Florida,Arkansas,0.75
+Florida,Iowa St.,0.58
+Florida,Nevada,0.8
+Florida,Florida St.,0.59
+Florida,East Tennessee St.,0.83
+Florida,SMU,0.55
+Florida,Syracuse,0.77
+Florida,Providence,0.79
+Florida,Baylor,0.53
+Florida,Iona,0.93
+Florida,Minnesota,0.73
+Florida,Seton Hall,0.78
+Florida,Kentucky,0.49
+Florida,Kent St.,0.94
+New Mexico St.,Saint Mary's,0.18
+New Mexico St.,Marquette,0.26
+New Mexico St.,UCLA,0.15
+New Mexico St.,Northern Kentucky,0.64
+New Mexico St.,Maryland,0.33
+New Mexico St.,VCU,0.33
+New Mexico St.,Duke,0.14
+New Mexico St.,Jacksonville St.,0.65
+New Mexico St.,Gonzaga,0.05
+New Mexico St.,Texas Southern,0.75
+New Mexico St.,Virginia Tech,0.32
+New Mexico St.,Vanderbilt,0.3
+New Mexico St.,Cincinnati,0.18
+New Mexico St.,Vermont,0.39
+New Mexico St.,West Virginia,0.11
+New Mexico St.,Princeton,0.39
+New Mexico St.,Michigan,0.21
+New Mexico St.,Middle Tennessee,0.33
+New Mexico St.,Louisville,0.12
+New Mexico St.,Florida Gulf Coast,0.55
+New Mexico St.,Creighton,0.21
+New Mexico St.,Michigan St.,0.32
+New Mexico St.,Arizona,0.18
+New Mexico St.,North Dakota,0.69
+New Mexico St.,Kansas,0.12
+New Mexico St.,UC Davis,0.77
+New Mexico St.,New Orleans,0.68
+New Mexico St.,South Carolina,0.28
+New Mexico St.,Dayton,0.3
+New Mexico St.,Purdue,0.15
+New Mexico St.,Wake Forest,0.26
+New Mexico St.,Kansas St.,0.27
+New Mexico St.,Butler,0.21
+New Mexico St.,Bucknell,0.46
+New Mexico St.,Wisconsin,0.18
+New Mexico St.,Rhode Island,0.32
+New Mexico St.,Notre Dame,0.2
+New Mexico St.,Winthrop,0.57
+New Mexico St.,Miami FL,0.29
+New Mexico St.,Xavier,0.31
+New Mexico St.,Oregon,0.16
+New Mexico St.,South Dakota St.,0.7
+New Mexico St.,North Carolina,0.09
+New Mexico St.,Troy,0.62
+New Mexico St.,Wichita St.,0.12
+New Mexico St.,Arkansas,0.29
+New Mexico St.,Iowa St.,0.17
+New Mexico St.,Nevada,0.35
+New Mexico St.,Florida St.,0.16
+New Mexico St.,East Tennessee St.,0.4
+New Mexico St.,SMU,0.16
+New Mexico St.,Syracuse,0.34
+New Mexico St.,Providence,0.37
+New Mexico St.,Baylor,0.16
+New Mexico St.,Iona,0.58
+New Mexico St.,Minnesota,0.28
+New Mexico St.,Seton Hall,0.34
+New Mexico St.,Kentucky,0.1
+New Mexico St.,Kent St.,0.63
+Saint Mary's,Marquette,0.65
+Saint Mary's,UCLA,0.54
+Saint Mary's,Northern Kentucky,0.89
+Saint Mary's,Maryland,0.7
+Saint Mary's,VCU,0.71
+Saint Mary's,Duke,0.49
+Saint Mary's,Jacksonville St.,0.88
+Saint Mary's,Gonzaga,0.32
+Saint Mary's,Texas Southern,0.94
+Saint Mary's,Virginia Tech,0.7
+Saint Mary's,Vanderbilt,0.67
+Saint Mary's,Cincinnati,0.53
+Saint Mary's,Vermont,0.74
+Saint Mary's,West Virginia,0.45
+Saint Mary's,Princeton,0.73
+Saint Mary's,Michigan,0.55
+Saint Mary's,Middle Tennessee,0.69
+Saint Mary's,Louisville,0.46
+Saint Mary's,Florida Gulf Coast,0.84
+Saint Mary's,Creighton,0.61
+Saint Mary's,Michigan St.,0.69
+Saint Mary's,Arizona,0.54
+Saint Mary's,North Dakota,0.92
+Saint Mary's,Kansas,0.47
+Saint Mary's,UC Davis,0.95
+Saint Mary's,New Orleans,0.9
+Saint Mary's,South Carolina,0.66
+Saint Mary's,Dayton,0.69
+Saint Mary's,Purdue,0.51
+Saint Mary's,Wake Forest,0.66
+Saint Mary's,Kansas St.,0.64
+Saint Mary's,Butler,0.58
+Saint Mary's,Bucknell,0.81
+Saint Mary's,Wisconsin,0.53
+Saint Mary's,Rhode Island,0.69
+Saint Mary's,Notre Dame,0.57
+Saint Mary's,Winthrop,0.87
+Saint Mary's,Miami FL,0.65
+Saint Mary's,Xavier,0.69
+Saint Mary's,Oregon,0.52
+Saint Mary's,South Dakota St.,0.92
+Saint Mary's,North Carolina,0.42
+Saint Mary's,Troy,0.88
+Saint Mary's,Wichita St.,0.46
+Saint Mary's,Arkansas,0.68
+Saint Mary's,Iowa St.,0.53
+Saint Mary's,Nevada,0.73
+Saint Mary's,Florida St.,0.54
+Saint Mary's,East Tennessee St.,0.77
+Saint Mary's,SMU,0.5
+Saint Mary's,Syracuse,0.71
+Saint Mary's,Providence,0.73
+Saint Mary's,Baylor,0.49
+Saint Mary's,Iona,0.88
+Saint Mary's,Minnesota,0.67
+Saint Mary's,Seton Hall,0.71
+Saint Mary's,Kentucky,0.45
+Saint Mary's,Kent St.,0.89
+Marquette,UCLA,0.36
+Marquette,Northern Kentucky,0.85
+Marquette,Maryland,0.57
+Marquette,VCU,0.58
+Marquette,Duke,0.32
+Marquette,Jacksonville St.,0.84
+Marquette,Gonzaga,0.16
+Marquette,Texas Southern,0.91
+Marquette,Virginia Tech,0.57
+Marquette,Vanderbilt,0.53
+Marquette,Cincinnati,0.37
+Marquette,Vermont,0.63
+Marquette,West Virginia,0.27
+Marquette,Princeton,0.63
+Marquette,Michigan,0.4
+Marquette,Middle Tennessee,0.57
+Marquette,Louisville,0.28
+Marquette,Florida Gulf Coast,0.78
+Marquette,Creighton,0.44
+Marquette,Michigan St.,0.56
+Marquette,Arizona,0.38
+Marquette,North Dakota,0.88
+Marquette,Kansas,0.29
+Marquette,UC Davis,0.92
+Marquette,New Orleans,0.87
+Marquette,South Carolina,0.52
+Marquette,Dayton,0.55
+Marquette,Purdue,0.34
+Marquette,Wake Forest,0.51
+Marquette,Kansas St.,0.5
+Marquette,Butler,0.42
+Marquette,Bucknell,0.72
+Marquette,Wisconsin,0.37
+Marquette,Rhode Island,0.56
+Marquette,Notre Dame,0.41
+Marquette,Winthrop,0.81
+Marquette,Miami FL,0.51
+Marquette,Xavier,0.55
+Marquette,Oregon,0.35
+Marquette,South Dakota St.,0.88
+Marquette,North Carolina,0.25
+Marquette,Troy,0.83
+Marquette,Wichita St.,0.29
+Marquette,Arkansas,0.54
+Marquette,Iowa St.,0.36
+Marquette,Nevada,0.61
+Marquette,Florida St.,0.37
+Marquette,East Tennessee St.,0.66
+Marquette,SMU,0.34
+Marquette,Syracuse,0.58
+Marquette,Providence,0.61
+Marquette,Baylor,0.33
+Marquette,Iona,0.81
+Marquette,Minnesota,0.53
+Marquette,Seton Hall,0.59
+Marquette,Kentucky,0.27
+Marquette,Kent St.,0.84
+UCLA,Northern Kentucky,0.92
+UCLA,Maryland,0.7
+UCLA,VCU,0.71
+UCLA,Duke,0.44
+UCLA,Jacksonville St.,0.92
+UCLA,Gonzaga,0.25
+UCLA,Texas Southern,0.96
+UCLA,Virginia Tech,0.7
+UCLA,Vanderbilt,0.67
+UCLA,Cincinnati,0.49
+UCLA,Vermont,0.76
+UCLA,West Virginia,0.4
+UCLA,Princeton,0.75
+UCLA,Michigan,0.53
+UCLA,Middle Tennessee,0.7
+UCLA,Louisville,0.4
+UCLA,Florida Gulf Coast,0.87
+UCLA,Creighton,0.59
+UCLA,Michigan St.,0.7
+UCLA,Arizona,0.51
+UCLA,North Dakota,0.95
+UCLA,Kansas,0.42
+UCLA,UC Davis,0.97
+UCLA,New Orleans,0.94
+UCLA,South Carolina,0.65
+UCLA,Dayton,0.69
+UCLA,Purdue,0.47
+UCLA,Wake Forest,0.65
+UCLA,Kansas St.,0.63
+UCLA,Butler,0.55
+UCLA,Bucknell,0.83
+UCLA,Wisconsin,0.49
+UCLA,Rhode Island,0.69
+UCLA,Notre Dame,0.55
+UCLA,Winthrop,0.9
+UCLA,Miami FL,0.64
+UCLA,Xavier,0.69
+UCLA,Oregon,0.48
+UCLA,South Dakota St.,0.94
+UCLA,North Carolina,0.36
+UCLA,Troy,0.91
+UCLA,Wichita St.,0.41
+UCLA,Arkansas,0.68
+UCLA,Iowa St.,0.49
+UCLA,Nevada,0.74
+UCLA,Florida St.,0.5
+UCLA,East Tennessee St.,0.78
+UCLA,SMU,0.46
+UCLA,Syracuse,0.71
+UCLA,Providence,0.74
+UCLA,Baylor,0.45
+UCLA,Iona,0.9
+UCLA,Minnesota,0.66
+UCLA,Seton Hall,0.72
+UCLA,Kentucky,0.39
+UCLA,Kent St.,0.92
+Northern Kentucky,Maryland,0.21
+Northern Kentucky,VCU,0.21
+Northern Kentucky,Duke,0.07
+Northern Kentucky,Jacksonville St.,0.52
+Northern Kentucky,Gonzaga,0.02
+Northern Kentucky,Texas Southern,0.62
+Northern Kentucky,Virginia Tech,0.2
+Northern Kentucky,Vanderbilt,0.19
+Northern Kentucky,Cincinnati,0.1
+Northern Kentucky,Vermont,0.27
+Northern Kentucky,West Virginia,0.05
+Northern Kentucky,Princeton,0.27
+Northern Kentucky,Michigan,0.12
+Northern Kentucky,Middle Tennessee,0.22
+Northern Kentucky,Louisville,0.06
+Northern Kentucky,Florida Gulf Coast,0.42
+Northern Kentucky,Creighton,0.12
+Northern Kentucky,Michigan St.,0.21
+Northern Kentucky,Arizona,0.1
+Northern Kentucky,North Dakota,0.55
+Northern Kentucky,Kansas,0.06
+Northern Kentucky,UC Davis,0.65
+Northern Kentucky,New Orleans,0.55
+Northern Kentucky,South Carolina,0.17
+Northern Kentucky,Dayton,0.19
+Northern Kentucky,Purdue,0.08
+Northern Kentucky,Wake Forest,0.16
+Northern Kentucky,Kansas St.,0.17
+Northern Kentucky,Butler,0.12
+Northern Kentucky,Bucknell,0.32
+Northern Kentucky,Wisconsin,0.11
+Northern Kentucky,Rhode Island,0.2
+Northern Kentucky,Notre Dame,0.12
+Northern Kentucky,Winthrop,0.42
+Northern Kentucky,Miami FL,0.19
+Northern Kentucky,Xavier,0.2
+Northern Kentucky,Oregon,0.09
+Northern Kentucky,South Dakota St.,0.57
+Northern Kentucky,North Carolina,0.04
+Northern Kentucky,Troy,0.48
+Northern Kentucky,Wichita St.,0.06
+Northern Kentucky,Arkansas,0.18
+Northern Kentucky,Iowa St.,0.09
+Northern Kentucky,Nevada,0.23
+Northern Kentucky,Florida St.,0.09
+Northern Kentucky,East Tennessee St.,0.26
+Northern Kentucky,SMU,0.09
+Northern Kentucky,Syracuse,0.22
+Northern Kentucky,Providence,0.24
+Northern Kentucky,Baylor,0.09
+Northern Kentucky,Iona,0.43
+Northern Kentucky,Minnesota,0.17
+Northern Kentucky,Seton Hall,0.22
+Northern Kentucky,Kentucky,0.05
+Northern Kentucky,Kent St.,0.49
+Maryland,VCU,0.5
+Maryland,Duke,0.27
+Maryland,Jacksonville St.,0.79
+Maryland,Gonzaga,0.13
+Maryland,Texas Southern,0.87
+Maryland,Virginia Tech,0.5
+Maryland,Vanderbilt,0.47
+Maryland,Cincinnati,0.32
+Maryland,Vermont,0.57
+Maryland,West Virginia,0.23
+Maryland,Princeton,0.56
+Maryland,Michigan,0.35
+Maryland,Middle Tennessee,0.5
+Maryland,Louisville,0.23
+Maryland,Florida Gulf Coast,0.72
+Maryland,Creighton,0.38
+Maryland,Michigan St.,0.5
+Maryland,Arizona,0.32
+Maryland,North Dakota,0.83
+Maryland,Kansas,0.24
+Maryland,UC Davis,0.89
+Maryland,New Orleans,0.82
+Maryland,South Carolina,0.45
+Maryland,Dayton,0.48
+Maryland,Purdue,0.28
+Maryland,Wake Forest,0.44
+Maryland,Kansas St.,0.43
+Maryland,Butler,0.36
+Maryland,Bucknell,0.65
+Maryland,Wisconsin,0.32
+Maryland,Rhode Island,0.49
+Maryland,Notre Dame,0.35
+Maryland,Winthrop,0.74
+Maryland,Miami FL,0.45
+Maryland,Xavier,0.49
+Maryland,Oregon,0.3
+Maryland,South Dakota St.,0.83
+Maryland,North Carolina,0.2
+Maryland,Troy,0.77
+Maryland,Wichita St.,0.24
+Maryland,Arkansas,0.47
+Maryland,Iowa St.,0.31
+Maryland,Nevada,0.54
+Maryland,Florida St.,0.31
+Maryland,East Tennessee St.,0.58
+Maryland,SMU,0.29
+Maryland,Syracuse,0.51
+Maryland,Providence,0.54
+Maryland,Baylor,0.28
+Maryland,Iona,0.75
+Maryland,Minnesota,0.46
+Maryland,Seton Hall,0.52
+Maryland,Kentucky,0.22
+Maryland,Kent St.,0.79
+VCU,Duke,0.26
+VCU,Jacksonville St.,0.79
+VCU,Gonzaga,0.12
+VCU,Texas Southern,0.87
+VCU,Virginia Tech,0.49
+VCU,Vanderbilt,0.46
+VCU,Cincinnati,0.31
+VCU,Vermont,0.56
+VCU,West Virginia,0.22
+VCU,Princeton,0.56
+VCU,Michigan,0.34
+VCU,Middle Tennessee,0.5
+VCU,Louisville,0.23
+VCU,Florida Gulf Coast,0.72
+VCU,Creighton,0.37
+VCU,Michigan St.,0.49
+VCU,Arizona,0.31
+VCU,North Dakota,0.84
+VCU,Kansas,0.23
+VCU,UC Davis,0.89
+VCU,New Orleans,0.82
+VCU,South Carolina,0.44
+VCU,Dayton,0.47
+VCU,Purdue,0.27
+VCU,Wake Forest,0.43
+VCU,Kansas St.,0.43
+VCU,Butler,0.35
+VCU,Bucknell,0.65
+VCU,Wisconsin,0.31
+VCU,Rhode Island,0.48
+VCU,Notre Dame,0.34
+VCU,Winthrop,0.74
+VCU,Miami FL,0.44
+VCU,Xavier,0.48
+VCU,Oregon,0.29
+VCU,South Dakota St.,0.84
+VCU,North Carolina,0.19
+VCU,Troy,0.78
+VCU,Wichita St.,0.23
+VCU,Arkansas,0.46
+VCU,Iowa St.,0.3
+VCU,Nevada,0.53
+VCU,Florida St.,0.3
+VCU,East Tennessee St.,0.58
+VCU,SMU,0.28
+VCU,Syracuse,0.51
+VCU,Providence,0.54
+VCU,Baylor,0.27
+VCU,Iona,0.75
+VCU,Minnesota,0.45
+VCU,Seton Hall,0.51
+VCU,Kentucky,0.21
+VCU,Kent St.,0.79
+Duke,Jacksonville St.,0.92
+Duke,Gonzaga,0.31
+Duke,Texas Southern,0.96
+Duke,Virginia Tech,0.74
+Duke,Vanderbilt,0.7
+Duke,Cincinnati,0.54
+Duke,Vermont,0.78
+Duke,West Virginia,0.46
+Duke,Princeton,0.77
+Duke,Michigan,0.57
+Duke,Middle Tennessee,0.73
+Duke,Louisville,0.46
+Duke,Florida Gulf Coast,0.88
+Duke,Creighton,0.64
+Duke,Michigan St.,0.73
+Duke,Arizona,0.56
+Duke,North Dakota,0.95
+Duke,Kansas,0.48
+Duke,UC Davis,0.97
+Duke,New Orleans,0.94
+Duke,South Carolina,0.69
+Duke,Dayton,0.72
+Duke,Purdue,0.52
+Duke,Wake Forest,0.69
+Duke,Kansas St.,0.67
+Duke,Butler,0.6
+Duke,Bucknell,0.85
+Duke,Wisconsin,0.54
+Duke,Rhode Island,0.72
+Duke,Notre Dame,0.6
+Duke,Winthrop,0.91
+Duke,Miami FL,0.68
+Duke,Xavier,0.72
+Duke,Oregon,0.53
+Duke,South Dakota St.,0.95
+Duke,North Carolina,0.43
+Duke,Troy,0.92
+Duke,Wichita St.,0.47
+Duke,Arkansas,0.72
+Duke,Iowa St.,0.55
+Duke,Nevada,0.77
+Duke,Florida St.,0.56
+Duke,East Tennessee St.,0.81
+Duke,SMU,0.52
+Duke,Syracuse,0.74
+Duke,Providence,0.77
+Duke,Baylor,0.5
+Duke,Iona,0.91
+Duke,Minnesota,0.7
+Duke,Seton Hall,0.75
+Duke,Kentucky,0.46
+Duke,Kent St.,0.93
+Jacksonville St.,Gonzaga,0.03
+Jacksonville St.,Texas Southern,0.6
+Jacksonville St.,Virginia Tech,0.2
+Jacksonville St.,Vanderbilt,0.19
+Jacksonville St.,Cincinnati,0.11
+Jacksonville St.,Vermont,0.27
+Jacksonville St.,West Virginia,0.06
+Jacksonville St.,Princeton,0.27
+Jacksonville St.,Michigan,0.13
+Jacksonville St.,Middle Tennessee,0.22
+Jacksonville St.,Louisville,0.07
+Jacksonville St.,Florida Gulf Coast,0.4
+Jacksonville St.,Creighton,0.12
+Jacksonville St.,Michigan St.,0.21
+Jacksonville St.,Arizona,0.11
+Jacksonville St.,North Dakota,0.52
+Jacksonville St.,Kansas,0.07
+Jacksonville St.,UC Davis,0.62
+Jacksonville St.,New Orleans,0.52
+Jacksonville St.,South Carolina,0.17
+Jacksonville St.,Dayton,0.19
+Jacksonville St.,Purdue,0.08
+Jacksonville St.,Wake Forest,0.16
+Jacksonville St.,Kansas St.,0.17
+Jacksonville St.,Butler,0.13
+Jacksonville St.,Bucknell,0.32
+Jacksonville St.,Wisconsin,0.11
+Jacksonville St.,Rhode Island,0.2
+Jacksonville St.,Notre Dame,0.12
+Jacksonville St.,Winthrop,0.4
+Jacksonville St.,Miami FL,0.19
+Jacksonville St.,Xavier,0.2
+Jacksonville St.,Oregon,0.09
+Jacksonville St.,South Dakota St.,0.54
+Jacksonville St.,North Carolina,0.05
+Jacksonville St.,Troy,0.46
+Jacksonville St.,Wichita St.,0.07
+Jacksonville St.,Arkansas,0.18
+Jacksonville St.,Iowa St.,0.1
+Jacksonville St.,Nevada,0.23
+Jacksonville St.,Florida St.,0.09
+Jacksonville St.,East Tennessee St.,0.26
+Jacksonville St.,SMU,0.1
+Jacksonville St.,Syracuse,0.22
+Jacksonville St.,Providence,0.24
+Jacksonville St.,Baylor,0.1
+Jacksonville St.,Iona,0.42
+Jacksonville St.,Minnesota,0.17
+Jacksonville St.,Seton Hall,0.22
+Jacksonville St.,Kentucky,0.05
+Jacksonville St.,Kent St.,0.47
+Gonzaga,Texas Southern,0.99
+Gonzaga,Virginia Tech,0.88
+Gonzaga,Vanderbilt,0.85
+Gonzaga,Cincinnati,0.72
+Gonzaga,Vermont,0.9
+Gonzaga,West Virginia,0.66
+Gonzaga,Princeton,0.89
+Gonzaga,Michigan,0.74
+Gonzaga,Middle Tennessee,0.86
+Gonzaga,Louisville,0.66
+Gonzaga,Florida Gulf Coast,0.96
+Gonzaga,Creighton,0.81
+Gonzaga,Michigan St.,0.87
+Gonzaga,Arizona,0.74
+Gonzaga,North Dakota,0.99
+Gonzaga,Kansas,0.68
+Gonzaga,UC Davis,0.99
+Gonzaga,New Orleans,0.98
+Gonzaga,South Carolina,0.85
+Gonzaga,Dayton,0.87
+Gonzaga,Purdue,0.71
+Gonzaga,Wake Forest,0.85
+Gonzaga,Kansas St.,0.83
+Gonzaga,Butler,0.77
+Gonzaga,Bucknell,0.94
+Gonzaga,Wisconsin,0.72
+Gonzaga,Rhode Island,0.86
+Gonzaga,Notre Dame,0.77
+Gonzaga,Winthrop,0.97
+Gonzaga,Miami FL,0.83
+Gonzaga,Xavier,0.87
+Gonzaga,Oregon,0.72
+Gonzaga,South Dakota St.,0.98
+Gonzaga,North Carolina,0.63
+Gonzaga,Troy,0.97
+Gonzaga,Wichita St.,0.66
+Gonzaga,Arkansas,0.87
+Gonzaga,Iowa St.,0.74
+Gonzaga,Nevada,0.9
+Gonzaga,Florida St.,0.75
+Gonzaga,East Tennessee St.,0.92
+Gonzaga,SMU,0.7
+Gonzaga,Syracuse,0.88
+Gonzaga,Providence,0.89
+Gonzaga,Baylor,0.68
+Gonzaga,Iona,0.97
+Gonzaga,Minnesota,0.86
+Gonzaga,Seton Hall,0.88
+Gonzaga,Kentucky,0.66
+Gonzaga,Kent St.,0.98
+Texas Southern,Virginia Tech,0.12
+Texas Southern,Vanderbilt,0.12
+Texas Southern,Cincinnati,0.06
+Texas Southern,Vermont,0.18
+Texas Southern,West Virginia,0.03
+Texas Southern,Princeton,0.18
+Texas Southern,Michigan,0.07
+Texas Southern,Middle Tennessee,0.14
+Texas Southern,Louisville,0.03
+Texas Southern,Florida Gulf Coast,0.3
+Texas Southern,Creighton,0.07
+Texas Southern,Michigan St.,0.13
+Texas Southern,Arizona,0.06
+Texas Southern,North Dakota,0.42
+Texas Southern,Kansas,0.03
+Texas Southern,UC Davis,0.53
+Texas Southern,New Orleans,0.43
+Texas Southern,South Carolina,0.1
+Texas Southern,Dayton,0.11
+Texas Southern,Purdue,0.04
+Texas Southern,Wake Forest,0.09
+Texas Southern,Kansas St.,0.1
+Texas Southern,Butler,0.07
+Texas Southern,Bucknell,0.22
+Texas Southern,Wisconsin,0.06
+Texas Southern,Rhode Island,0.13
+Texas Southern,Notre Dame,0.06
+Texas Southern,Winthrop,0.3
+Texas Southern,Miami FL,0.12
+Texas Southern,Xavier,0.12
+Texas Southern,Oregon,0.05
+Texas Southern,South Dakota St.,0.44
+Texas Southern,North Carolina,0.02
+Texas Southern,Troy,0.35
+Texas Southern,Wichita St.,0.03
+Texas Southern,Arkansas,0.11
+Texas Southern,Iowa St.,0.05
+Texas Southern,Nevada,0.14
+Texas Southern,Florida St.,0.04
+Texas Southern,East Tennessee St.,0.17
+Texas Southern,SMU,0.05
+Texas Southern,Syracuse,0.14
+Texas Southern,Providence,0.16
+Texas Southern,Baylor,0.05
+Texas Southern,Iona,0.31
+Texas Southern,Minnesota,0.1
+Texas Southern,Seton Hall,0.14
+Texas Southern,Kentucky,0.02
+Texas Southern,Kent St.,0.37
+Virginia Tech,Vanderbilt,0.47
+Virginia Tech,Cincinnati,0.31
+Virginia Tech,Vermont,0.57
+Virginia Tech,West Virginia,0.22
+Virginia Tech,Princeton,0.56
+Virginia Tech,Michigan,0.35
+Virginia Tech,Middle Tennessee,0.5
+Virginia Tech,Louisville,0.23
+Virginia Tech,Florida Gulf Coast,0.72
+Virginia Tech,Creighton,0.38
+Virginia Tech,Michigan St.,0.5
+Virginia Tech,Arizona,0.32
+Virginia Tech,North Dakota,0.84
+Virginia Tech,Kansas,0.24
+Virginia Tech,UC Davis,0.89
+Virginia Tech,New Orleans,0.82
+Virginia Tech,South Carolina,0.45
+Virginia Tech,Dayton,0.48
+Virginia Tech,Purdue,0.28
+Virginia Tech,Wake Forest,0.44
+Virginia Tech,Kansas St.,0.44
+Virginia Tech,Butler,0.36
+Virginia Tech,Bucknell,0.65
+Virginia Tech,Wisconsin,0.32
+Virginia Tech,Rhode Island,0.49
+Virginia Tech,Notre Dame,0.35
+Virginia Tech,Winthrop,0.75
+Virginia Tech,Miami FL,0.45
+Virginia Tech,Xavier,0.49
+Virginia Tech,Oregon,0.29
+Virginia Tech,South Dakota St.,0.84
+Virginia Tech,North Carolina,0.2
+Virginia Tech,Troy,0.78
+Virginia Tech,Wichita St.,0.24
+Virginia Tech,Arkansas,0.47
+Virginia Tech,Iowa St.,0.31
+Virginia Tech,Nevada,0.54
+Virginia Tech,Florida St.,0.31
+Virginia Tech,East Tennessee St.,0.59
+Virginia Tech,SMU,0.29
+Virginia Tech,Syracuse,0.51
+Virginia Tech,Providence,0.55
+Virginia Tech,Baylor,0.28
+Virginia Tech,Iona,0.76
+Virginia Tech,Minnesota,0.46
+Virginia Tech,Seton Hall,0.52
+Virginia Tech,Kentucky,0.21
+Virginia Tech,Kent St.,0.79
+Vanderbilt,Cincinnati,0.35
+Vanderbilt,Vermont,0.6
+Vanderbilt,West Virginia,0.26
+Vanderbilt,Princeton,0.59
+Vanderbilt,Michigan,0.38
+Vanderbilt,Middle Tennessee,0.53
+Vanderbilt,Louisville,0.27
+Vanderbilt,Florida Gulf Coast,0.74
+Vanderbilt,Creighton,0.41
+Vanderbilt,Michigan St.,0.53
+Vanderbilt,Arizona,0.35
+Vanderbilt,North Dakota,0.85
+Vanderbilt,Kansas,0.28
+Vanderbilt,UC Davis,0.9
+Vanderbilt,New Orleans,0.83
+Vanderbilt,South Carolina,0.48
+Vanderbilt,Dayton,0.51
+Vanderbilt,Purdue,0.31
+Vanderbilt,Wake Forest,0.47
+Vanderbilt,Kansas St.,0.47
+Vanderbilt,Butler,0.39
+Vanderbilt,Bucknell,0.68
+Vanderbilt,Wisconsin,0.35
+Vanderbilt,Rhode Island,0.52
+Vanderbilt,Notre Dame,0.39
+Vanderbilt,Winthrop,0.76
+Vanderbilt,Miami FL,0.48
+Vanderbilt,Xavier,0.52
+Vanderbilt,Oregon,0.33
+Vanderbilt,South Dakota St.,0.85
+Vanderbilt,North Carolina,0.23
+Vanderbilt,Troy,0.79
+Vanderbilt,Wichita St.,0.27
+Vanderbilt,Arkansas,0.5
+Vanderbilt,Iowa St.,0.34
+Vanderbilt,Nevada,0.57
+Vanderbilt,Florida St.,0.34
+Vanderbilt,East Tennessee St.,0.62
+Vanderbilt,SMU,0.32
+Vanderbilt,Syracuse,0.54
+Vanderbilt,Providence,0.58
+Vanderbilt,Baylor,0.31
+Vanderbilt,Iona,0.77
+Vanderbilt,Minnesota,0.49
+Vanderbilt,Seton Hall,0.55
+Vanderbilt,Kentucky,0.25
+Vanderbilt,Kent St.,0.81
+Cincinnati,Vermont,0.73
+Cincinnati,West Virginia,0.42
+Cincinnati,Princeton,0.72
+Cincinnati,Michigan,0.53
+Cincinnati,Middle Tennessee,0.68
+Cincinnati,Louisville,0.42
+Cincinnati,Florida Gulf Coast,0.84
+Cincinnati,Creighton,0.58
+Cincinnati,Michigan St.,0.68
+Cincinnati,Arizona,0.51
+Cincinnati,North Dakota,0.92
+Cincinnati,Kansas,0.44
+Cincinnati,UC Davis,0.95
+Cincinnati,New Orleans,0.91
+Cincinnati,South Carolina,0.64
+Cincinnati,Dayton,0.67
+Cincinnati,Purdue,0.48
+Cincinnati,Wake Forest,0.64
+Cincinnati,Kansas St.,0.62
+Cincinnati,Butler,0.55
+Cincinnati,Bucknell,0.81
+Cincinnati,Wisconsin,0.5
+Cincinnati,Rhode Island,0.67
+Cincinnati,Notre Dame,0.55
+Cincinnati,Winthrop,0.87
+Cincinnati,Miami FL,0.63
+Cincinnati,Xavier,0.67
+Cincinnati,Oregon,0.49
+Cincinnati,South Dakota St.,0.92
+Cincinnati,North Carolina,0.39
+Cincinnati,Troy,0.89
+Cincinnati,Wichita St.,0.43
+Cincinnati,Arkansas,0.66
+Cincinnati,Iowa St.,0.5
+Cincinnati,Nevada,0.72
+Cincinnati,Florida St.,0.51
+Cincinnati,East Tennessee St.,0.76
+Cincinnati,SMU,0.47
+Cincinnati,Syracuse,0.69
+Cincinnati,Providence,0.72
+Cincinnati,Baylor,0.46
+Cincinnati,Iona,0.88
+Cincinnati,Minnesota,0.65
+Cincinnati,Seton Hall,0.7
+Cincinnati,Kentucky,0.41
+Cincinnati,Kent St.,0.89
+Vermont,West Virginia,0.19
+Vermont,Princeton,0.5
+Vermont,Michigan,0.3
+Vermont,Middle Tennessee,0.44
+Vermont,Louisville,0.19
+Vermont,Florida Gulf Coast,0.65
+Vermont,Creighton,0.32
+Vermont,Michigan St.,0.43
+Vermont,Arizona,0.27
+Vermont,North Dakota,0.77
+Vermont,Kansas,0.2
+Vermont,UC Davis,0.84
+Vermont,New Orleans,0.76
+Vermont,South Carolina,0.38
+Vermont,Dayton,0.41
+Vermont,Purdue,0.23
+Vermont,Wake Forest,0.37
+Vermont,Kansas St.,0.37
+Vermont,Butler,0.31
+Vermont,Bucknell,0.58
+Vermont,Wisconsin,0.27
+Vermont,Rhode Island,0.42
+Vermont,Notre Dame,0.3
+Vermont,Winthrop,0.67
+Vermont,Miami FL,0.39
+Vermont,Xavier,0.42
+Vermont,Oregon,0.25
+Vermont,South Dakota St.,0.78
+Vermont,North Carolina,0.16
+Vermont,Troy,0.71
+Vermont,Wichita St.,0.2
+Vermont,Arkansas,0.4
+Vermont,Iowa St.,0.26
+Vermont,Nevada,0.47
+Vermont,Florida St.,0.25
+Vermont,East Tennessee St.,0.51
+Vermont,SMU,0.25
+Vermont,Syracuse,0.45
+Vermont,Providence,0.48
+Vermont,Baylor,0.24
+Vermont,Iona,0.68
+Vermont,Minnesota,0.39
+Vermont,Seton Hall,0.45
+Vermont,Kentucky,0.17
+Vermont,Kent St.,0.73
+West Virginia,Princeton,0.81
+West Virginia,Michigan,0.62
+West Virginia,Middle Tennessee,0.77
+West Virginia,Louisville,0.5
+West Virginia,Florida Gulf Coast,0.91
+West Virginia,Creighton,0.68
+West Virginia,Michigan St.,0.77
+West Virginia,Arizona,0.6
+West Virginia,North Dakota,0.96
+West Virginia,Kansas,0.52
+West Virginia,UC Davis,0.98
+West Virginia,New Orleans,0.95
+West Virginia,South Carolina,0.73
+West Virginia,Dayton,0.76
+West Virginia,Purdue,0.57
+West Virginia,Wake Forest,0.73
+West Virginia,Kansas St.,0.71
+West Virginia,Butler,0.64
+West Virginia,Bucknell,0.88
+West Virginia,Wisconsin,0.58
+West Virginia,Rhode Island,0.76
+West Virginia,Notre Dame,0.64
+West Virginia,Winthrop,0.93
+West Virginia,Miami FL,0.72
+West Virginia,Xavier,0.76
+West Virginia,Oregon,0.57
+West Virginia,South Dakota St.,0.96
+West Virginia,North Carolina,0.47
+West Virginia,Troy,0.94
+West Virginia,Wichita St.,0.51
+West Virginia,Arkansas,0.76
+West Virginia,Iowa St.,0.59
+West Virginia,Nevada,0.81
+West Virginia,Florida St.,0.6
+West Virginia,East Tennessee St.,0.84
+West Virginia,SMU,0.56
+West Virginia,Syracuse,0.78
+West Virginia,Providence,0.81
+West Virginia,Baylor,0.54
+West Virginia,Iona,0.93
+West Virginia,Minnesota,0.75
+West Virginia,Seton Hall,0.79
+West Virginia,Kentucky,0.5
+West Virginia,Kent St.,0.94
+Princeton,Michigan,0.3
+Princeton,Middle Tennessee,0.44
+Princeton,Louisville,0.2
+Princeton,Florida Gulf Coast,0.65
+Princeton,Creighton,0.32
+Princeton,Michigan St.,0.43
+Princeton,Arizona,0.28
+Princeton,North Dakota,0.78
+Princeton,Kansas,0.21
+Princeton,UC Davis,0.84
+Princeton,New Orleans,0.76
+Princeton,South Carolina,0.39
+Princeton,Dayton,0.42
+Princeton,Purdue,0.24
+Princeton,Wake Forest,0.38
+Princeton,Kansas St.,0.38
+Princeton,Butler,0.31
+Princeton,Bucknell,0.58
+Princeton,Wisconsin,0.28
+Princeton,Rhode Island,0.43
+Princeton,Notre Dame,0.3
+Princeton,Winthrop,0.67
+Princeton,Miami FL,0.4
+Princeton,Xavier,0.43
+Princeton,Oregon,0.25
+Princeton,South Dakota St.,0.78
+Princeton,North Carolina,0.17
+Princeton,Troy,0.71
+Princeton,Wichita St.,0.2
+Princeton,Arkansas,0.41
+Princeton,Iowa St.,0.26
+Princeton,Nevada,0.47
+Princeton,Florida St.,0.26
+Princeton,East Tennessee St.,0.52
+Princeton,SMU,0.26
+Princeton,Syracuse,0.45
+Princeton,Providence,0.48
+Princeton,Baylor,0.25
+Princeton,Iona,0.69
+Princeton,Minnesota,0.4
+Princeton,Seton Hall,0.46
+Princeton,Kentucky,0.18
+Princeton,Kent St.,0.73
+Michigan,Middle Tennessee,0.65
+Michigan,Louisville,0.39
+Michigan,Florida Gulf Coast,0.82
+Michigan,Creighton,0.55
+Michigan,Michigan St.,0.65
+Michigan,Arizona,0.48
+Michigan,North Dakota,0.91
+Michigan,Kansas,0.4
+Michigan,UC Davis,0.94
+Michigan,New Orleans,0.89
+Michigan,South Carolina,0.61
+Michigan,Dayton,0.64
+Michigan,Purdue,0.44
+Michigan,Wake Forest,0.61
+Michigan,Kansas St.,0.59
+Michigan,Butler,0.52
+Michigan,Bucknell,0.78
+Michigan,Wisconsin,0.47
+Michigan,Rhode Island,0.64
+Michigan,Notre Dame,0.52
+Michigan,Winthrop,0.85
+Michigan,Miami FL,0.6
+Michigan,Xavier,0.64
+Michigan,Oregon,0.46
+Michigan,South Dakota St.,0.9
+Michigan,North Carolina,0.36
+Michigan,Troy,0.87
+Michigan,Wichita St.,0.4
+Michigan,Arkansas,0.63
+Michigan,Iowa St.,0.47
+Michigan,Nevada,0.69
+Michigan,Florida St.,0.48
+Michigan,East Tennessee St.,0.73
+Michigan,SMU,0.45
+Michigan,Syracuse,0.66
+Michigan,Providence,0.69
+Michigan,Baylor,0.43
+Michigan,Iona,0.85
+Michigan,Minnesota,0.62
+Michigan,Seton Hall,0.67
+Michigan,Kentucky,0.38
+Michigan,Kent St.,0.87
+Middle Tennessee,Louisville,0.24
+Middle Tennessee,Florida Gulf Coast,0.71
+Middle Tennessee,Creighton,0.38
+Middle Tennessee,Michigan St.,0.49
+Middle Tennessee,Arizona,0.33
+Middle Tennessee,North Dakota,0.82
+Middle Tennessee,Kansas,0.25
+Middle Tennessee,UC Davis,0.87
+Middle Tennessee,New Orleans,0.81
+Middle Tennessee,South Carolina,0.45
+Middle Tennessee,Dayton,0.48
+Middle Tennessee,Purdue,0.29
+Middle Tennessee,Wake Forest,0.44
+Middle Tennessee,Kansas St.,0.43
+Middle Tennessee,Butler,0.36
+Middle Tennessee,Bucknell,0.64
+Middle Tennessee,Wisconsin,0.32
+Middle Tennessee,Rhode Island,0.49
+Middle Tennessee,Notre Dame,0.36
+Middle Tennessee,Winthrop,0.73
+Middle Tennessee,Miami FL,0.45
+Middle Tennessee,Xavier,0.48
+Middle Tennessee,Oregon,0.3
+Middle Tennessee,South Dakota St.,0.82
+Middle Tennessee,North Carolina,0.21
+Middle Tennessee,Troy,0.76
+Middle Tennessee,Wichita St.,0.25
+Middle Tennessee,Arkansas,0.47
+Middle Tennessee,Iowa St.,0.31
+Middle Tennessee,Nevada,0.53
+Middle Tennessee,Florida St.,0.31
+Middle Tennessee,East Tennessee St.,0.58
+Middle Tennessee,SMU,0.3
+Middle Tennessee,Syracuse,0.51
+Middle Tennessee,Providence,0.54
+Middle Tennessee,Baylor,0.29
+Middle Tennessee,Iona,0.74
+Middle Tennessee,Minnesota,0.45
+Middle Tennessee,Seton Hall,0.52
+Middle Tennessee,Kentucky,0.22
+Middle Tennessee,Kent St.,0.78
+Louisville,Florida Gulf Coast,0.9
+Louisville,Creighton,0.67
+Louisville,Michigan St.,0.76
+Louisville,Arizona,0.59
+Louisville,North Dakota,0.96
+Louisville,Kansas,0.52
+Louisville,UC Davis,0.97
+Louisville,New Orleans,0.95
+Louisville,South Carolina,0.73
+Louisville,Dayton,0.75
+Louisville,Purdue,0.56
+Louisville,Wake Forest,0.73
+Louisville,Kansas St.,0.71
+Louisville,Butler,0.63
+Louisville,Bucknell,0.87
+Louisville,Wisconsin,0.58
+Louisville,Rhode Island,0.75
+Louisville,Notre Dame,0.63
+Louisville,Winthrop,0.92
+Louisville,Miami FL,0.71
+Louisville,Xavier,0.75
+Louisville,Oregon,0.57
+Louisville,South Dakota St.,0.96
+Louisville,North Carolina,0.47
+Louisville,Troy,0.93
+Louisville,Wichita St.,0.51
+Louisville,Arkansas,0.75
+Louisville,Iowa St.,0.59
+Louisville,Nevada,0.8
+Louisville,Florida St.,0.6
+Louisville,East Tennessee St.,0.83
+Louisville,SMU,0.55
+Louisville,Syracuse,0.77
+Louisville,Providence,0.8
+Louisville,Baylor,0.54
+Louisville,Iona,0.93
+Louisville,Minnesota,0.74
+Louisville,Seton Hall,0.78
+Louisville,Kentucky,0.5
+Louisville,Kent St.,0.94
+Florida Gulf Coast,Creighton,0.18
+Florida Gulf Coast,Michigan St.,0.28
+Florida Gulf Coast,Arizona,0.16
+Florida Gulf Coast,North Dakota,0.63
+Florida Gulf Coast,Kansas,0.1
+Florida Gulf Coast,UC Davis,0.72
+Florida Gulf Coast,New Orleans,0.62
+Florida Gulf Coast,South Carolina,0.24
+Florida Gulf Coast,Dayton,0.26
+Florida Gulf Coast,Purdue,0.12
+Florida Gulf Coast,Wake Forest,0.23
+Florida Gulf Coast,Kansas St.,0.23
+Florida Gulf Coast,Butler,0.18
+Florida Gulf Coast,Bucknell,0.41
+Florida Gulf Coast,Wisconsin,0.16
+Florida Gulf Coast,Rhode Island,0.28
+Florida Gulf Coast,Notre Dame,0.17
+Florida Gulf Coast,Winthrop,0.51
+Florida Gulf Coast,Miami FL,0.26
+Florida Gulf Coast,Xavier,0.27
+Florida Gulf Coast,Oregon,0.14
+Florida Gulf Coast,South Dakota St.,0.64
+Florida Gulf Coast,North Carolina,0.08
+Florida Gulf Coast,Troy,0.56
+Florida Gulf Coast,Wichita St.,0.1
+Florida Gulf Coast,Arkansas,0.25
+Florida Gulf Coast,Iowa St.,0.14
+Florida Gulf Coast,Nevada,0.31
+Florida Gulf Coast,Florida St.,0.14
+Florida Gulf Coast,East Tennessee St.,0.35
+Florida Gulf Coast,SMU,0.14
+Florida Gulf Coast,Syracuse,0.3
+Florida Gulf Coast,Providence,0.32
+Florida Gulf Coast,Baylor,0.14
+Florida Gulf Coast,Iona,0.52
+Florida Gulf Coast,Minnesota,0.24
+Florida Gulf Coast,Seton Hall,0.3
+Florida Gulf Coast,Kentucky,0.08
+Florida Gulf Coast,Kent St.,0.58
+Creighton,Michigan St.,0.62
+Creighton,Arizona,0.43
+Creighton,North Dakota,0.91
+Creighton,Kansas,0.34
+Creighton,UC Davis,0.94
+Creighton,New Orleans,0.9
+Creighton,South Carolina,0.57
+Creighton,Dayton,0.6
+Creighton,Purdue,0.38
+Creighton,Wake Forest,0.56
+Creighton,Kansas St.,0.55
+Creighton,Butler,0.47
+Creighton,Bucknell,0.77
+Creighton,Wisconsin,0.42
+Creighton,Rhode Island,0.61
+Creighton,Notre Dame,0.46
+Creighton,Winthrop,0.84
+Creighton,Miami FL,0.56
+Creighton,Xavier,0.61
+Creighton,Oregon,0.4
+Creighton,South Dakota St.,0.91
+Creighton,North Carolina,0.29
+Creighton,Troy,0.87
+Creighton,Wichita St.,0.33
+Creighton,Arkansas,0.6
+Creighton,Iowa St.,0.41
+Creighton,Nevada,0.66
+Creighton,Florida St.,0.42
+Creighton,East Tennessee St.,0.71
+Creighton,SMU,0.39
+Creighton,Syracuse,0.63
+Creighton,Providence,0.67
+Creighton,Baylor,0.37
+Creighton,Iona,0.85
+Creighton,Minnesota,0.58
+Creighton,Seton Hall,0.64
+Creighton,Kentucky,0.31
+Creighton,Kent St.,0.88
+Michigan St.,Arizona,0.33
+Michigan St.,North Dakota,0.84
+Michigan St.,Kansas,0.25
+Michigan St.,UC Davis,0.89
+Michigan St.,New Orleans,0.82
+Michigan St.,South Carolina,0.45
+Michigan St.,Dayton,0.48
+Michigan St.,Purdue,0.29
+Michigan St.,Wake Forest,0.44
+Michigan St.,Kansas St.,0.44
+Michigan St.,Butler,0.37
+Michigan St.,Bucknell,0.65
+Michigan St.,Wisconsin,0.32
+Michigan St.,Rhode Island,0.49
+Michigan St.,Notre Dame,0.36
+Michigan St.,Winthrop,0.74
+Michigan St.,Miami FL,0.46
+Michigan St.,Xavier,0.49
+Michigan St.,Oregon,0.3
+Michigan St.,South Dakota St.,0.83
+Michigan St.,North Carolina,0.21
+Michigan St.,Troy,0.78
+Michigan St.,Wichita St.,0.24
+Michigan St.,Arkansas,0.48
+Michigan St.,Iowa St.,0.31
+Michigan St.,Nevada,0.54
+Michigan St.,Florida St.,0.31
+Michigan St.,East Tennessee St.,0.59
+Michigan St.,SMU,0.3
+Michigan St.,Syracuse,0.52
+Michigan St.,Providence,0.55
+Michigan St.,Baylor,0.29
+Michigan St.,Iona,0.76
+Michigan St.,Minnesota,0.46
+Michigan St.,Seton Hall,0.52
+Michigan St.,Kentucky,0.22
+Michigan St.,Kent St.,0.79
+Arizona,North Dakota,0.93
+Arizona,Kansas,0.42
+Arizona,UC Davis,0.95
+Arizona,New Orleans,0.91
+Arizona,South Carolina,0.63
+Arizona,Dayton,0.66
+Arizona,Purdue,0.46
+Arizona,Wake Forest,0.63
+Arizona,Kansas St.,0.62
+Arizona,Butler,0.54
+Arizona,Bucknell,0.8
+Arizona,Wisconsin,0.49
+Arizona,Rhode Island,0.67
+Arizona,Notre Dame,0.54
+Arizona,Winthrop,0.87
+Arizona,Miami FL,0.62
+Arizona,Xavier,0.67
+Arizona,Oregon,0.47
+Arizona,South Dakota St.,0.92
+Arizona,North Carolina,0.37
+Arizona,Troy,0.89
+Arizona,Wichita St.,0.41
+Arizona,Arkansas,0.66
+Arizona,Iowa St.,0.49
+Arizona,Nevada,0.72
+Arizona,Florida St.,0.5
+Arizona,East Tennessee St.,0.76
+Arizona,SMU,0.46
+Arizona,Syracuse,0.69
+Arizona,Providence,0.72
+Arizona,Baylor,0.45
+Arizona,Iona,0.88
+Arizona,Minnesota,0.64
+Arizona,Seton Hall,0.7
+Arizona,Kentucky,0.4
+Arizona,Kent St.,0.9
+North Dakota,Kansas,0.04
+North Dakota,UC Davis,0.61
+North Dakota,New Orleans,0.5
+North Dakota,South Carolina,0.13
+North Dakota,Dayton,0.15
+North Dakota,Purdue,0.05
+North Dakota,Wake Forest,0.12
+North Dakota,Kansas St.,0.13
+North Dakota,Butler,0.09
+North Dakota,Bucknell,0.27
+North Dakota,Wisconsin,0.08
+North Dakota,Rhode Island,0.16
+North Dakota,Notre Dame,0.08
+North Dakota,Winthrop,0.37
+North Dakota,Miami FL,0.15
+North Dakota,Xavier,0.16
+North Dakota,Oregon,0.06
+North Dakota,South Dakota St.,0.52
+North Dakota,North Carolina,0.03
+North Dakota,Troy,0.43
+North Dakota,Wichita St.,0.04
+North Dakota,Arkansas,0.14
+North Dakota,Iowa St.,0.06
+North Dakota,Nevada,0.18
+North Dakota,Florida St.,0.06
+North Dakota,East Tennessee St.,0.22
+North Dakota,SMU,0.07
+North Dakota,Syracuse,0.18
+North Dakota,Providence,0.2
+North Dakota,Baylor,0.06
+North Dakota,Iona,0.38
+North Dakota,Minnesota,0.13
+North Dakota,Seton Hall,0.18
+North Dakota,Kentucky,0.03
+North Dakota,Kent St.,0.45
+Kansas,UC Davis,0.98
+Kansas,New Orleans,0.95
+Kansas,South Carolina,0.72
+Kansas,Dayton,0.74
+Kansas,Purdue,0.54
+Kansas,Wake Forest,0.71
+Kansas,Kansas St.,0.7
+Kansas,Butler,0.62
+Kansas,Bucknell,0.87
+Kansas,Wisconsin,0.56
+Kansas,Rhode Island,0.75
+Kansas,Notre Dame,0.62
+Kansas,Winthrop,0.92
+Kansas,Miami FL,0.7
+Kansas,Xavier,0.75
+Kansas,Oregon,0.55
+Kansas,South Dakota St.,0.96
+Kansas,North Carolina,0.44
+Kansas,Troy,0.93
+Kansas,Wichita St.,0.49
+Kansas,Arkansas,0.74
+Kansas,Iowa St.,0.57
+Kansas,Nevada,0.79
+Kansas,Florida St.,0.58
+Kansas,East Tennessee St.,0.83
+Kansas,SMU,0.54
+Kansas,Syracuse,0.76
+Kansas,Providence,0.79
+Kansas,Baylor,0.52
+Kansas,Iona,0.93
+Kansas,Minnesota,0.73
+Kansas,Seton Hall,0.77
+Kansas,Kentucky,0.48
+Kansas,Kent St.,0.94
+UC Davis,New Orleans,0.4
+UC Davis,South Carolina,0.09
+UC Davis,Dayton,0.1
+UC Davis,Purdue,0.03
+UC Davis,Wake Forest,0.08
+UC Davis,Kansas St.,0.09
+UC Davis,Butler,0.06
+UC Davis,Bucknell,0.19
+UC Davis,Wisconsin,0.05
+UC Davis,Rhode Island,0.11
+UC Davis,Notre Dame,0.06
+UC Davis,Winthrop,0.27
+UC Davis,Miami FL,0.1
+UC Davis,Xavier,0.11
+UC Davis,Oregon,0.04
+UC Davis,South Dakota St.,0.41
+UC Davis,North Carolina,0.02
+UC Davis,Troy,0.33
+UC Davis,Wichita St.,0.03
+UC Davis,Arkansas,0.09
+UC Davis,Iowa St.,0.04
+UC Davis,Nevada,0.12
+UC Davis,Florida St.,0.04
+UC Davis,East Tennessee St.,0.15
+UC Davis,SMU,0.04
+UC Davis,Syracuse,0.12
+UC Davis,Providence,0.14
+UC Davis,Baylor,0.04
+UC Davis,Iona,0.29
+UC Davis,Minnesota,0.09
+UC Davis,Seton Hall,0.12
+UC Davis,Kentucky,0.02
+UC Davis,Kent St.,0.34
+New Orleans,South Carolina,0.15
+New Orleans,Dayton,0.16
+New Orleans,Purdue,0.07
+New Orleans,Wake Forest,0.13
+New Orleans,Kansas St.,0.15
+New Orleans,Butler,0.11
+New Orleans,Bucknell,0.29
+New Orleans,Wisconsin,0.09
+New Orleans,Rhode Island,0.18
+New Orleans,Notre Dame,0.1
+New Orleans,Winthrop,0.37
+New Orleans,Miami FL,0.17
+New Orleans,Xavier,0.17
+New Orleans,Oregon,0.08
+New Orleans,South Dakota St.,0.52
+New Orleans,North Carolina,0.04
+New Orleans,Troy,0.43
+New Orleans,Wichita St.,0.05
+New Orleans,Arkansas,0.16
+New Orleans,Iowa St.,0.08
+New Orleans,Nevada,0.2
+New Orleans,Florida St.,0.07
+New Orleans,East Tennessee St.,0.23
+New Orleans,SMU,0.08
+New Orleans,Syracuse,0.19
+New Orleans,Providence,0.22
+New Orleans,Baylor,0.08
+New Orleans,Iona,0.39
+New Orleans,Minnesota,0.15
+New Orleans,Seton Hall,0.19
+New Orleans,Kentucky,0.04
+New Orleans,Kent St.,0.45
+South Carolina,Dayton,0.53
+South Carolina,Purdue,0.33
+South Carolina,Wake Forest,0.49
+South Carolina,Kansas St.,0.49
+South Carolina,Butler,0.41
+South Carolina,Bucknell,0.7
+South Carolina,Wisconsin,0.36
+South Carolina,Rhode Island,0.54
+South Carolina,Notre Dame,0.4
+South Carolina,Winthrop,0.79
+South Carolina,Miami FL,0.5
+South Carolina,Xavier,0.54
+South Carolina,Oregon,0.34
+South Carolina,South Dakota St.,0.87
+South Carolina,North Carolina,0.24
+South Carolina,Troy,0.82
+South Carolina,Wichita St.,0.28
+South Carolina,Arkansas,0.53
+South Carolina,Iowa St.,0.35
+South Carolina,Nevada,0.59
+South Carolina,Florida St.,0.35
+South Carolina,East Tennessee St.,0.64
+South Carolina,SMU,0.33
+South Carolina,Syracuse,0.56
+South Carolina,Providence,0.6
+South Carolina,Baylor,0.32
+South Carolina,Iona,0.8
+South Carolina,Minnesota,0.51
+South Carolina,Seton Hall,0.57
+South Carolina,Kentucky,0.26
+South Carolina,Kent St.,0.83
+Dayton,Purdue,0.3
+Dayton,Wake Forest,0.46
+Dayton,Kansas St.,0.45
+Dayton,Butler,0.38
+Dayton,Bucknell,0.67
+Dayton,Wisconsin,0.33
+Dayton,Rhode Island,0.51
+Dayton,Notre Dame,0.37
+Dayton,Winthrop,0.76
+Dayton,Miami FL,0.47
+Dayton,Xavier,0.51
+Dayton,Oregon,0.31
+Dayton,South Dakota St.,0.85
+Dayton,North Carolina,0.21
+Dayton,Troy,0.8
+Dayton,Wichita St.,0.25
+Dayton,Arkansas,0.49
+Dayton,Iowa St.,0.32
+Dayton,Nevada,0.56
+Dayton,Florida St.,0.32
+Dayton,East Tennessee St.,0.61
+Dayton,SMU,0.31
+Dayton,Syracuse,0.53
+Dayton,Providence,0.57
+Dayton,Baylor,0.29
+Dayton,Iona,0.77
+Dayton,Minnesota,0.48
+Dayton,Seton Hall,0.54
+Dayton,Kentucky,0.23
+Dayton,Kent St.,0.81
+Purdue,Wake Forest,0.67
+Purdue,Kansas St.,0.66
+Purdue,Butler,0.58
+Purdue,Bucknell,0.84
+Purdue,Wisconsin,0.52
+Purdue,Rhode Island,0.71
+Purdue,Notre Dame,0.58
+Purdue,Winthrop,0.9
+Purdue,Miami FL,0.66
+Purdue,Xavier,0.71
+Purdue,Oregon,0.51
+Purdue,South Dakota St.,0.94
+Purdue,North Carolina,0.4
+Purdue,Troy,0.91
+Purdue,Wichita St.,0.44
+Purdue,Arkansas,0.7
+Purdue,Iowa St.,0.53
+Purdue,Nevada,0.76
+Purdue,Florida St.,0.54
+Purdue,East Tennessee St.,0.8
+Purdue,SMU,0.5
+Purdue,Syracuse,0.73
+Purdue,Providence,0.76
+Purdue,Baylor,0.48
+Purdue,Iona,0.91
+Purdue,Minnesota,0.69
+Purdue,Seton Hall,0.74
+Purdue,Kentucky,0.43
+Purdue,Kent St.,0.92
+Wake Forest,Kansas St.,0.49
+Wake Forest,Butler,0.41
+Wake Forest,Bucknell,0.71
+Wake Forest,Wisconsin,0.36
+Wake Forest,Rhode Island,0.55
+Wake Forest,Notre Dame,0.41
+Wake Forest,Winthrop,0.8
+Wake Forest,Miami FL,0.51
+Wake Forest,Xavier,0.55
+Wake Forest,Oregon,0.34
+Wake Forest,South Dakota St.,0.88
+Wake Forest,North Carolina,0.24
+Wake Forest,Troy,0.83
+Wake Forest,Wichita St.,0.28
+Wake Forest,Arkansas,0.53
+Wake Forest,Iowa St.,0.36
+Wake Forest,Nevada,0.6
+Wake Forest,Florida St.,0.36
+Wake Forest,East Tennessee St.,0.65
+Wake Forest,SMU,0.34
+Wake Forest,Syracuse,0.57
+Wake Forest,Providence,0.61
+Wake Forest,Baylor,0.32
+Wake Forest,Iona,0.81
+Wake Forest,Minnesota,0.52
+Wake Forest,Seton Hall,0.58
+Wake Forest,Kentucky,0.26
+Wake Forest,Kent St.,0.84
+Kansas St.,Butler,0.42
+Kansas St.,Bucknell,0.71
+Kansas St.,Wisconsin,0.38
+Kansas St.,Rhode Island,0.55
+Kansas St.,Notre Dame,0.42
+Kansas St.,Winthrop,0.79
+Kansas St.,Miami FL,0.51
+Kansas St.,Xavier,0.55
+Kansas St.,Oregon,0.36
+Kansas St.,South Dakota St.,0.87
+Kansas St.,North Carolina,0.26
+Kansas St.,Troy,0.82
+Kansas St.,Wichita St.,0.3
+Kansas St.,Arkansas,0.54
+Kansas St.,Iowa St.,0.37
+Kansas St.,Nevada,0.6
+Kansas St.,Florida St.,0.37
+Kansas St.,East Tennessee St.,0.65
+Kansas St.,SMU,0.35
+Kansas St.,Syracuse,0.58
+Kansas St.,Providence,0.61
+Kansas St.,Baylor,0.34
+Kansas St.,Iona,0.8
+Kansas St.,Minnesota,0.52
+Kansas St.,Seton Hall,0.58
+Kansas St.,Kentucky,0.28
+Kansas St.,Kent St.,0.83
+Butler,Bucknell,0.77
+Butler,Wisconsin,0.45
+Butler,Rhode Island,0.63
+Butler,Notre Dame,0.5
+Butler,Winthrop,0.84
+Butler,Miami FL,0.58
+Butler,Xavier,0.63
+Butler,Oregon,0.43
+Butler,South Dakota St.,0.9
+Butler,North Carolina,0.33
+Butler,Troy,0.86
+Butler,Wichita St.,0.37
+Butler,Arkansas,0.62
+Butler,Iowa St.,0.45
+Butler,Nevada,0.68
+Butler,Florida St.,0.45
+Butler,East Tennessee St.,0.72
+Butler,SMU,0.42
+Butler,Syracuse,0.65
+Butler,Providence,0.68
+Butler,Baylor,0.41
+Butler,Iona,0.85
+Butler,Minnesota,0.6
+Butler,Seton Hall,0.66
+Butler,Kentucky,0.35
+Butler,Kent St.,0.87
+Bucknell,Wisconsin,0.2
+Bucknell,Rhode Island,0.34
+Bucknell,Notre Dame,0.22
+Bucknell,Winthrop,0.61
+Bucknell,Miami FL,0.31
+Bucknell,Xavier,0.34
+Bucknell,Oregon,0.17
+Bucknell,South Dakota St.,0.73
+Bucknell,North Carolina,0.1
+Bucknell,Troy,0.65
+Bucknell,Wichita St.,0.13
+Bucknell,Arkansas,0.32
+Bucknell,Iowa St.,0.18
+Bucknell,Nevada,0.38
+Bucknell,Florida St.,0.18
+Bucknell,East Tennessee St.,0.43
+Bucknell,SMU,0.18
+Bucknell,Syracuse,0.36
+Bucknell,Providence,0.4
+Bucknell,Baylor,0.17
+Bucknell,Iona,0.62
+Bucknell,Minnesota,0.31
+Bucknell,Seton Hall,0.37
+Bucknell,Kentucky,0.11
+Bucknell,Kent St.,0.67
+Wisconsin,Rhode Island,0.67
+Wisconsin,Notre Dame,0.55
+Wisconsin,Winthrop,0.87
+Wisconsin,Miami FL,0.63
+Wisconsin,Xavier,0.67
+Wisconsin,Oregon,0.49
+Wisconsin,South Dakota St.,0.92
+Wisconsin,North Carolina,0.39
+Wisconsin,Troy,0.88
+Wisconsin,Wichita St.,0.43
+Wisconsin,Arkansas,0.66
+Wisconsin,Iowa St.,0.5
+Wisconsin,Nevada,0.72
+Wisconsin,Florida St.,0.51
+Wisconsin,East Tennessee St.,0.76
+Wisconsin,SMU,0.47
+Wisconsin,Syracuse,0.69
+Wisconsin,Providence,0.72
+Wisconsin,Baylor,0.46
+Wisconsin,Iona,0.87
+Wisconsin,Minnesota,0.65
+Wisconsin,Seton Hall,0.7
+Wisconsin,Kentucky,0.41
+Wisconsin,Kent St.,0.89
+Rhode Island,Notre Dame,0.36
+Rhode Island,Winthrop,0.75
+Rhode Island,Miami FL,0.46
+Rhode Island,Xavier,0.5
+Rhode Island,Oregon,0.31
+Rhode Island,South Dakota St.,0.84
+Rhode Island,North Carolina,0.21
+Rhode Island,Troy,0.78
+Rhode Island,Wichita St.,0.25
+Rhode Island,Arkansas,0.48
+Rhode Island,Iowa St.,0.32
+Rhode Island,Nevada,0.55
+Rhode Island,Florida St.,0.32
+Rhode Island,East Tennessee St.,0.6
+Rhode Island,SMU,0.3
+Rhode Island,Syracuse,0.52
+Rhode Island,Providence,0.56
+Rhode Island,Baylor,0.29
+Rhode Island,Iona,0.76
+Rhode Island,Minnesota,0.47
+Rhode Island,Seton Hall,0.53
+Rhode Island,Kentucky,0.23
+Rhode Island,Kent St.,0.79
+Notre Dame,Winthrop,0.85
+Notre Dame,Miami FL,0.59
+Notre Dame,Xavier,0.63
+Notre Dame,Oregon,0.44
+Notre Dame,South Dakota St.,0.91
+Notre Dame,North Carolina,0.33
+Notre Dame,Troy,0.87
+Notre Dame,Wichita St.,0.37
+Notre Dame,Arkansas,0.62
+Notre Dame,Iowa St.,0.45
+Notre Dame,Nevada,0.69
+Notre Dame,Florida St.,0.46
+Notre Dame,East Tennessee St.,0.73
+Notre Dame,SMU,0.43
+Notre Dame,Syracuse,0.66
+Notre Dame,Providence,0.69
+Notre Dame,Baylor,0.41
+Notre Dame,Iona,0.86
+Notre Dame,Minnesota,0.61
+Notre Dame,Seton Hall,0.67
+Notre Dame,Kentucky,0.35
+Notre Dame,Kent St.,0.88
+Winthrop,Miami FL,0.23
+Winthrop,Xavier,0.25
+Winthrop,Oregon,0.11
+Winthrop,South Dakota St.,0.65
+Winthrop,North Carolina,0.06
+Winthrop,Troy,0.56
+Winthrop,Wichita St.,0.08
+Winthrop,Arkansas,0.23
+Winthrop,Iowa St.,0.12
+Winthrop,Nevada,0.28
+Winthrop,Florida St.,0.11
+Winthrop,East Tennessee St.,0.33
+Winthrop,SMU,0.12
+Winthrop,Syracuse,0.27
+Winthrop,Providence,0.3
+Winthrop,Baylor,0.11
+Winthrop,Iona,0.52
+Winthrop,Minnesota,0.22
+Winthrop,Seton Hall,0.27
+Winthrop,Kentucky,0.06
+Winthrop,Kent St.,0.57
+Miami FL,Xavier,0.54
+Miami FL,Oregon,0.35
+Miami FL,South Dakota St.,0.85
+Miami FL,North Carolina,0.26
+Miami FL,Troy,0.8
+Miami FL,Wichita St.,0.29
+Miami FL,Arkansas,0.52
+Miami FL,Iowa St.,0.36
+Miami FL,Nevada,0.59
+Miami FL,Florida St.,0.36
+Miami FL,East Tennessee St.,0.63
+Miami FL,SMU,0.35
+Miami FL,Syracuse,0.56
+Miami FL,Providence,0.59
+Miami FL,Baylor,0.33
+Miami FL,Iona,0.78
+Miami FL,Minnesota,0.51
+Miami FL,Seton Hall,0.57
+Miami FL,Kentucky,0.27
+Miami FL,Kent St.,0.81
+Xavier,Oregon,0.31
+Xavier,South Dakota St.,0.84
+Xavier,North Carolina,0.21
+Xavier,Troy,0.79
+Xavier,Wichita St.,0.25
+Xavier,Arkansas,0.49
+Xavier,Iowa St.,0.32
+Xavier,Nevada,0.55
+Xavier,Florida St.,0.32
+Xavier,East Tennessee St.,0.6
+Xavier,SMU,0.3
+Xavier,Syracuse,0.53
+Xavier,Providence,0.56
+Xavier,Baylor,0.29
+Xavier,Iona,0.76
+Xavier,Minnesota,0.47
+Xavier,Seton Hall,0.53
+Xavier,Kentucky,0.23
+Xavier,Kent St.,0.8
+Oregon,South Dakota St.,0.93
+Oregon,North Carolina,0.4
+Oregon,Troy,0.9
+Oregon,Wichita St.,0.44
+Oregon,Arkansas,0.69
+Oregon,Iowa St.,0.52
+Oregon,Nevada,0.74
+Oregon,Florida St.,0.53
+Oregon,East Tennessee St.,0.78
+Oregon,SMU,0.49
+Oregon,Syracuse,0.71
+Oregon,Providence,0.74
+Oregon,Baylor,0.47
+Oregon,Iona,0.89
+Oregon,Minnesota,0.67
+Oregon,Seton Hall,0.72
+Oregon,Kentucky,0.42
+Oregon,Kent St.,0.91
+South Dakota St.,North Carolina,0.03
+South Dakota St.,Troy,0.41
+South Dakota St.,Wichita St.,0.04
+South Dakota St.,Arkansas,0.14
+South Dakota St.,Iowa St.,0.07
+South Dakota St.,Nevada,0.18
+South Dakota St.,Florida St.,0.06
+South Dakota St.,East Tennessee St.,0.21
+South Dakota St.,SMU,0.07
+South Dakota St.,Syracuse,0.18
+South Dakota St.,Providence,0.2
+South Dakota St.,Baylor,0.07
+South Dakota St.,Iona,0.37
+South Dakota St.,Minnesota,0.13
+South Dakota St.,Seton Hall,0.18
+South Dakota St.,Kentucky,0.03
+South Dakota St.,Kent St.,0.43
+North Carolina,Troy,0.95
+North Carolina,Wichita St.,0.54
+North Carolina,Arkansas,0.78
+North Carolina,Iowa St.,0.62
+North Carolina,Nevada,0.83
+North Carolina,Florida St.,0.64
+North Carolina,East Tennessee St.,0.86
+North Carolina,SMU,0.59
+North Carolina,Syracuse,0.8
+North Carolina,Providence,0.83
+North Carolina,Baylor,0.57
+North Carolina,Iona,0.94
+North Carolina,Minnesota,0.77
+North Carolina,Seton Hall,0.81
+North Carolina,Kentucky,0.53
+North Carolina,Kent St.,0.95
+Troy,Wichita St.,0.07
+Troy,Arkansas,0.2
+Troy,Iowa St.,0.1
+Troy,Nevada,0.25
+Troy,Florida St.,0.09
+Troy,East Tennessee St.,0.28
+Troy,SMU,0.1
+Troy,Syracuse,0.24
+Troy,Providence,0.26
+Troy,Baylor,0.1
+Troy,Iona,0.46
+Troy,Minnesota,0.19
+Troy,Seton Hall,0.24
+Troy,Kentucky,0.05
+Troy,Kent St.,0.52
+Wichita St.,Arkansas,0.75
+Wichita St.,Iowa St.,0.58
+Wichita St.,Nevada,0.8
+Wichita St.,Florida St.,0.59
+Wichita St.,East Tennessee St.,0.83
+Wichita St.,SMU,0.55
+Wichita St.,Syracuse,0.77
+Wichita St.,Providence,0.79
+Wichita St.,Baylor,0.53
+Wichita St.,Iona,0.93
+Wichita St.,Minnesota,0.73
+Wichita St.,Seton Hall,0.78
+Wichita St.,Kentucky,0.49
+Wichita St.,Kent St.,0.94
+Arkansas,Iowa St.,0.33
+Arkansas,Nevada,0.57
+Arkansas,Florida St.,0.33
+Arkansas,East Tennessee St.,0.62
+Arkansas,SMU,0.31
+Arkansas,Syracuse,0.54
+Arkansas,Providence,0.58
+Arkansas,Baylor,0.3
+Arkansas,Iona,0.78
+Arkansas,Minnesota,0.48
+Arkansas,Seton Hall,0.55
+Arkansas,Kentucky,0.23
+Arkansas,Kent St.,0.82
+Iowa St.,Nevada,0.73
+Iowa St.,Florida St.,0.51
+Iowa St.,East Tennessee St.,0.77
+Iowa St.,SMU,0.47
+Iowa St.,Syracuse,0.7
+Iowa St.,Providence,0.73
+Iowa St.,Baylor,0.45
+Iowa St.,Iona,0.89
+Iowa St.,Minnesota,0.66
+Iowa St.,Seton Hall,0.71
+Iowa St.,Kentucky,0.4
+Iowa St.,Kent St.,0.91
+Nevada,Florida St.,0.27
+Nevada,East Tennessee St.,0.55
+Nevada,SMU,0.26
+Nevada,Syracuse,0.48
+Nevada,Providence,0.51
+Nevada,Baylor,0.24
+Nevada,Iona,0.73
+Nevada,Minnesota,0.42
+Nevada,Seton Hall,0.48
+Nevada,Kentucky,0.18
+Nevada,Kent St.,0.77
+Florida St.,East Tennessee St.,0.77
+Florida St.,SMU,0.46
+Florida St.,Syracuse,0.7
+Florida St.,Providence,0.73
+Florida St.,Baylor,0.45
+Florida St.,Iona,0.89
+Florida St.,Minnesota,0.66
+Florida St.,Seton Hall,0.71
+Florida St.,Kentucky,0.39
+Florida St.,Kent St.,0.91
+East Tennessee St.,SMU,0.22
+East Tennessee St.,Syracuse,0.43
+East Tennessee St.,Providence,0.46
+East Tennessee St.,Baylor,0.21
+East Tennessee St.,Iona,0.69
+East Tennessee St.,Minnesota,0.37
+East Tennessee St.,Seton Hall,0.44
+East Tennessee St.,Kentucky,0.15
+East Tennessee St.,Kent St.,0.73
+SMU,Syracuse,0.71
+SMU,Providence,0.74
+SMU,Baylor,0.49
+SMU,Iona,0.89
+SMU,Minnesota,0.68
+SMU,Seton Hall,0.72
+SMU,Kentucky,0.44
+SMU,Kent St.,0.91
+Syracuse,Providence,0.53
+Syracuse,Baylor,0.27
+Syracuse,Iona,0.74
+Syracuse,Minnesota,0.44
+Syracuse,Seton Hall,0.51
+Syracuse,Kentucky,0.21
+Syracuse,Kent St.,0.78
+Providence,Baylor,0.25
+Providence,Iona,0.71
+Providence,Minnesota,0.41
+Providence,Seton Hall,0.47
+Providence,Kentucky,0.18
+Providence,Kent St.,0.75
+Baylor,Iona,0.9
+Baylor,Minnesota,0.69
+Baylor,Seton Hall,0.73
+Baylor,Kentucky,0.46
+Baylor,Kent St.,0.91
+Iona,Minnesota,0.21
+Iona,Seton Hall,0.26
+Iona,Kentucky,0.06
+Iona,Kent St.,0.56
+Minnesota,Seton Hall,0.56
+Minnesota,Kentucky,0.25
+Minnesota,Kent St.,0.83
+Seton Hall,Kentucky,0.2
+Seton Hall,Kent St.,0.77
+Kentucky,Kent St.,0.95

@@ -142,7 +142,16 @@ if __name__ == '__main__':
     parser.add_argument('bracket_file')
     parser.add_argument('ratings_file', nargs='?', default=None)
     parser.add_argument('--overrides')
+    parser.add_argument('--sort', action='store', default='name')
     args = parser.parse_args()
+
+    if args.sort == 'name':
+        sorter = lambda g: g[0]
+    elif args.sort == 'score':
+        sorter = lambda g: -1 * g[1]
+    else:
+        sys.stderr.write('invalid sort type\n')
+        exit(1)
 
     if args.ratings_file:
         with open(args.ratings_file, 'r') as ratings_file:
@@ -158,7 +167,7 @@ if __name__ == '__main__':
 
     team_scores = calculate_scores(games, overrides)
 
-    for team, win_prob in sorted(team_scores.iteritems(), key=lambda g: g[0]):
+    for team, win_prob in sorted(team_scores.iteritems(), key=sorter):
         print ','.join((team, str(round(win_prob, 3))))
 
     assert total_overrides == 0
