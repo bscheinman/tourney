@@ -52,11 +52,14 @@ def get_ratings(out_file):
     ratings = ratings.tbody
     for row in ratings.find_all('tr'):
         columns = row.find_all('td')
-        if not columns:
+        data_columns = row.find_all('td', {'class': 'td-left'})
+        if not columns or not data_columns or len(data_columns) < 3:
             continue
         team_name = columns[1].a.string
-        team_rating = columns[4].string
-        out_file.write('{0}|{1}\n'.format(team_name, team_rating))
+        offense = data_columns[0].string
+        defense = data_columns[1].string
+        tempo = data_columns[2].string
+        out_file.write('{0}\n'.format('|'.join((team_name, offense, defense, tempo))))
 
 def get_pairwise_prob(a, b):
     html = urllib2.urlopen(GAMEPREDICT_URL.format(urllib2.quote(a), urllib2.quote(b))).read()

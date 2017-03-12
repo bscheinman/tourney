@@ -1,21 +1,35 @@
 #!/usr/bin/python
 
 import argparse
-import collections
+from collections import defaultdict
 import csv
 from decimal import Decimal
+from scipy.stats import norm
 import sys
 
 DEBUG_PRINT = False
 #DEBUG_PRINT = True
 ROUND_POINTS = [1, 1, 2, 2, 2, 3]
 
+AVG_SCORING = Decimal('104.6')
+AVG_TEMPO = Decimal('67.7')
+SCORING_STDDEV = Decimal('11.0')
+
 total_overrides = 0
 
 class Team:
-    def __init__(self, name, rating=None):
+    def __init__(self, name, ratings=None):
         self.name = name
-        self.rating = Decimal(rating) if rating is not None else None
+        if ratings is None:
+            self.offense = None
+            self.defense = None
+            self.tempo = None
+        else:
+            self.offense, self.defense, self.tempo = tuple(map(Decimal, ratings))
+            self.offense = (self.offense / AVG_SCORING) - 1
+            self.defense = (self.defense / AVG_SCORING) - 1
+            if DEBUG_PRINT:
+                print '\t\t'.join(map(str, (self.name, self.offense, self.defense, self.tempo)))
 
 class OverridesMap:
     _overrides = {}
@@ -57,13 +71,16 @@ class OverridesMap:
         return override
 
 def read_ratings_file(in_file):
-    ratings = {}
+    all_ratings = {}
     for line in in_file:
-        team, rating = tuple(field.strip() for field in line.split('|'))
-        ratings[team] = rating
-    return ratings
+        fields = line.strip().split('|')
+        team = fields[0]
+        ratings = fields[1:]
+        all_ratings[team] = ratings
+    return all_ratings
 
-
+# based on old kenpom pythag ratings
+'''
 def calculate_win_prob(team1, team2, overrides=None):
     if overrides:
         override = overrides.get_override(team1.name, team2.name)
@@ -71,7 +88,39 @@ def calculate_win_prob(team1, team2, overrides=None):
             return override
     win1, win2 = team1.rating, team2.rating
     return (win1 * (1 - win2)) / ((win1 * (1 - win2)) + ((1 - win1) * win2))
+'''
 
+def calculate_win_prob(team1, team2, overrides=None):
+    if overrides:
+        override = overrides.get_override(team1.name, team2.name)
+        if override is not None:
+            return override
+
+    if DEBUG_PRINT:
+        print 'scoring {0}-{1}'.format(team1.name, team2.name)
+
+    # number of expected possessions per team
+    tempo = (team1.tempo * team2.tempo) / AVG_TEMPO
+
+    # teams' points per possession, as percentage of national average
+    team1_scoring = 1 + team1.offense + team2.defense
+    team2_scoring = 1 + team2.offense + team1.defense
+
+    # teams' actual points per possession
+    team1_ppp = team1_scoring * (AVG_SCORING / 100)
+    team2_ppp = team2_scoring * (AVG_SCORING / 100)
+
+    # expected point differential is difference in per-possession scoring
+    # times expected number of possesions per team
+    team1_score = team1_ppp * tempo
+    team2_score = team2_ppp * tempo
+    point_diff = team1_score - team2_score
+
+    if DEBUG_PRINT:
+        print 'expected score {0}-{1}'.format(team1_score, team2_score)
+    
+    # find probability that actual point diff will be positive
+    return Decimal(norm.cdf(float(point_diff / SCORING_STDDEV)))
 
 def read_games_from_file(filepath, ratings, overrides=None):
     games = []
@@ -81,11 +130,11 @@ def read_games_from_file(filepath, ratings, overrides=None):
             if not len(row):
                 continue
             if len(row) == 1:
-                team = Team(name=row[0], rating=ratings[row[0]])
+                team = Team(name=row[0], ratings=ratings[row[0]])
                 games.append({team: Decimal(1)})
             elif len(row) == 2:
-                team1 = Team(name=row[0], rating=ratings[row[0]])
-                team2 = Team(name=row[1], rating=ratings[row[1]])
+                team1 = Team(name=row[0], ratings=ratings[row[0]])
+                team2 = Team(name=row[1], ratings=ratings[row[1]])
                 win_prob = calculate_win_prob(team1, team2, overrides)
                 games.append({team1: win_prob, team2: 1 - win_prob})
             else:
@@ -97,7 +146,7 @@ def read_games_from_file(filepath, ratings, overrides=None):
 def calculate_scores(bracket, overrides=None):
     tourney_round = 0
     games = list(bracket)
-    total_scores = collections.defaultdict(lambda: Decimal(0))
+    total_scores = defaultdict(lambda: Decimal(0))
     while len(games) > 1:
         new_games = []
         for i in xrange(len(games) / 2):
@@ -157,7 +206,7 @@ if __name__ == '__main__':
         with open(args.ratings_file, 'r') as ratings_file:
             ratings = read_ratings_file(ratings_file)
     else:
-        ratings = collections.defaultdict(lambda: None)
+        ratings = defaultdict(lambda: None)
 
     overrides = None
     if args.overrides:

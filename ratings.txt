@@ -1,0 +1,351 @@
+Gonzaga|120.7|87.6|69.8
+Villanova|122.8|92.0|63.8
+North Carolina|122.1|94.1|70.4
+Kentucky|119.2|91.9|72.5
+West Virginia|116.5|89.7|69.6
+Louisville|117.1|90.4|67.7
+Virginia|113.7|87.0|58.6
+Wichita St.|119.6|93.2|68.4
+Florida|115.9|89.5|68.6
+Kansas|120.8|94.8|70.0
+Duke|121.0|95.9|67.7
+Baylor|117.3|92.3|62.8
+Saint Mary's|119.0|94.3|59.1
+SMU|119.6|95.3|63.3
+Purdue|116.9|92.7|68.7
+Oregon|117.7|93.9|66.5
+Wisconsin|114.1|90.9|63.0
+Cincinnati|114.7|91.5|63.5
+Iowa St.|119.6|96.4|67.9
+UCLA|122.7|99.8|72.9
+Florida St.|116.7|94.0|70.5
+Arizona|117.5|94.8|65.5
+Oklahoma St.|124.8|102.7|70.0
+Michigan|121.3|99.5|62.5
+Notre Dame|118.9|97.8|66.9
+Butler|118.0|97.0|65.1
+Creighton|115.7|96.0|70.6
+Marquette|121.0|103.4|69.7
+Kansas St.|112.0|94.5|65.9
+Wake Forest|120.9|103.6|70.2
+South Carolina|105.5|88.5|67.9
+Miami FL|110.4|93.4|62.8
+Minnesota|109.6|93.0|69.1
+Vanderbilt|112.3|96.1|65.3
+Clemson|115.9|100.0|66.0
+Dayton|112.3|96.6|68.3
+Rhode Island|110.7|95.0|65.9
+Arkansas|116.6|101.0|69.1
+Northwestern|111.2|95.7|64.9
+Xavier|114.8|99.5|66.9
+TCU|113.2|97.9|66.6
+Indiana|116.6|101.5|68.0
+Michigan St.|110.6|95.6|66.5
+Virginia Tech|117.4|102.5|68.1
+Maryland|113.6|98.7|66.8
+Texas Tech|112.5|97.8|63.4
+Utah|114.2|99.5|68.2
+Middle Tennessee|111.6|97.0|64.0
+Houston|114.0|99.5|64.7
+Syracuse|115.9|101.5|66.1
+Illinois St.|106.6|92.3|64.4
+VCU|110.0|95.7|67.9
+Seton Hall|109.9|95.9|67.0
+Alabama|105.4|91.9|64.7
+Nevada|114.5|101.2|69.4
+Providence|108.1|95.2|66.1
+Georgia|108.7|95.9|66.7
+California|104.8|92.1|65.1
+Princeton|109.4|96.9|62.9
+UNC Wilmington|117.8|105.4|69.9
+USC|112.5|100.2|68.6
+Tennessee|109.8|97.7|69.0
+Vermont|110.8|98.9|64.1
+East Tennessee St.|108.0|96.5|69.8
+Oklahoma|107.3|96.2|69.6
+Texas A&M;|108.5|97.5|64.1
+Georgetown|108.6|97.6|68.3
+UCF|103.8|92.8|65.3
+Iowa|112.4|101.8|71.0
+Illinois|107.5|97.0|65.9
+Ohio St.|111.3|100.9|67.6
+Colorado|112.0|101.8|67.4
+Texas|104.1|94.0|67.2
+BYU|109.1|99.4|75.1
+Pittsburgh|112.8|103.2|65.1
+UT Arlington|109.8|100.3|69.7
+Mississippi|110.1|100.8|71.2
+San Diego St.|103.9|95.0|64.6
+Monmouth|108.9|100.1|72.1
+Bucknell|109.1|100.3|69.4
+Colorado St.|108.3|99.8|65.9
+Georgia Tech|99.0|90.6|67.6
+Auburn|111.7|103.4|73.2
+Davidson|108.5|100.7|68.1
+Belmont|110.5|102.9|67.7
+College of Charleston|105.9|98.4|63.9
+Penn St.|104.6|97.1|70.1
+New Mexico St.|110.0|102.7|67.3
+St. Bonaventure|109.0|101.7|68.4
+Richmond|108.8|101.7|68.8
+Louisiana Tech|107.9|100.9|68.2
+Mississippi St.|106.4|99.6|68.6
+Connecticut|105.3|98.6|64.7
+St. John's|109.1|102.6|72.9
+Loyola Chicago|108.9|102.4|65.4
+Boise St.|109.7|103.2|69.0
+Valparaiso|106.7|100.3|66.6
+Memphis|107.0|101.0|68.0
+Akron|112.9|107.0|65.3
+Fresno St.|104.9|99.0|68.0
+Stanford|104.8|99.0|68.1
+UNC Asheville|107.6|101.9|67.7
+Ohio|105.5|99.9|70.0
+North Carolina St.|112.9|107.2|70.0
+San Francisco|103.3|97.9|68.4
+Furman|107.3|102.0|65.2
+Nebraska|105.0|99.9|67.7
+Florida Gulf Coast|109.5|104.5|65.0
+Oakland|103.7|98.8|71.7
+Saint Peter's|102.6|97.8|60.4
+Harvard|106.7|101.9|66.7
+Winthrop|106.5|101.8|70.7
+Chattanooga|106.7|102.1|65.1
+George Mason|108.6|104.0|68.2
+Cal St. Bakersfield|98.0|93.5|66.1
+Towson|105.5|101.1|67.6
+Temple|108.4|104.2|66.7
+Iona|110.2|106.2|70.3
+Lehigh|107.2|103.4|69.3
+UNC Greensboro|107.8|104.1|66.2
+Old Dominion|100.7|97.2|60.7
+Georgia St.|104.6|101.1|67.9
+Arkansas St.|106.4|103.2|66.9
+New Mexico|106.4|103.1|68.5
+George Washington|108.3|105.1|65.3
+Santa Clara|105.5|102.4|62.3
+Albany|107.7|104.6|63.8
+Buffalo|105.3|102.2|71.0
+Toledo|108.7|106.0|66.2
+Arizona St.|111.8|109.2|69.6
+Troy|110.3|107.9|67.8
+William & Mary|112.0|109.7|70.6
+Rutgers|101.5|99.2|65.9
+Missouri St.|108.3|106.0|65.7
+Elon|104.3|102.1|67.4
+Utah St.|106.7|104.5|66.2
+La Salle|110.6|108.7|68.3
+UC Irvine|101.0|99.1|66.1
+Wofford|110.0|108.2|66.5
+Mercer|109.7|107.9|61.4
+Kent St.|104.4|102.7|68.0
+Louisiana Lafayette|111.2|109.5|71.9
+Tulsa|104.5|102.8|67.8
+South Dakota|103.8|102.2|70.4
+Fort Wayne|109.6|108.1|71.0
+Northern Kentucky|106.6|105.3|67.6
+Wyoming|103.4|102.0|73.2
+Eastern Michigan|106.0|104.8|67.8
+Marshall|110.8|109.6|77.3
+Southern Illinois|104.8|103.7|65.0
+Yale|106.1|105.0|67.8
+North Carolina Central|102.9|101.9|66.1
+Samford|108.3|107.3|68.4
+Rice|107.9|107.0|72.0
+Evansville|104.1|103.2|66.4
+Massachusetts|100.7|99.9|71.5
+Northeastern|107.1|106.4|65.7
+Jacksonville St.|105.4|104.8|63.3
+Tennessee St.|100.3|99.7|66.6
+Boston College|104.3|103.9|70.8
+Lipscomb|107.2|106.8|73.9
+Western Michigan|107.0|106.7|67.5
+Missouri|101.3|101.1|67.7
+Grand Canyon|101.3|101.0|68.6
+North Dakota St.|104.5|104.3|66.4
+Texas St.|103.2|103.1|61.7
+Wright St.|106.5|106.4|68.7
+Loyola Marymount|103.1|103.2|66.9
+Northern Iowa|97.5|97.5|63.1
+Washington|107.7|107.7|70.6
+Penn|102.5|102.6|66.3
+Georgia Southern|106.5|106.7|68.4
+North Dakota|102.9|103.2|71.1
+Siena|106.1|106.4|68.4
+Nebraska Omaha|108.5|108.9|73.4
+Ball St.|104.8|105.2|70.6
+LSU|109.4|109.9|71.6
+New Orleans|100.8|101.3|65.9
+New Hampshire|102.4|103.1|65.1
+Gardner Webb|102.7|103.4|70.4
+Weber St.|108.3|109.0|66.2
+Saint Joseph's|102.2|103.2|68.0
+DePaul|103.5|104.5|67.3
+East Carolina|97.1|98.3|66.5
+Green Bay|101.9|103.2|73.8
+Hofstra|111.1|112.4|67.2
+South Dakota St.|110.8|112.1|66.8
+Eastern Washington|108.7|110.1|66.5
+Denver|107.5|109.1|66.4
+Utah Valley|100.2|101.7|73.1
+Canisius|108.3|109.9|69.3
+Washington St.|104.4|106.4|67.2
+Boston University|101.3|103.4|69.3
+UMBC|108.3|110.6|70.2
+Montana|106.0|108.4|66.3
+UAB|103.8|106.3|65.7
+Murray St.|107.1|109.8|68.3
+Indiana St.|99.5|102.2|69.3
+IUPUI|106.9|109.7|68.9
+Coastal Carolina|102.5|105.3|67.6
+Fordham|96.9|99.8|63.9
+UTEP|99.7|102.7|65.9
+Morehead St.|106.7|109.8|68.2
+Texas A&M; Corpus Chris|103.0|106.2|67.6
+Northern Illinois|98.9|102.4|66.4
+Fairfield|99.3|102.8|68.7
+Texas Southern|103.6|107.3|68.2
+Navy|99.6|103.4|63.9
+Tennessee Martin|106.9|110.8|67.0
+Rider|100.7|104.6|71.9
+Liberty|99.4|103.3|62.4
+Stony Brook|102.0|105.9|65.5
+Houston Baptist|104.8|109.1|69.7
+Mount St. Mary's|98.9|103.2|66.6
+Bradley|98.4|102.7|67.2
+San Jose St.|100.2|104.5|70.3
+Holy Cross|98.5|103.1|60.0
+UC Davis|97.9|102.6|68.3
+Eastern Illinois|100.0|104.9|68.3
+James Madison|98.9|104.0|63.6
+Duquesne|101.9|107.1|69.7
+Idaho|101.2|106.6|66.2
+UMKC|102.5|107.8|70.6
+Air Force|104.2|109.6|66.7
+Stephen F. Austin|96.8|102.3|66.1
+Lamar|103.3|108.8|67.6
+Long Beach St.|104.6|110.2|69.3
+USC Upstate|105.3|111.2|67.7
+Southeast Missouri St.|103.3|109.3|68.2
+Central Michigan|111.5|117.6|75.0
+Southeastern Louisiana|97.8|103.8|66.8
+Columbia|101.0|107.2|68.6
+Western Kentucky|102.9|109.1|65.5
+Sam Houston St.|97.2|103.4|69.8
+Charlotte|103.1|109.4|72.4
+Oral Roberts|104.4|110.7|68.7
+South Alabama|98.9|105.2|69.4
+Tulane|102.6|109.0|70.1
+Army|98.4|104.8|71.0
+Little Rock|98.2|104.8|62.9
+Pacific|99.6|106.3|66.1
+Montana St.|103.0|109.7|68.9
+Cleveland St.|96.4|103.2|65.0
+Portland St.|104.2|111.1|72.3
+Illinois Chicago|100.9|107.8|71.4
+Wagner|101.0|108.1|62.6
+Drexel|102.9|110.0|70.0
+Bowling Green|100.0|107.2|69.6
+UNLV|98.1|105.4|68.0
+Kennesaw St.|102.6|109.9|69.1
+Loyola MD|98.6|105.9|65.2
+UTSA|95.1|102.6|67.7
+North Florida|101.8|109.4|69.6
+LIU Brooklyn|100.1|107.7|66.7
+St. Francis PA|102.0|110.0|69.7
+San Diego|100.2|108.3|63.0
+Tennessee Tech|98.9|107.0|67.9
+Niagara|101.2|109.4|68.7
+Louisiana Monroe|98.3|106.5|64.7
+Drake|103.0|111.2|69.1
+Milwaukee|99.8|108.4|62.2
+Cal St. Fullerton|97.0|105.5|68.2
+Cornell|99.7|108.4|69.3
+Oregon St.|97.0|105.9|64.1
+Robert Morris|91.6|100.5|68.4
+Fairleigh Dickinson|102.9|111.9|68.7
+Hawaii|96.9|106.0|66.8
+Appalachian St.|99.6|108.7|70.2
+Colgate|98.5|107.6|64.7
+High Point|98.9|108.1|65.3
+Jacksonville|102.6|111.8|67.4
+Florida Atlantic|98.6|107.9|68.5
+Saint Louis|95.4|104.8|63.1
+Eastern Kentucky|98.4|107.8|67.2
+Seattle|95.6|105.2|67.3
+FIU|102.9|112.5|64.6
+Brown|104.1|113.9|70.9
+Portland|98.8|108.7|65.5
+Miami OH|95.8|105.9|68.2
+Alcorn St.|95.4|105.8|67.4
+Bryant|101.7|112.0|68.8
+NJIT|98.7|109.1|67.3
+Youngstown St.|102.5|113.0|71.4
+Northern Colorado|96.5|107.1|68.1
+Cal St. Northridge|103.9|114.6|72.4
+The Citadel|105.6|116.3|79.4
+Manhattan|96.8|107.7|68.6
+Austin Peay|106.0|117.1|69.6
+Delaware|97.3|108.4|64.5
+South Florida|96.5|107.7|68.4
+Campbell|99.3|110.7|65.2
+UMass Lowell|104.3|115.6|71.4
+Northwestern St.|101.0|112.4|70.9
+Sacramento St.|100.8|112.3|65.2
+Quinnipiac|101.3|113.0|72.8
+Radford|96.1|107.9|63.6
+Western Illinois|97.1|108.8|68.4
+Norfolk St.|93.8|105.6|68.4
+Pepperdine|102.1|114.1|68.2
+Abilene Christian|96.7|108.8|65.5
+Sacred Heart|97.5|109.7|70.7
+Detroit|102.2|114.5|72.3
+Incarnate Word|101.5|114.3|71.4
+UT Rio Grande Valley|100.3|113.2|73.6
+Dartmouth|99.2|112.1|67.0
+Hampton|93.6|106.8|67.9
+Cal Poly|99.8|113.0|65.0
+American|94.8|108.1|64.0
+Charleston Southern|103.3|116.7|67.9
+Prairie View A&M;|98.0|111.4|67.2
+Central Arkansas|104.0|117.5|70.7
+Binghamton|96.2|109.8|65.6
+Nicholls St.|100.4|114.2|69.1
+UC Riverside|92.1|106.0|67.5
+Savannah St.|100.6|114.5|80.7
+Marist|100.6|114.5|66.5
+McNeese St.|96.1|110.2|69.6
+SIU Edwardsville|95.0|109.1|68.9
+Stetson|100.9|115.2|72.1
+North Texas|96.3|110.8|69.8
+Maryland Eastern Shore|97.9|112.5|68.2
+Western Carolina|90.1|104.9|66.4
+Morgan St.|91.2|106.5|67.3
+Southern Miss|92.9|108.4|65.2
+Southern|98.1|113.7|68.0
+Northern Arizona|95.0|110.7|68.8
+VMI|97.7|113.7|68.7
+Grambling St.|96.6|112.6|66.8
+Jackson St.|92.7|108.9|64.0
+Lafayette|96.1|113.3|69.0
+UC Santa Barbara|91.3|109.4|63.7
+Idaho St.|97.7|115.9|68.6
+Hartford|92.6|110.8|68.1
+Southern Utah|101.1|119.7|71.0
+South Carolina St.|99.1|118.3|68.0
+Chicago St.|91.9|111.3|66.7
+Maine|91.1|110.6|67.6
+Howard|90.5|110.1|67.7
+Delaware St.|94.2|114.1|65.4
+Bethune Cookman|95.0|115.3|67.9
+Central Connecticut|92.8|113.9|64.5
+Alabama St.|91.1|112.6|68.1
+Coppin St.|93.7|115.4|68.4
+Florida A&M;|93.7|116.0|68.9
+Mississippi Valley St.|95.8|118.2|70.9
+St. Francis NY|87.8|112.1|66.8
+Longwood|92.2|117.3|70.1
+Arkansas Pine Bluff|85.6|110.8|67.2
+North Carolina A&T;|95.5|123.0|62.5
+Presbyterian|88.9|118.1|63.9
+Alabama A&M;|91.6|121.8|63.8
