@@ -118,9 +118,14 @@ def calculate_win_prob(team1, team2, overrides=None):
 
     if DEBUG_PRINT:
         print 'expected score {0}-{1}'.format(team1_score, team2_score)
+
+    # deviation in scoring margin should scale (linearly?) based on tempo and
+    # possibly also scoring rates
+    stddev = ((team1_scoring + team2_scoring) / 2) * \
+            (tempo / AVG_TEMPO) * SCORING_STDDEV
     
     # find probability that actual point diff will be positive
-    return Decimal(norm.cdf(float(point_diff / SCORING_STDDEV)))
+    return Decimal(norm.cdf(float(point_diff / stddev)))
 
 def read_games_from_file(filepath, ratings, overrides=None):
     games = []

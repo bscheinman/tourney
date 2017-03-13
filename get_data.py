@@ -1,13 +1,16 @@
 #!/usr/bin/python
 
-import sys
-
 from bs4 import BeautifulSoup
+from math import sqrt
+import re
+import sys
 import urllib2
 
 RATINGS_URL = 'http://kenpom.com/'
 BRACKET_URL = 'http://espn.go.com/ncb/bracketology'
 GAMEPREDICT_URL = 'http://gamepredict.us/teams/matchup_table?team_a={0}&team_b={1}&neutral=true'
+ODDS_URL = 'http://www.vegasinsider.com/college-basketball/odds/las-vegas/money/'
+CHROME_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
 
 NAME_CONVERSIONS = {
     'Miami': 'Miami FL'
@@ -79,6 +82,56 @@ def get_pairwise_probs(teams, out_file):
                 sys.stderr.write('prob failed for teams {0}, {1}\n'.format(teams[i], teams[j]))
                 raise
 
+ODDS_REGEX = re.compile('[-+][1-9][0-9]{2,}')
+def extract_odds(cell_str):
+    return ODDS_REGEX.findall(cell_str)
+
+def convert_american_odds(odds_str):
+    num_comp = int(odds_str[1:])
+    if odds_str[0] == '-':
+        return num_comp / (100.0 + num_comp)
+    elif odds_str[0] == '+':
+        return 100.0 / (100.0 + num_comp)
+    else:
+        assert False
+
+def get_overrides(overrides_file):
+    req = urllib2.Request(ODDS_URL, headers={'User-Agent': CHROME_UA})
+    html = urllib2.urlopen(req).read()
+    #with open('odds.html', 'r') as html_file:
+        #html = html_file.read()
+    soup = BeautifulSoup(html, 'html.parser')
+    odds_table = soup.find_all('table', {'class': 'frodds-data-tbl'})[0]
+    rows = odds_table.find_all('tr')
+    for row in rows:
+        cells = row.find_all('td')
+        if len(cells) < 3:
+            continue
+
+        matchup_cell = cells[0]
+        odds_cell = cells[2]
+
+        team_links = matchup_cell.find_all('a')
+        if len(team_links) != 2:
+            continue
+
+        road_team = team_links[0].string
+        home_team = team_links[1].string
+
+        odds_links = odds_cell.find_all('a')
+        if not odds_links:
+            continue
+
+        odds = extract_odds(odds_links[0].text)
+        assert len(odds) == 2
+
+        road_win = convert_american_odds(odds[0])
+        home_win = convert_american_odds(odds[1])
+        avg_win = sqrt(road_win * (1 - home_win))
+
+        overrides_file.write('{0}\n'.format(','.join((clean_name(road_team),
+            clean_name(home_team), str(round(avg_win, 3))))))
+
 def read_team_names(bracket_file):
     names = []
     for line in bracket_file:
@@ -98,3 +151,6 @@ if __name__ == '__main__':
             all_teams = read_team_names(bracket_file)
         with open('probs.txt', 'w') as probs_file:
             get_pairwise_probs(all_teams, probs_file)
+    elif sys.argv[1] == 'odds':
+        with open('overrides.txt', 'w') as overrides_file:
+            get_overrides(overrides_file)
