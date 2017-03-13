@@ -1,64 +1,79 @@
 Villanova
-Mount St. Mary's,North Carolina Central
-Northwestern
-Oklahoma St.
+Mount St. Mary's,New Orleans
+Wisconsin
+Virginia Tech
+
 Virginia
 UNC Wilmington
 Florida
+East Tennessee St.
+
+SMU
+Providence,USC
+Baylor
 New Mexico St.
-Saint Mary's
+
+South Carolina
 Marquette
-UCLA
-Northern Kentucky
-Maryland
-VCU
 Duke
-Jacksonville St.
+Troy
+
 Gonzaga
-Texas Southern
-Virginia Tech
+South Dakota St.
+Northwestern
 Vanderbilt
-Cincinnati
-Vermont
-West Virginia
+
+Notre Dame
 Princeton
-Michigan
-Middle Tennessee
-Louisville
+West Virginia
+Bucknell
+
+Maryland
+Xavier
+Florida St.
 Florida Gulf Coast
-Creighton
-Michigan St.
+
+Saint Mary's
+VCU
 Arizona
 North Dakota
+
 Kansas
-UC Davis,New Orleans
-South Carolina
-Dayton
-Purdue
-Wake Forest,Kansas St.
-Butler
-Bucknell
-Wisconsin
-Rhode Island
-Notre Dame
-Winthrop
+UC Davis,North Carolina Central
 Miami FL
-Xavier
-Oregon
-South Dakota St.
-North Carolina
-Troy
-Wichita St.
-Arkansas
+Michigan St.
+
 Iowa St.
 Nevada
-Florida St.
-East Tennessee St.
-SMU
-Syracuse,Providence
-Baylor
+Purdue
+Vermont
+
+Creighton
+Rhode Island
+Oregon
 Iona
-Minnesota
+
+Michigan
+Oklahoma St.
+Louisville
+Jacksonville St.
+
+North Carolina
+Texas Southern
+Arkansas
 Seton Hall
-Kentucky
+
+Minnesota
+Middle Tennessee
+Butler
+Winthrop
+
+Cincinnati
+Kansas St.,Wake Forest
+UCLA
 Kent St.
+
+Dayton
+Wichita St.
+Kentucky
+Northern Kentucky

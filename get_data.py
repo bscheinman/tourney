@@ -82,7 +82,8 @@ def get_pairwise_probs(teams, out_file):
 def read_team_names(bracket_file):
     names = []
     for line in bracket_file:
-        names += line.strip().split(',')
+        if line.strip():
+            names += line.strip().split(',')
     return names
 
 if __name__ == '__main__':
