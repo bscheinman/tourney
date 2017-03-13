@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+from datetime import datetime
 from decimal import Decimal
 from gzip import GzipFile
 import json
@@ -8,7 +9,7 @@ from StringIO import StringIO
 import urllib2
 
 ROUND_SCORES = [0, 1, 1, 2, 2, 2, 3]
-ENDPOINT = 'https://projects.fivethirtyeight.com/march-madness-api/2016/latest.json'
+ENDPOINT = 'https://projects.fivethirtyeight.com/march-madness-api/{0}/latest.json'.format(datetime.now().year)
 
 def score(data):
     scores = {}
@@ -35,4 +36,4 @@ scores = sorted(scores.iteritems(), key=lambda x: x[0])
 
 for team, score in scores:
     if score:
-        print('{0}|{1}'.format(team, score))
+        print('{0},{1}'.format(team, round(score, 3)))
