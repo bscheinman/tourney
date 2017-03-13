@@ -13,7 +13,12 @@ ODDS_URL = 'http://www.vegasinsider.com/college-basketball/odds/las-vegas/money/
 CHROME_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
 
 NAME_CONVERSIONS = {
-    'Miami': 'Miami FL'
+    'Miami': 'Miami FL',
+    'Southern Cal': 'USC',
+    'St. Mary\'s (ca)': 'Saint Mary\'s',
+    'Virginia Commonwealth': 'VCU',
+    'Miami (fl)': 'Miami FL',
+    'Middle Tennessee St.': 'Middle Tennessee',
 }
 
 WORD_ABBREVS = set([
@@ -25,7 +30,9 @@ WORD_ABBREVS = set([
 ])
 
 WORD_CONVERSIONS = {
+    'State': 'St.',
     'St': 'St.',
+    'Marys': 'Mary\'s',
 }
 
 def clean_name(s):
@@ -37,7 +44,8 @@ def clean_name(s):
             word = word.upper()
         word = WORD_CONVERSIONS.get(word, word)
         words[i] = word
-    return ' '.join(words)
+    cleaned = ' '.join(words)
+    return NAME_CONVERSIONS.get(cleaned, cleaned)
 
 def get_bracket(out_file):
     html = urllib2.urlopen(BRACKET_URL).read()
@@ -45,7 +53,6 @@ def get_bracket(out_file):
     bracket = soup.find('div', { 'class': 'bracket' })
     for entry in bracket.find_all('div', {'class': 'team'}):
         team_names = [clean_name(link.string) for link in entry.find_all('a')]
-        team_names = [NAME_CONVERSIONS.get(name, name) for name in team_names]
         out_file.write('{0}\n'.format(','.join(team_names)))
 
 def get_ratings(out_file):

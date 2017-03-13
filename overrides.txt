@@ -1,32 +1,32 @@
-Mount St. Marys,New Orleans,0.47
-Kansas State,Wake Forest,0.499
+Mount St. Mary's,New Orleans,0.47
+Kansas St.,Wake Forest,0.499
 North Carolina Central,UC Davis,0.591
-Southern Cal,Providence,0.499
+USC,Providence,0.499
 Virginia Tech,Wisconsin,0.318
 Princeton,Notre Dame,0.278
 Bucknell,West Virginia,0.075
 UNC Wilmington,Virginia,0.208
 East Tennessee St.,Florida,0.161
-Florida Gulf Coast,Florida State,0.119
+Florida Gulf Coast,Florida St.,0.119
 Xavier,Maryland,0.455
-Nevada,Iowa State,0.282
+Nevada,Iowa St.,0.282
 Vermont,Purdue,0.206
-Middle Tennessee St.,Minnesota,0.511
+Middle Tennessee,Minnesota,0.511
 Winthrop,Butler,0.144
-South Dakota State,Gonzaga,0.019
+South Dakota St.,Gonzaga,0.019
 Vanderbilt,Northwestern,0.522
 North Dakota,Arizona,0.056
-Virginia Commonwealth,St. Marys (ca),0.361
+VCU,Saint Mary's,0.361
 Troy,Duke,0.039
 Marquette,South Carolina,0.47
 Texas Southern,North Carolina,0.011
 Seton Hall,Arkansas,0.499
-Jacksonville State,Louisville,0.02
-Oklahoma State,Michigan,0.426
+Jacksonville St.,Louisville,0.02
+Oklahoma St.,Michigan,0.426
 Northern Kentucky,Kentucky,0.023
-Wichita State,Dayton,0.696
-New Mexico State,Baylor,0.12
-Michigan State,Miami (fl),0.455
+Wichita St.,Dayton,0.696
+New Mexico St.,Baylor,0.12
+Michigan St.,Miami FL,0.455
 Iona,Oregon,0.072
 Rhode Island,Creighton,0.483
-Kent State,UCLA,0.039
+Kent St.,UCLA,0.039
