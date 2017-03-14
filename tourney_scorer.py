@@ -11,11 +11,14 @@ DEBUG_PRINT = False
 #DEBUG_PRINT = True
 ROUND_POINTS = [1, 1, 2, 2, 2, 3]
 
+CALCUTTA_POINTS = map(Decimal, [0.5, 1.25, 2.5, 7.75, 3, 7])
+
 AVG_SCORING = Decimal('104.6')
 AVG_TEMPO = Decimal('67.7')
 SCORING_STDDEV = Decimal('11.0')
 
 total_overrides = 0
+overrides_used = 0
 
 class Team:
     def __init__(self, name, ratings=None):
@@ -55,6 +58,7 @@ class OverridesMap:
 
     def get_override(self, name1, name2):
         global total_overrides
+        global overrides_used
         if name1 < name2:
             override = self._overrides.get((name1, name2), None)
         else:
@@ -63,6 +67,7 @@ class OverridesMap:
                 override = 1 - override
         if override is not None:
             total_overrides -= 1
+            overrides_used += 1
             '''
             if DEBUG_PRINT:
                 sys.stderr.write('using override for {0} vs. {1}\n'.format(
@@ -148,7 +153,7 @@ def read_games_from_file(filepath, ratings, overrides=None):
     return games
 
 
-def calculate_scores(bracket, overrides=None):
+def calculate_scores(bracket, scoring, overrides=None):
     tourney_round = 0
     games = list(bracket)
     total_scores = defaultdict(lambda: Decimal(0))
@@ -169,7 +174,7 @@ def calculate_scores(bracket, overrides=None):
                     parent[team2] += game_prob * (1 - p1)
 
             for team, win_prob in parent.iteritems():
-                total_scores[team.name] += win_prob * ROUND_POINTS[tourney_round]
+                total_scores[team.name] += win_prob * scoring[tourney_round]
             new_games.append(parent)
 
         games = new_games
@@ -197,6 +202,7 @@ if __name__ == '__main__':
     parser.add_argument('ratings_file', nargs='?', default=None)
     parser.add_argument('--overrides')
     parser.add_argument('--sort', action='store', default='name')
+    parser.add_argument('--calcutta', action='store_true')
     args = parser.parse_args()
 
     if args.sort == 'name':
@@ -213,15 +219,21 @@ if __name__ == '__main__':
     else:
         ratings = defaultdict(lambda: None)
 
+    if args.calcutta:
+        scoring = CALCUTTA_POINTS
+    else:
+        scoring = ROUND_POINTS
+
     overrides = None
     if args.overrides:
         overrides = OverridesMap()
         overrides.init_from_file(args.overrides)
     games = read_games_from_file(args.bracket_file, ratings, overrides)
 
-    team_scores = calculate_scores(games, overrides)
+    team_scores = calculate_scores(games, scoring, overrides)
 
     for team, win_prob in sorted(team_scores.iteritems(), key=sorter):
         print ','.join((team, str(round(win_prob, 3))))
 
-    assert total_overrides == 0
+    if total_overrides != 0:
+        print '{0} overrides used'.format(overrides_used)
