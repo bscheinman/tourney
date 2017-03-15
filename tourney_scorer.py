@@ -37,9 +37,8 @@ class Team:
 class OverridesMap:
     _overrides = {}
 
-    def init_from_file(self, filepath):
+    def read_from_file(self, filepath):
         global total_overrides
-        self._overrides.clear()
         with open(filepath, 'rb') as overrides_file:
             reader = csv.reader(overrides_file)
             for row in reader:
@@ -200,7 +199,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('bracket_file')
     parser.add_argument('ratings_file', nargs='?', default=None)
-    parser.add_argument('--overrides')
+    parser.add_argument('--overrides', action='append')
     parser.add_argument('--sort', action='store', default='name')
     parser.add_argument('--calcutta', action='store_true')
     args = parser.parse_args()
@@ -224,10 +223,9 @@ if __name__ == '__main__':
     else:
         scoring = ROUND_POINTS
 
-    overrides = None
-    if args.overrides:
-        overrides = OverridesMap()
-        overrides.init_from_file(args.overrides)
+    overrides = OverridesMap()
+    for overrides_file in args.overrides:
+        overrides.read_from_file(overrides_file)
     games = read_games_from_file(args.bracket_file, ratings, overrides)
 
     team_scores = calculate_scores(games, scoring, overrides)
