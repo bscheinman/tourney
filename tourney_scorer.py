@@ -229,8 +229,9 @@ if __name__ == '__main__':
         scoring = ROUND_POINTS
 
     overrides = OverridesMap()
-    for override_file in args.overrides:
-        overrides.read_from_file(override_file)
+    if args.overrides:
+        for overrides_file in args.overrides:
+            overrides.read_from_file(overrides_file)
     games = read_games_from_file(args.bracket_file, ratings, overrides)
 
     team_scores = calculate_scores(games, scoring, overrides)
