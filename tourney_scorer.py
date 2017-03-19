@@ -12,6 +12,7 @@ DEBUG_PRINT = False
 ROUND_POINTS = [1, 1, 2, 2, 2, 3]
 
 CALCUTTA_POINTS = map(Decimal, [0.5, 1.25, 2.5, 7.75, 3, 7])
+CALCUTTA_POINTS = [Decimal(15.5) * x for x in CALCUTTA_POINTS]
 
 AVG_SCORING = Decimal('104.6')
 AVG_TEMPO = Decimal('67.7')
@@ -37,9 +38,8 @@ class Team:
 class OverridesMap:
     _overrides = {}
 
-    def init_from_file(self, filepath):
+    def read_from_file(self, filepath):
         global total_overrides
-        self._overrides.clear()
         with open(filepath, 'rb') as overrides_file:
             reader = csv.reader(overrides_file)
             for row in reader:
@@ -56,6 +56,12 @@ class OverridesMap:
         else:
             self._overrides[(name2, name1)] = 1 - prob
 
+    def remove_override(self, name1, name2):
+        if name1 < name2:
+            del self._overrides[(name1, name2)]
+        else:
+            del self._overrides[(name2, name1)]
+
     def get_override(self, name1, name2):
         global total_overrides
         global overrides_used
@@ -68,11 +74,9 @@ class OverridesMap:
         if override is not None:
             total_overrides -= 1
             overrides_used += 1
-            '''
             if DEBUG_PRINT:
                 sys.stderr.write('using override for {0} vs. {1}\n'.format(
                     name1, name2))
-            '''
         return override
 
 def read_ratings_file(in_file):
@@ -200,7 +204,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('bracket_file')
     parser.add_argument('ratings_file', nargs='?', default=None)
-    parser.add_argument('--overrides')
+    parser.add_argument('--overrides', action='append')
     parser.add_argument('--sort', action='store', default='name')
     parser.add_argument('--calcutta', action='store_true')
     args = parser.parse_args()
@@ -224,10 +228,9 @@ if __name__ == '__main__':
     else:
         scoring = ROUND_POINTS
 
-    overrides = None
-    if args.overrides:
-        overrides = OverridesMap()
-        overrides.init_from_file(args.overrides)
+    overrides = OverridesMap()
+    for override_file in args.overrides:
+        overrides.read_from_file(override_file)
     games = read_games_from_file(args.bracket_file, ratings, overrides)
 
     team_scores = calculate_scores(games, scoring, overrides)
@@ -235,5 +238,4 @@ if __name__ == '__main__':
     for team, win_prob in sorted(team_scores.iteritems(), key=sorter):
         print ','.join((team, str(round(win_prob, 3))))
 
-    if total_overrides != 0:
-        print '{0} overrides used'.format(overrides_used)
+    print '{0} overrides used'.format(overrides_used)

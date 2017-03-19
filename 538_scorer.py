@@ -10,10 +10,11 @@ import urllib2
 
 ROUND_SCORES = [0, 1, 1, 2, 2, 2, 3]
 ENDPOINT = 'https://projects.fivethirtyeight.com/march-madness-api/{0}/latest.json'.format(datetime.now().year)
+ENDPOINT = 'https://projects.fivethirtyeight.com/march-madness-api/{0}/madness.json'.format(datetime.now().year)
 
 def score(data):
     scores = {}
-    teams = data['forecasts']['mens']['teams']
+    teams = data['forecasts']['mens']['current_run']['teams']
     for team in teams:
         name = team['team_name']
         score = Decimal(0)

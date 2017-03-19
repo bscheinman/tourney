@@ -159,5 +159,5 @@ if __name__ == '__main__':
         with open('probs.txt', 'w') as probs_file:
             get_pairwise_probs(all_teams, probs_file)
     elif sys.argv[1] == 'odds':
-        with open('overrides.txt', 'w') as overrides_file:
+        with open('odds.txt', 'w') as overrides_file:
             get_overrides(overrides_file)
