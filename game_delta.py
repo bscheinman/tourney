@@ -3,19 +3,31 @@ import argparse
 from portfolio_value import API_KEY, get_portfolio_value, get_positions
 from tourney_scorer import *
 
-def bracket_games(bracket, results):
-    pass
+def bracket_games(bracket, overrides):
+    games = list(bracket)
+    while games:
+        new_games = []
+        for i in xrange(len(games) / 2):
+            team1, team2 = tuple(games[i*2 : (i+1)*2])
+            prob = overrides.get_override(team1, team2)
+            if prob >= Decimal(1):
+                new_games.append(team1)
+            elif prob == Decimal(0):
+                new_games.append(team2)
+            else:
+                yield team1, team2
+        games = new_games
 
 def game_delta(positions, bracket, scoring, ratings, team1, team2,
         overrides=OverridesMap()):
     original_override = overrides.get_override(team1, team2)
 
     overrides.add_override(team1, team2, Decimal(1))
-    win_values = calculate_scores(bracket, scoring, overrides)
+    win_values = calculate_scores_prob(bracket, scoring, overrides)
     win_portfolio = get_portfolio_value(positions, win_values)
 
     overrides.add_override(team1, team2, Decimal(0))
-    loss_values = calculate_scores(bracket, scoring, overrides)
+    loss_values = calculate_scores_prob(bracket, scoring, overrides)
     loss_portfolio = get_portfolio_value(positions, loss_values)
 
     if original_override:

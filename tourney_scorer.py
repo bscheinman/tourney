@@ -4,8 +4,11 @@ import argparse
 from collections import defaultdict
 import csv
 from decimal import Decimal
+import random
 from scipy.stats import norm
 import sys
+
+from portfolio_value import *
 
 DEBUG_PRINT = False
 #DEBUG_PRINT = True
@@ -157,7 +160,34 @@ def read_games_from_file(filepath, ratings, overrides=None):
     return games
 
 
-def calculate_scores(bracket, scoring, overrides=None):
+def game_transform_prob(child1, child2, overrides):
+    parent = {}
+
+    for team1, win1 in child1.iteritems():
+        parent[team1] = 0
+        for team2, win2 in child2.iteritems():
+            if team2 not in parent:
+                parent[team2] = 0
+            game_prob = win1 * win2
+            p1 = calculate_win_prob(team1, team2, overrides)
+            parent[team1] += game_prob * p1
+            parent[team2] += game_prob * (1 - p1)
+
+    return parent
+
+
+def game_transform_sim(child1, child2, overrides):
+    assert len(child1) == 1 and len(child2) == 1
+    team1 = child1.keys()[0]
+    team2 = child2.keys()[0]
+
+    prob = calculate_win_prob(team1, team2, overrides)
+    winner = team1 if random.random() < prob else team2
+
+    return { winner : Decimal(1) }
+
+
+def calculate_scores(bracket, scoring, game_transform, overrides=None):
     tourney_round = 0
     games = list(bracket)
     total_scores = defaultdict(lambda: Decimal(0))
@@ -165,18 +195,7 @@ def calculate_scores(bracket, scoring, overrides=None):
         new_games = []
         for i in xrange(len(games) / 2):
             child1, child2 = games[2 * i: 2 * i + 2]
-            parent = {}
-
-            for team1, win1 in child1.iteritems():
-                parent[team1] = 0
-                for team2, win2 in child2.iteritems():
-                    if team2 not in parent:
-                        parent[team2] = 0
-                    game_prob = win1 * win2
-                    p1 = calculate_win_prob(team1, team2, overrides)
-                    parent[team1] += game_prob * p1
-                    parent[team2] += game_prob * (1 - p1)
-
+            parent = game_transform(child1, child2, overrides)
             for team, win_prob in parent.iteritems():
                 total_scores[team.name] += win_prob * scoring[tourney_round]
             new_games.append(parent)
@@ -199,14 +218,24 @@ def calculate_scores(bracket, scoring, overrides=None):
     return total_scores
 
 
+def calculate_scores_prob(bracket, scoring, overrides=None):
+    return calculate_scores(bracket, scoring, game_transform_prob, overrides)
+
+
+def calculate_scores_sim(bracket, scoring, overrides=None):
+    return calculate_scores(bracket, scoring, game_transform_sim, overrides)
+
+
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
+    parser.add_argument('operation')
     parser.add_argument('bracket_file')
     parser.add_argument('ratings_file', nargs='?', default=None)
     parser.add_argument('--overrides', action='append')
     parser.add_argument('--sort', action='store', default='name')
     parser.add_argument('--calcutta', action='store_true')
+    parser.add_argument('--simulations', action='store', type=int, default=10000)
     args = parser.parse_args()
 
     if args.sort == 'name':
@@ -234,9 +263,27 @@ if __name__ == '__main__':
             overrides.read_from_file(overrides_file)
     games = read_games_from_file(args.bracket_file, ratings, overrides)
 
-    team_scores = calculate_scores(games, scoring, overrides)
+    if args.operation == 'expected':
+        team_scores = calculate_scores_prob(games, scoring, overrides)
 
-    for team, win_prob in sorted(team_scores.iteritems(), key=sorter):
-        print ','.join((team, str(round(win_prob, 3))))
+        for team, win_prob in sorted(team_scores.iteritems(), key=sorter):
+            print ','.join((team, str(round(win_prob, 3))))
+    elif args.operation == 'portfolio_simulate':
+        positions = get_positions(API_KEY)
+        portfolio_values = []
+        for i in xrange(args.simulations):
+            scores = calculate_scores_sim(games, scoring, overrides)
+            values = get_portfolio_value(positions, scores)
+            portfolio_values.append(values)
+        portfolio_values = sorted(portfolio_values)
+        percentiles = [1, 10, 25, 50, 75, 90, 99]
+        print 'min value: {0}'.format(portfolio_values[0])
+        for percentile in percentiles:
+            print '{0} percentile value: {1}'.format(percentile, portfolio_values[(percentile * args.simulations) / 100])
+        print 'max value: {0}'.format(portfolio_values[-1])
+    elif args.operation == 'portfolio_expected':
+        pass
+    else:
+        print 'invalid operation'
 
     print '{0} overrides used'.format(overrides_used)

@@ -39,3 +39,9 @@ Arizona,Saint Mary's,1.000
 Florida,Virginia,1.000
 Purdue,Iowa St.,1.000
 Louisville,Michigan,0.000
+Kentucky,Wichita St.,1.000
+Kansas,Michigan St.,1.000
+North Carolina,Arkansas,1.000
+Oregon,Rhode Island,1.000
+Baylor,USC,1.000
+South Carolina,Duke,1.000
