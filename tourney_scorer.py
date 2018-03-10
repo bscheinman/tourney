@@ -6,11 +6,6 @@ import sys
 import portfolio_value as pv
 import tourney_utils as tourney
 
-ROUND_POINTS = [1, 1, 2, 2, 2, 3]
-
-CALCUTTA_POINTS = map(Decimal, [0.5, 1.25, 2.5, 7.75, 3, 7])
-CALCUTTA_POINTS = [Decimal(15.5) * x for x in CALCUTTA_POINTS]
-
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
@@ -38,9 +33,9 @@ if __name__ == '__main__':
         ratings = defaultdict(lambda: None)
 
     if args.calcutta:
-        scoring = CALCUTTA_POINTS
+        scoring = tourney.CALCUTTA_POINTS
     else:
-        scoring = ROUND_POINTS
+        scoring = tourney.ROUND_POINTS
 
     overrides = tourney.OverridesMap()
     if args.overrides:
@@ -49,7 +44,7 @@ if __name__ == '__main__':
     games = tourney.read_games_from_file(args.bracket_file, ratings, overrides)
 
     if args.operation == 'expected':
-        team_scores = tourney.calculate_scores_prob(games, scoring, overrides)
+        team_scores = tourney.calculate_scores_prob(games, ratings, scoring, overrides)
 
         for team, win_prob in sorted(team_scores.iteritems(), key=sorter):
             print ','.join((team, str(round(win_prob, 3))))
@@ -57,7 +52,7 @@ if __name__ == '__main__':
         positions = pv.get_positions(API_KEY)
         portfolio_values = []
         for i in xrange(args.simulations):
-            scores = tourney.calculate_scores_sim(games, scoring, overrides)
+            scores = tourney.calculate_scores_sim(games, ratings, scoring, overrides)
             values = pv.get_portfolio_value(positions, scores)
             portfolio_values.append(values)
         portfolio_values = sorted(portfolio_values)
