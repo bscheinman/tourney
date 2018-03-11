@@ -1,4 +1,4 @@
-from collections import defaultdict
+from collections import defaultdict, namedtuple
 import csv
 from decimal import Decimal
 import random
@@ -20,18 +20,20 @@ total_overrides = 0
 overrides_used = 0
 
 class Team:
-    def __init__(self, name, ratings=None):
+    def __init__(self, name, offense, defense, tempo, adjust=False):
         self.name = name
-        if ratings is None:
-            self.offense = None
-            self.defense = None
-            self.tempo = None
-        else:
-            self.offense, self.defense, self.tempo = tuple(map(Decimal, ratings))
+        self.offense, self.defense, self.tempo = tuple(map(Decimal, [offense, defense, tempo]))
+        if adjust:
             self.offense = (self.offense / AVG_SCORING) - 1
             self.defense = (self.defense / AVG_SCORING) - 1
-            if DEBUG_PRINT:
-                print '\t\t'.join(map(str, (self.name, self.offense, self.defense, self.tempo)))
+        if DEBUG_PRINT:
+            print '\t\t'.join(map(str, (self.name, self.offense, self.defense, self.tempo)))
+
+    def copy(self):
+        return Team(self.name, self.offense, self.defense, self.tempo)
+
+    def __str__(self):
+        return '{0}: {1} | {2} | {3}'.format(self.name, self.offense, self.defense, self.tempo)
 
 class OverridesMap:
     _overrides = {}
@@ -77,14 +79,114 @@ class OverridesMap:
                     name1, name2))
         return override
 
+
+def game_transform_prob(child1, child2, teams, overrides):
+    parent = defaultdict(lambda: Decimal(0))
+
+    for team_name1, win1 in child1.iteritems():
+        team1 = teams[team_name1]
+        for team_name2, win2 in child2.iteritems():
+            team2 = teams[team_name2]
+            game_prob = win1 * win2
+            p1 = calculate_win_prob(team1, team2, overrides)
+            parent[team_name1] += game_prob * p1
+            parent[team_name2] += game_prob * (1 - p1)
+
+    return parent
+
+
+def game_transform_sim(child1, child2, teams, overrides):
+    assert len(child1) == 1 and len(child2) == 1
+    team_name1 = child1.keys()[0]
+    team_name2 = child2.keys()[0]
+
+    team1 = teams[team_name1]
+    team2 = teams[team_name2]
+
+    prob = calculate_win_prob(team1, team2, overrides)
+    winner = team_name1 if random.random() < prob else team_name2
+
+    return { winner : Decimal(1) }
+
+
+class TournamentState:
+    def __init__(self, bracket, ratings, scoring, overrides=OverridesMap()):
+        self.bracket = bracket
+        self.ratings = ratings
+        self.scoring = scoring
+        self.overrides = overrides
+
+
+    def calculate_scores(self, game_transform=game_transform_prob):
+        tourney_round = 0
+        games = list(self.bracket)
+        total_scores = defaultdict(lambda: Decimal(0))
+        while len(games) > 1:
+            new_games = []
+            for i in xrange(len(games) / 2):
+                child1, child2 = games[2 * i: 2 * i + 2]
+                parent = game_transform(child1, child2, self.ratings,
+                        self.overrides)
+                for team_name, win_prob in parent.iteritems():
+                    total_scores[team_name] += \
+                        win_prob * self.scoring[tourney_round]
+                new_games.append(parent)
+
+            games = new_games
+            tourney_round += 1
+
+            if DEBUG_PRINT:
+                print 'Round', tourney_round
+                sum_prob = 0
+                team_scores = []
+                for game in games:
+                    for item in game.iteritems():
+                        team_scores.append(item)
+                for team, win_prob in sorted(team_scores, key=lambda g: g[0]):
+                    print ','.join((team, str(round(win_prob, 5))))
+                    sum_prob += win_prob
+                print 'Sum: ', sum_prob
+
+        return total_scores
+
+
+    def calculate_scores_prob(self):
+        return self.calculate_scores(game_transform_prob)
+
+
+    def calculate_scores_sim(self):
+        return self.calculate_scores(game_transform_sim)
+
+
 def read_ratings_file(in_file):
     all_ratings = {}
     for line in in_file:
         fields = line.strip().split('|')
         name = fields[0]
         ratings = fields[1:]
-        all_ratings[name] = Team(name=name, ratings=ratings)
+        all_ratings[name] = Team(name, *ratings, adjust=True)
     return all_ratings
+
+
+def read_games_from_file(filepath, ratings, overrides=None):
+    games = []
+    with open(filepath, 'rb') as bracket_file:
+        reader = csv.reader(bracket_file)
+        for row in reader:
+            if not len(row):
+                continue
+            if len(row) == 1:
+                games.append({row[0]: Decimal(1)})
+            elif len(row) == 2:
+                team1 = ratings[row[0]]
+                team2 = ratings[row[1]]
+                win_prob = calculate_win_prob(team1, team2, overrides)
+                games.append({row[0]: win_prob, row[1]: 1 - win_prob})
+            else:
+                assert False
+    assert games and not (len(games) & (len(games) - 1))
+    return games
+
 
 # based on old kenpom pythag ratings
 '''
@@ -134,92 +236,7 @@ def calculate_win_prob(team1, team2, overrides=None):
     # find probability that actual point diff will be positive
     return Decimal(norm.cdf(float(point_diff / stddev)))
 
-def read_games_from_file(filepath, ratings, overrides=None):
-    games = []
-    with open(filepath, 'rb') as bracket_file:
-        reader = csv.reader(bracket_file)
-        for row in reader:
-            if not len(row):
-                continue
-            if len(row) == 1:
-                games.append({row[0]: Decimal(1)})
-            elif len(row) == 2:
-                team1 = ratings[row[0]]
-                team2 = ratings[row[1]]
-                win_prob = calculate_win_prob(team1, team2, overrides)
-                games.append({row[0]: win_prob, row[1]: 1 - win_prob})
-            else:
-                assert False
-    assert games and not (len(games) & (len(games) - 1))
-    return games
-
-
-def game_transform_prob(child1, child2, teams, overrides):
-    parent = defaultdict(lambda: Decimal(0))
-
-    for team_name1, win1 in child1.iteritems():
-        team1 = teams[team_name1]
-        for team_name2, win2 in child2.iteritems():
-            team2 = teams[team_name2]
-            game_prob = win1 * win2
-            p1 = calculate_win_prob(team1, team2, overrides)
-            parent[team_name1] += game_prob * p1
-            parent[team_name2] += game_prob * (1 - p1)
-
-    return parent
-
-
-def game_transform_sim(child1, child2, teams, overrides):
-    assert len(child1) == 1 and len(child2) == 1
-    team_name1 = child1.keys()[0]
-    team_name2 = child2.keys()[0]
-
-    team1 = teams[team_name1]
-    team2 = teams[team_name2]
-
-    prob = calculate_win_prob(team1, team2, overrides)
-    winner = team_name1 if random.random() < prob else team_name2
-
-    return { winner : Decimal(1) }
-
-
-def calculate_scores(bracket, teams, scoring,
-        game_transform=game_transform_prob, overrides=None):
-    tourney_round = 0
-    games = list(bracket)
-    total_scores = defaultdict(lambda: Decimal(0))
-    while len(games) > 1:
-        new_games = []
-        for i in xrange(len(games) / 2):
-            child1, child2 = games[2 * i: 2 * i + 2]
-            parent = game_transform(child1, child2, teams, overrides)
-            for team_name, win_prob in parent.iteritems():
-                total_scores[team_name] += win_prob * scoring[tourney_round]
-            new_games.append(parent)
-
-        games = new_games
-        tourney_round += 1
-
-        if DEBUG_PRINT:
-            print 'Round', tourney_round
-            sum_prob = 0
-            team_scores = []
-            for game in games:
-                for item in game.iteritems():
-                    team_scores.append(item)
-            for team, win_prob in sorted(team_scores, key=lambda g: g[0]):
-                print ','.join((team, str(round(win_prob, 5))))
-                sum_prob += win_prob
-            print 'Sum: ', sum_prob
-
-    return total_scores
-
-
-def calculate_scores_prob(bracket, teams, scoring, overrides=None):
-    return calculate_scores(bracket, teams, scoring, game_transform_prob,
-            overrides)
-
-
-def calculate_scores_sim(bracket, teams, scoring, overrides=None):
-    return calculate_scores(bracket, teams, scoring, game_transform_sim,
-            overrides)
+def get_bracket_teams(bracket):
+    for game in bracket:
+        for team in game:
+            yield team

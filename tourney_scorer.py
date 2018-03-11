@@ -43,8 +43,11 @@ if __name__ == '__main__':
             overrides.read_from_file(overrides_file)
     games = tourney.read_games_from_file(args.bracket_file, ratings, overrides)
 
+    state = tourney.TournamentState(bracket=games, ratings=ratings,
+            scoring=scoring, overrides=overrides)
+
     if args.operation == 'expected':
-        team_scores = tourney.calculate_scores_prob(games, ratings, scoring, overrides)
+        team_scores = state.calculate_scores_prob()
 
         for team, win_prob in sorted(team_scores.iteritems(), key=sorter):
             print ','.join((team, str(round(win_prob, 3))))
@@ -52,7 +55,7 @@ if __name__ == '__main__':
         positions = pv.get_positions(API_KEY)
         portfolio_values = []
         for i in xrange(args.simulations):
-            scores = tourney.calculate_scores_sim(games, ratings, scoring, overrides)
+            scores = state.calculate_scores_sim()
             values = pv.get_portfolio_value(positions, scores)
             portfolio_values.append(values)
         portfolio_values = sorted(portfolio_values)
