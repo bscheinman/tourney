@@ -27,7 +27,8 @@ class Team:
             self.offense = (self.offense / AVG_SCORING) - 1
             self.defense = (self.defense / AVG_SCORING) - 1
         if DEBUG_PRINT:
-            print '\t\t'.join(map(str, (self.name, self.offense, self.defense, self.tempo)))
+            #print '\t\t'.join(map(str, (self.name, self.offense, self.defense, self.tempo)))
+            pass
 
     def copy(self):
         return Team(self.name, self.offense, self.defense, self.tempo)

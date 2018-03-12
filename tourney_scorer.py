@@ -12,6 +12,7 @@ if __name__ == '__main__':
     parser.add_argument('operation')
     parser.add_argument('bracket_file')
     parser.add_argument('ratings_file')
+    parser.add_argument('teams', nargs='*')
     parser.add_argument('--adjustments', action='store')
     parser.add_argument('--overrides', action='append')
     parser.add_argument('--sort', action='store', default='name')
@@ -70,6 +71,9 @@ if __name__ == '__main__':
         print 'max value: {0}'.format(portfolio_values[-1])
     elif args.operation == 'portfolio_expected':
         pass
+    elif args.operation == 'sim_game':
+        print tourney.calculate_win_prob(state.ratings[args.teams[0]],
+                state.ratings[args.teams[1]], overrides=overrides).quantize(Decimal('0.001'))
     else:
         print 'invalid operation'
 

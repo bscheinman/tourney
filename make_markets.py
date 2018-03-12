@@ -36,7 +36,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('bracket_file')
     parser.add_argument('ratings_file')
-    parser.add_argument('teams', nargs='?', action='store', default=None)
+    parser.add_argument('teams', nargs='*', default=None)
     parser.add_argument('--overrides', action='append')
     parser.add_argument('--adjustments', action='store')
     parser.add_argument('--point_delta', action='store', default='1.0')
