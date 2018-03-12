@@ -26,26 +26,26 @@ Houston
 San Diego St.
 Michigan
 Montana
-Texas A&M
+Texas A&M;
 Providence
 North Carolina
 Lipscomb
 Villanova
 LIU Brooklyn,Radford
-VIrginia Tech
+Virginia Tech
 Alabama
 West Virginia
 Murray St.
 Wichita St.
 Marshall
 Florida
-St. Bonavenure,UCLA
+St. Bonaventure,UCLA
 Texas Tech
 Stephen F. Austin
 Arkansas
 Butler
 Purdue
-CSU Fullerton
+Cal St. Fullerton
 Kansas
 Penn
 Seton Hall
@@ -53,7 +53,7 @@ North Carolina St.
 Clemson
 New Mexico St.
 Auburn
-Charleston
+College of Charleston
 TCU
 Arizona St.,Syracuse
 Michigan St.
