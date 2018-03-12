@@ -11,7 +11,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('operation')
     parser.add_argument('bracket_file')
-    parser.add_argument('ratings_file', nargs='?', default=None)
+    parser.add_argument('ratings_file')
+    parser.add_argument('--adjustments', action='store')
     parser.add_argument('--overrides', action='append')
     parser.add_argument('--sort', action='store', default='name')
     parser.add_argument('--calcutta', action='store_true')
@@ -26,11 +27,14 @@ if __name__ == '__main__':
         sys.stderr.write('invalid sort type\n')
         exit(1)
 
-    if args.ratings_file:
-        with open(args.ratings_file, 'r') as ratings_file:
-            ratings = tourney.read_ratings_file(ratings_file)
+    if args.adjustments:
+        with open(args.adjustments, 'r') as adjustments_file:
+            adjustments = tourney.read_adjustments_file(adjustments_file)
     else:
-        ratings = defaultdict(lambda: None)
+        adjustments = {}
+
+    with open(args.ratings_file, 'r') as ratings_file:
+        ratings = tourney.read_ratings_file(ratings_file, adjustments)
 
     if args.calcutta:
         scoring = tourney.CALCUTTA_POINTS

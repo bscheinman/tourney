@@ -39,8 +39,9 @@ class PortfolioState:
                     self.positions, self.tournament, team,
                     point_delta=self.point_delta)
         else:
-            self.team_deltas, self.pairwise_deltas = pv.get_all_team_deltas(
-                    self.positions, self.tournament, point_delta=point_delta)
+            self.team_deltas, self.pairwise_deltas = get_all_team_deltas(
+                    self.positions, self.tournament,
+                    point_delta=self.point_delta)
 
 
     def store_deltas(self, path):
@@ -165,8 +166,8 @@ def get_all_team_deltas(positions, tournament, point_delta=Decimal(1)):
 
         team_deltas[team] = calculate_team_portfolio_delta(positions,
                 positive_values, negative_values)
-        pairwise_deltas[team] = calculate_team_pairwise_deltas(positions,
-                positive_values, negative_values)
+        pairwise_deltas[team] = calculate_team_pairwise_deltas(positive_values,
+                negative_values)
 
         print 'computed deltas for {0}'.format(team)
 

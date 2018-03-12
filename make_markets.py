@@ -38,17 +38,24 @@ if __name__ == '__main__':
     parser.add_argument('ratings_file')
     parser.add_argument('teams', nargs='?', action='store', default=None)
     parser.add_argument('--overrides', action='append')
-    parser.add_argument('--sort', action='store', default='name')
-    parser.add_argument('-c', '--calcutta', action='store_true')
+    parser.add_argument('--adjustments', action='store')
     parser.add_argument('--point_delta', action='store', default='1.0')
     parser.add_argument('--save_deltas', action='store')
     parser.add_argument('--load_deltas', action='store')
     parser.add_argument('--spread_margin', action='store', default='0.05')
+    parser.add_argument('--order_size', action='store', type=int, default=5000)
     parser.add_argument('-d', '--dry_run', action='store_true')
+    parser.add_argument('--no_prompt', action='store_true')
     args = parser.parse_args()
 
+    if args.adjustments:
+        with open(args.adjustments, 'r') as adjustments_file:
+            adjustments = tourney.read_adjustments_file(adjustments_file)
+    else:
+        adjustments = {}
+
     with open(args.ratings_file, 'r') as ratings_file:
-        ratings = tourney.read_ratings_file(ratings_file)
+        ratings = tourney.read_ratings_file(ratings_file, adjustments)
 
     overrides = tourney.OverridesMap()
     if args.overrides:
@@ -77,9 +84,6 @@ if __name__ == '__main__':
     if args.save_deltas:
         portfolio.store_deltas(args.save_deltas)
 
-    for team, delta in portfolio.team_deltas.iteritems():
-        print 'team delta for {0} = {1}'.format(team, delta)
-
     if args.teams:
         market_teams = args.teams
     else:
@@ -88,10 +92,18 @@ if __name__ == '__main__':
     for team in market_teams:
         bid, ask = get_spread(team, values, portfolio,
                 base_margin=Decimal(args.spread_margin))
-        if args.dry_run:
-            print '{team} market: {bid} - {ask}'.format(team=team, bid=bid, ask=ask)
-        else:
-            try:
-                client.make_market(team, bid=bid, bid_size=100, ask=ask, ask_size=100)
-            except cix_client.ApiException as ex:
-                print ex.errors
+        print '{team} market: {bid} - {ask} (value = {value})'.format(
+                team=team, bid=bid, ask=ask, value=values[team].quantize(Decimal('0.001')))
+        if not args.dry_run:
+            if args.no_prompt:
+                do_order = True
+            else:
+                print 'place orders?'
+                answer = raw_input()
+                do_order = answer[0].lower() == 'y'
+            if do_order:
+                try:
+                    client.make_market(team, bid=bid, bid_size=args.order_size,
+                            ask=ask, ask_size=args.order_size)
+                except cix_client.ApiException as ex:
+                    print 'failed to make market: {}'.format(', '.join(ex.errors))

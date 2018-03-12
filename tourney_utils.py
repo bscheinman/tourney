@@ -22,7 +22,7 @@ overrides_used = 0
 class Team:
     def __init__(self, name, offense, defense, tempo, adjust=False):
         self.name = name
-        self.offense, self.defense, self.tempo = tuple(map(Decimal, [offense, defense, tempo]))
+        self.offense, self.defense, self.tempo = offense, defense, tempo
         if adjust:
             self.offense = (self.offense / AVG_SCORING) - 1
             self.defense = (self.defense / AVG_SCORING) - 1
@@ -158,12 +158,34 @@ class TournamentState:
         return self.calculate_scores(game_transform_sim)
 
 
-def read_ratings_file(in_file):
+def read_adjustments_file(in_file):
+    adjustments = {}
+
+    for line in in_file:
+        team, adj = tuple(line.strip().split('|'))
+        if adj[0] == '+':
+            adj = adj[1:]
+        adjustments[team] = Decimal(adj)
+
+    return adjustments
+
+
+def read_ratings_file(in_file, adjustments=None):
     all_ratings = {}
     for line in in_file:
         fields = line.strip().split('|')
         name = fields[0]
-        ratings = fields[1:]
+        ratings = map(Decimal, fields[1:])
+
+        if adjustments:
+            try:
+                adj = adjustments[name]
+            except KeyError:
+                pass
+            else:
+                ratings[0] += adj
+                ratings[1] -= adj
+
         all_ratings[name] = Team(name, *ratings, adjust=True)
     return all_ratings
 
