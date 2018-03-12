@@ -1,79 +1,64 @@
-Villanova
-Mount St. Mary's,New Orleans
-Wisconsin
-Virginia Tech
-
 Virginia
-UNC Wilmington
-Florida
-East Tennessee St.
-
-SMU
-Providence,USC
-Baylor
-New Mexico St.
-
-South Carolina
-Marquette
-Duke
-Troy
-
-Gonzaga
-South Dakota St.
-Northwestern
-Vanderbilt
-
-Notre Dame
-Princeton
-West Virginia
-Bucknell
-
-Maryland
-Xavier
-Florida St.
-Florida Gulf Coast
-
-Saint Mary's
-VCU
-Arizona
-North Dakota
-
-Kansas
-UC Davis,North Carolina Central
-Miami FL
-Michigan St.
-
-Iowa St.
-Nevada
-Purdue
-Vermont
-
+UMBC
 Creighton
-Rhode Island
-Oregon
-Iona
-
-Michigan
-Oklahoma St.
-Louisville
-Jacksonville St.
-
-North Carolina
-Texas Southern
-Arkansas
-Seton Hall
-
-Minnesota
-Middle Tennessee
-Butler
-Winthrop
-
-Cincinnati
-Kansas St.,Wake Forest
-UCLA
-Kent St.
-
-Dayton
-Wichita St.
+Kansas St.
 Kentucky
-Northern Kentucky
+Davidson
+Arizona
+Buffalo
+Miami FL
+Loyola Chicago
+Tennessee
+Wright St.
+Nevada
+Texas
+Cincinnati
+Georgia St.
+Xavier
+North Carolina Central,Texas Southern
+Missouri
+Florida St.
+Ohio St.
+South Dakota St.
+Gonzaga
+UNC Greensboro
+Houston
+San Diego St.
+Michigan
+Montana
+Texas A&M
+Providence
+North Carolina
+Lipscomb
+Villanova
+LIU Brooklyn,Radford
+VIrginia Tech
+Alabama
+West Virginia
+Murray St.
+Wichita St.
+Marshall
+Florida
+St. Bonavenure,UCLA
+Texas Tech
+Stephen F. Austin
+Arkansas
+Butler
+Purdue
+CSU Fullerton
+Kansas
+Penn
+Seton Hall
+North Carolina St.
+Clemson
+New Mexico St.
+Auburn
+Charleston
+TCU
+Arizona St.,Syracuse
+Michigan St.
+Bucknell
+Rhode Island
+Oklahoma
+Duke
+Iona
