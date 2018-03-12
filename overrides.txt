@@ -1,0 +1,6 @@
+Nevada,Texas,0.500
+Kentucky,Davidson,0.750
+Arizona,Buffalo,0.800
+Purdue,Arkansas,0.76
+North Carolina,Texas A&M;,0.73
+Kansas,Seton Hall,0.750

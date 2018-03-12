@@ -15,11 +15,6 @@ APID = os.environ['CIX_APID']
 
 def get_positions():
     return client.my_positions()
-    return {
-        'Virginia': 1000,
-        'St. Bonaventure': 1000,
-        'Houston': -1000
-    }
 
 def get_spread(team, values, portfolio, base_margin=Decimal('0.05')):
     team_ev = values[team]
@@ -42,6 +37,7 @@ if __name__ == '__main__':
     parser.add_argument('--point_delta', action='store', default='1.0')
     parser.add_argument('--save_deltas', action='store')
     parser.add_argument('--load_deltas', action='store')
+    parser.add_argument('--print_deltas', action='store_true')
     parser.add_argument('--spread_margin', action='store', default='0.05')
     parser.add_argument('--order_size', action='store', type=int, default=5000)
     parser.add_argument('-d', '--dry_run', action='store_true')
@@ -90,6 +86,9 @@ if __name__ == '__main__':
         market_teams = tourney.get_bracket_teams(bracket)
 
     for team in market_teams:
+        if args.print_deltas:
+            print '{team} delta: {delta}'.format(team=team,
+                    delta=portfolio.team_deltas[team])
         bid, ask = get_spread(team, values, portfolio,
                 base_margin=Decimal(args.spread_margin))
         print '{team} market: {bid} - {ask} (value = {value})'.format(

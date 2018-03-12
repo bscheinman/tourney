@@ -1,0 +1,4 @@
+Michigan|+1.0
+Kansas|+1.5
+TCU|-1.0
+Kentucky|+0.3

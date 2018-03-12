@@ -1,7 +1,7 @@
 import argparse
 
 from portfolio_value import API_KEY, get_portfolio_value, get_positions
-from tourney_scorer import *
+import tourney_utils as tourney
 
 def bracket_games(bracket, overrides):
     games = list(bracket)
@@ -18,25 +18,6 @@ def bracket_games(bracket, overrides):
                 yield team1, team2
         games = new_games
 
-def game_delta(positions, bracket, scoring, ratings, team1, team2,
-        overrides=OverridesMap()):
-    original_override = overrides.get_override(team1, team2)
-
-    overrides.add_override(team1, team2, Decimal(1))
-    win_values = calculate_scores_prob(bracket, scoring, overrides)
-    win_portfolio = get_portfolio_value(positions, win_values)
-
-    overrides.add_override(team1, team2, Decimal(0))
-    loss_values = calculate_scores_prob(bracket, scoring, overrides)
-    loss_portfolio = get_portfolio_value(positions, loss_values)
-
-    if original_override:
-        overrides.add_override(team1, team2, original_override)
-    else:
-        overrides.remove_override(team1, team2)
-
-    return win_portfolio, loss_portfolio
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('bracket_file')
@@ -49,18 +30,18 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     with open(args.ratings_file, 'r') as ratings_file:
-        ratings = read_ratings_file(ratings_file)
+        ratings = tourney.read_ratings_file(ratings_file)
 
     if args.calcutta:
-        scoring = CALCUTTA_POINTS
+        scoring = tourney.CALCUTTA_POINTS
     else:
-        scoring = ROUND_POINTS
+        scoring = tourney.ROUND_POINTS
 
-    overrides = OverridesMap()
+    overrides = tourney.OverridesMap()
     if args.overrides:
         for override_file in args.overrides:
             overrides.read_from_file(override_file)
-    bracket = read_games_from_file(args.bracket_file, ratings, overrides)
+    bracket = tourney.read_games_from_file(args.bracket_file, ratings, overrides)
 
     positions = get_positions(API_KEY)
     win_value, loss_value = game_delta(positions, bracket, scoring, ratings,
