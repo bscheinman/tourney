@@ -26,6 +26,12 @@ NAME_CONVERSIONS = {
     'Nc St.': 'North Carolina St.',
     'Texas A&m;': 'Texas A&M;',
     'Loyola-chicago': 'Loyola Chicago',
+    'Cs Fullerton': 'Cal St. Fullerton',
+    'Suny-buffalo': 'Buffalo',
+    'Md-baltimore County': 'UMBC',
+    'Texas Am': 'Texas A&M;',
+    'Pennsylvania': 'Penn',
+    'College Of Charleston': 'College of Charleston',
 }
 
 WORD_ABBREVS = set([
@@ -37,6 +43,8 @@ WORD_ABBREVS = set([
     'Tcu',
     'Liu',
     'Usc',
+    'A&m',
+    'A&m;',
 ])
 
 WORD_CONVERSIONS = {
