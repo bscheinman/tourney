@@ -2,3 +2,6 @@ Purdue,Arkansas,0.76
 North Carolina,Texas A&M;,0.76
 Kansas,Seton Hall,0.750
 Gonzaga,Ohio St.,0.70
+Cincinnati,Nevada,0.725
+Michigan St.,TCU,0.725
+St. Bonaventure,UCLA,1.000

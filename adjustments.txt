@@ -4,3 +4,4 @@ Kentucky|+0.5
 West Virginia|+0.5
 Arizona|-0.5
 Rhode Island|-1.0
+Virginia|-1.5
