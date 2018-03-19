@@ -61,7 +61,7 @@ if __name__ == '__main__':
 
     client = cix_client.CixClient(APID)
 
-    positions = client.my_positions()
+    positions = client.my_positions(full_names=True)
     point_delta = Decimal(args.point_delta)
 
     tourney_state = tourney.TournamentState(bracket=bracket, ratings=ratings,
@@ -86,6 +86,9 @@ if __name__ == '__main__':
         market_teams = tourney.get_bracket_teams(bracket)
 
     for team in market_teams:
+        if values[team] <= Decimal('1.0'):
+            continue
+
         if args.print_deltas:
             print '{team} delta: {delta}'.format(team=team,
                     delta=portfolio.team_deltas[team])

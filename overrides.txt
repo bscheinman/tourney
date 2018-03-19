@@ -1,7 +1,54 @@
-Purdue,Arkansas,0.76
-North Carolina,Texas A&M;,0.76
-Kansas,Seton Hall,0.750
-Gonzaga,Ohio St.,0.70
-Cincinnati,Nevada,0.725
-Michigan St.,TCU,0.725
 St. Bonaventure,UCLA,1.000
+Syracuse,Arizona St.,1.000
+Texas Southern,North Carolina Central,1.000
+Radford,LIU Brooklyn,1.000
+Rhode Island,Oklahoma,1.000
+Tennessee,Wright St.,1.000
+Gonzaga,UNC Greensboro,1.000
+Kansas,Penn,1.000
+Duke,Iona,1.000
+Miami FL,Loyola Chicago,0.000
+Ohio St.,South Dakota St.,1.000
+Seton Hall,North Carolina St.,1.000
+Kentucky,Davidson,1.000
+Villanova,Radford,1.000
+Texas Tech,Stephen F. Austin,1.000
+Houston,San Diego St.,1.000
+Virginia Tech,Alabama,0.000
+Arizona,Buffalo,0.000
+Michigan,Montana,1.000
+Florida,St. Bonaventure,1.000
+Purdue,Cal St. Fullerton,1.000
+Texas A&M;,Providence,1.000
+Wichita St.,Marshall,0.000
+Cincinnati,Georgia St.,1.000
+Texas,Nevada,0.000
+West Virginia,Murray St.,1.000
+Butler,Arkansas,1.000
+North Carolina,Lipscomb,1.000
+Creighton,Kansas St.,0.000
+Michigan St.,Bucknell,1.000
+Auburn,College of Charleston,1.000
+Xavier,Texas Southern,1.000
+Virginia,UMBC,0.000
+TCU,Syracuse,0.000
+Clemson,New Mexico St.,1.000
+Missouri,Florida St.,0.000
+Villanova,Alabama,1.000
+Duke,Rhode Island,1.000
+Kentucky,Buffalo,1.000
+Tennessee,Loyola Chicago,0.000
+Kansas,Seton Hall,1.000
+Gonzaga,Ohio St.,1.000
+Texas Tech,Florida,1.000
+Michigan,Houston,1.000
+Purdue,Butler,1.000
+Michigan St.,Syracuse,0.000
+North Carolina,Texas A&M;,0.000
+Cincinnati,Nevada,0.000
+Clemson,Auburn,1.000
+Kansas St.,UMBC,1.000
+Xavier,Florida St.,0.000
+West Virginia,Marshall,1.000
+Kansas,Duke,0.44
+Duke,Syracuse,0.84

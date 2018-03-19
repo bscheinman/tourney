@@ -32,6 +32,7 @@ NAME_CONVERSIONS = {
     'Texas Am': 'Texas A&M;',
     'Pennsylvania': 'Penn',
     'College Of Charleston': 'College of Charleston',
+    'Texas Christian': 'TCU',
 }
 
 WORD_ABBREVS = set([
@@ -148,6 +149,8 @@ def get_overrides(overrides_file):
             continue
 
         odds = extract_odds(odds_links[0].text)
+        if len(odds) == 0:
+            print road_team, home_team
         assert len(odds) == 2
 
         road_win = convert_american_odds(odds[0])

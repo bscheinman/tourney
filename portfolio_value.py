@@ -4,8 +4,7 @@ import json
 import sys
 import urllib2
 
-API_KEY = 'XXX'
-POSITIONS_URL = 'http://caseinsensitive.org/ncaa/entry/{0}/positions?name=full'
+import tourney_utils as tourney
 
 # why do i do this to myself
 CIX_NAME_CONVERSIONS = {
@@ -53,9 +52,6 @@ class PortfolioState:
             self.team_deltas, self.pairwise_deltas = pickle.load(infile)
 
 
-def get_positions(api_key):
-    return json.loads(urllib2.urlopen(POSITIONS_URL.format(api_key)).read())
-
 def read_values(values_file):
     values = {}
     for line in values_file.readlines():
@@ -82,22 +78,21 @@ def get_portfolio_value(positions, values):
 
     return total_value
 
-def game_delta(positions, bracket, scoring, ratings, team1, team2,
-        overrides=tourney.OverridesMap()):
-    original_override = overrides.get_override(team1, team2)
+def game_delta(positions, tournament, team1, team2):
+    original_override = tournament.overrides.get_override(team1, team2)
 
-    overrides.add_override(team1, team2, Decimal(1))
-    win_values = calculate_scores_prob(bracket, scoring, overrides)
+    tournament.overrides.add_override(team1, team2, Decimal(1))
+    win_values = tournament.calculate_scores_prob()
     win_portfolio = get_portfolio_value(positions, win_values)
 
-    overrides.add_override(team1, team2, Decimal(0))
-    loss_values = calculate_scores_prob(bracket, scoring, overrides)
+    tournament.overrides.add_override(team1, team2, Decimal(0))
+    loss_values = tournament.calculate_scores_prob()
     loss_portfolio = get_portfolio_value(positions, loss_values)
 
     if original_override:
-        overrides.add_override(team1, team2, original_override)
+        tournament.overrides.add_override(team1, team2, original_override)
     else:
-        overrides.remove_override(team1, team2)
+        tournament.overrides.remove_override(team1, team2)
 
     return win_portfolio, loss_portfolio
 

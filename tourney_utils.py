@@ -3,6 +3,7 @@ import csv
 from decimal import Decimal
 import random
 from scipy.stats import norm
+import sys
 
 DEBUG_PRINT = False
 #DEBUG_PRINT = True

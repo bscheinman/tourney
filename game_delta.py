@@ -1,6 +1,8 @@
 import argparse
+import cix_client
+import os
 
-from portfolio_value import API_KEY, get_portfolio_value, get_positions
+import portfolio_value as pv
 import tourney_utils as tourney
 
 def bracket_games(bracket, overrides):
@@ -43,9 +45,15 @@ if __name__ == '__main__':
             overrides.read_from_file(override_file)
     bracket = tourney.read_games_from_file(args.bracket_file, ratings, overrides)
 
-    positions = get_positions(API_KEY)
-    win_value, loss_value = game_delta(positions, bracket, scoring, ratings,
-            args.team1, args.team2, overrides)
+    APID = os.environ['CIX_APID']
+    client = cix_client.CixClient(APID)
+    positions = client.my_positions(full_names=True)
+
+    tournament = tourney.TournamentState(bracket=bracket, ratings=ratings,
+            overrides=overrides, scoring=scoring)
+
+    win_value, loss_value = pv.game_delta(positions, tournament, args.team1,
+            args.team2)
 
     print 'If {0} wins: {1:.2f}'.format(args.team1, win_value)
     print 'If {0} wins: {1:.2f}'.format(args.team2, loss_value)
