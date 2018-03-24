@@ -27,12 +27,19 @@ if __name__ == '__main__':
     parser.add_argument('team1')
     parser.add_argument('team2')
     parser.add_argument('--overrides', action='append')
+    parser.add_argument('--adjustments', action='store')
     parser.add_argument('--sort', action='store', default='name')
     parser.add_argument('--calcutta', action='store_true')
     args = parser.parse_args()
 
+    if args.adjustments:
+        with open(args.adjustments, 'r') as adjustments_file:
+            adjustments = tourney.read_adjustments_file(adjustments_file)
+    else:
+        adjustments = {}
+
     with open(args.ratings_file, 'r') as ratings_file:
-        ratings = tourney.read_ratings_file(ratings_file)
+        ratings = tourney.read_ratings_file(ratings_file, adjustments)
 
     if args.calcutta:
         scoring = tourney.CALCUTTA_POINTS
