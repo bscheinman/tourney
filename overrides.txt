@@ -50,5 +50,11 @@ Clemson,Auburn,1.000
 Kansas St.,UMBC,1.000
 Xavier,Florida St.,0.000
 West Virginia,Marshall,1.000
+Nevada,Loyola Chicago,0.000
+Michigan,Texas A&M;,1.000
+Kentucky,Kansas St.,0.000
+Gonzaga,Florida St.,0.000
+Kansas,Clemson,1.000
+Villanova,West Virginia,1.000
+Kansas St.,Loyola Chicago,0.47
 Kansas,Duke,0.44
-Duke,Syracuse,0.84
