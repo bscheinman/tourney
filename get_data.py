@@ -33,6 +33,8 @@ NAME_CONVERSIONS = {
     'Pennsylvania': 'Penn',
     'College Of Charleston': 'College of Charleston',
     'Texas Christian': 'TCU',
+    'Ole Miss': 'Mississippi',
+    'Gardner-webb': 'Gardner Webb',
 }
 
 WORD_ABBREVS = set([
@@ -46,6 +48,8 @@ WORD_ABBREVS = set([
     'Usc',
     'A&m',
     'A&m;',
+    'Lsu',
+    'Ucf',
 ])
 
 WORD_CONVERSIONS = {
@@ -182,3 +186,5 @@ if __name__ == '__main__':
     elif sys.argv[1] == 'odds':
         with open('odds.txt', 'w') as overrides_file:
             get_overrides(overrides_file)
+    else:
+        print 'unrecognized data type {}'.format(sys.argv[1])

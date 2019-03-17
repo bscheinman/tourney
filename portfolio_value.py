@@ -30,13 +30,14 @@ class PortfolioState:
         self.pairwise_deltas = {}
         self.point_delta = point_delta
 
-    def compute_deltas(self, team=None):
-        if team:
-            self.team_deltas[team] = pv.get_team_portfolio_delta(self.positions,
-                    self.tournament, team, point_delta=self.point_delta)
-            self.pairwise_deltas[team] = pv.get_team_pairwise_deltas(
-                    self.positions, self.tournament, team,
-                    point_delta=self.point_delta)
+    def compute_deltas(self, teams=None):
+        if teams:
+            for team in teams:
+                self.team_deltas[team] = get_team_portfolio_delta(self.positions,
+                        self.tournament, team, point_delta=self.point_delta)
+                self.pairwise_deltas[team] = get_team_pairwise_deltas(
+                        self.positions, self.tournament, team,
+                        point_delta=self.point_delta)
         else:
             self.team_deltas, self.pairwise_deltas = get_all_team_deltas(
                     self.positions, self.tournament,
