@@ -2,6 +2,7 @@ import argparse
 import cix_client
 from decimal import Decimal, ROUND_UP, ROUND_DOWN
 import os
+import re
 
 import portfolio_value as pv
 import tourney_utils as tourney
@@ -86,9 +87,8 @@ if __name__ == '__main__':
         market_teams = tourney.get_bracket_teams(bracket)
 
     for team in market_teams:
-        if values[team] <= Decimal('1.0'):
+        if values[team] == Decimal('0.0'):
             continue
-
         if args.print_deltas:
             print '{team} delta: {delta}'.format(team=team,
                     delta=portfolio.team_deltas[team])
@@ -105,7 +105,8 @@ if __name__ == '__main__':
                 do_order = answer[0].lower() == 'y'
             if do_order:
                 try:
-                    client.make_market(team, bid=bid, bid_size=args.order_size,
+                    order_name = re.sub('St\.$', 'State', team)
+                    client.make_market(order_name, bid=bid, bid_size=args.order_size,
                             ask=ask, ask_size=args.order_size)
                 except cix_client.ApiException as ex:
                     print 'failed to make market: {}'.format(', '.join(ex.errors))
