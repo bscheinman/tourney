@@ -18,7 +18,7 @@ def score(data):
     for team in teams:
         name = team['team_name']
         score = Decimal(0)
-        for i in xrange(len(ROUND_SCORES)):
+        for i in range(len(ROUND_SCORES)):
             p = Decimal(team['rd{0}_win'.format(i + 1)])
             #print(' '.join(map(str, (name, i, p))))
             score += p * ROUND_SCORES[i]

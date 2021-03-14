@@ -9,7 +9,7 @@ import tourney_utils as tourney
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('operation')
+    parser.add_argument('operation', choices=["expected", "portfolio_simulate", "portfolio_expected", "sim_game"])
     parser.add_argument('bracket_file')
     parser.add_argument('ratings_file')
     parser.add_argument('teams', nargs='*')
@@ -54,27 +54,27 @@ if __name__ == '__main__':
     if args.operation == 'expected':
         team_scores = state.calculate_scores_prob()
 
-        for team, win_prob in sorted(team_scores.iteritems(), key=sorter):
-            print ','.join((team, str(round(win_prob, 3))))
+        for team, win_prob in sorted(team_scores.items(), key=sorter):
+            print(','.join((team, str(round(win_prob, 3)))))
     elif args.operation == 'portfolio_simulate':
         positions = pv.get_positions(API_KEY)
         portfolio_values = []
-        for i in xrange(args.simulations):
+        for i in range(args.simulations):
             scores = state.calculate_scores_sim()
             values = pv.get_portfolio_value(positions, scores)
             portfolio_values.append(values)
         portfolio_values = sorted(portfolio_values)
         percentiles = [1, 10, 25, 50, 75, 90, 99]
-        print 'min value: {0}'.format(portfolio_values[0])
+        print('min value: {0}'.format(portfolio_values[0]))
         for percentile in percentiles:
-            print '{0} percentile value: {1}'.format(percentile, portfolio_values[(percentile * args.simulations) / 100])
-        print 'max value: {0}'.format(portfolio_values[-1])
+            print('{0} percentile value: {1}'.format(percentile, portfolio_values[(percentile * args.simulations) / 100]))
+        print('max value: {0}'.format(portfolio_values[-1]))
     elif args.operation == 'portfolio_expected':
         pass
     elif args.operation == 'sim_game':
-        print tourney.calculate_win_prob(state.ratings[args.teams[0]],
-                state.ratings[args.teams[1]], overrides=overrides).quantize(Decimal('0.001'))
+        print(tourney.calculate_win_prob(state.ratings[args.teams[0]],
+                state.ratings[args.teams[1]], overrides=overrides).quantize(Decimal('0.001')))
     else:
-        print 'invalid operation'
+        print('invalid operation')
 
-    print '{0} overrides used'.format(tourney.overrides_used)
+    print('{0} overrides used'.format(tourney.overrides_used))

@@ -28,7 +28,7 @@ class Team:
             self.offense = (self.offense / AVG_SCORING) - 1
             self.defense = (self.defense / AVG_SCORING) - 1
         if DEBUG_PRINT:
-            #print '\t\t'.join(map(str, (self.name, self.offense, self.defense, self.tempo)))
+            #print('\t\t'.join(map(str, (self.name, self.offense, self.defense, self.tempo))))
             pass
 
     def copy(self):
@@ -85,9 +85,9 @@ class OverridesMap:
 def game_transform_prob(child1, child2, teams, overrides):
     parent = defaultdict(lambda: Decimal(0))
 
-    for team_name1, win1 in child1.iteritems():
+    for team_name1, win1 in child1.items():
         team1 = teams[team_name1]
-        for team_name2, win2 in child2.iteritems():
+        for team_name2, win2 in child2.items():
             team2 = teams[team_name2]
             game_prob = win1 * win2
             p1 = calculate_win_prob(team1, team2, overrides)
@@ -125,11 +125,11 @@ class TournamentState:
         total_scores = defaultdict(lambda: Decimal(0))
         while len(games) > 1:
             new_games = []
-            for i in xrange(len(games) / 2):
+            for i in range(len(games) // 2):
                 child1, child2 = games[2 * i: 2 * i + 2]
                 parent = game_transform(child1, child2, self.ratings,
                         self.overrides)
-                for team_name, win_prob in parent.iteritems():
+                for team_name, win_prob in parent.items():
                     total_scores[team_name] += \
                         win_prob * self.scoring[tourney_round]
                 new_games.append(parent)
@@ -138,16 +138,16 @@ class TournamentState:
             tourney_round += 1
 
             if DEBUG_PRINT:
-                print 'Round', tourney_round
+                print('Round', tourney_round)
                 sum_prob = 0
                 team_scores = []
                 for game in games:
-                    for item in game.iteritems():
+                    for item in game.items():
                         team_scores.append(item)
                 for team, win_prob in sorted(team_scores, key=lambda g: g[0]):
-                    print ','.join((team, str(round(win_prob, 5))))
+                    print(','.join((team, str(round(win_prob, 5)))))
                     sum_prob += win_prob
-                print 'Sum: ', sum_prob
+                print('Sum: ', sum_prob)
 
         return total_scores
 
@@ -194,7 +194,7 @@ def read_ratings_file(in_file, adjustments=None):
 
 def read_games_from_file(filepath, ratings, overrides=None):
     games = []
-    with open(filepath, 'rb') as bracket_file:
+    with open(filepath, "rt") as bracket_file:
         reader = csv.reader(bracket_file)
         for row in reader:
             if not len(row):
@@ -230,7 +230,7 @@ def calculate_win_prob(team1, team2, overrides=None):
             return override
 
     if DEBUG_PRINT:
-        print 'scoring {0}-{1}'.format(team1.name, team2.name)
+        print('scoring {0}-{1}'.format(team1.name, team2.name))
 
     # number of expected possessions per team
     tempo = (team1.tempo * team2.tempo) / AVG_TEMPO
@@ -250,7 +250,7 @@ def calculate_win_prob(team1, team2, overrides=None):
     point_diff = team1_score - team2_score
 
     if DEBUG_PRINT:
-        print 'expected score {0}-{1}'.format(team1_score, team2_score)
+        print('expected score {0}-{1}'.format(team1_score, team2_score))
 
     # deviation in scoring margin should scale (linearly?) based on tempo and
     # possibly also scoring rates

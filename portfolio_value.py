@@ -1,8 +1,8 @@
-import cPickle as pickle
+#import cPickle as pickle
+import pickle
 from decimal import Decimal
 import json
 import sys
-import urllib2
 
 import tourney_utils as tourney
 
@@ -62,7 +62,7 @@ def read_values(values_file):
 
 def get_portfolio_value(positions, values):
     total_value = Decimal(0)
-    for team, count in positions.iteritems():
+    for team, count in positions.items():
         if not count:
             continue
 
@@ -73,7 +73,7 @@ def get_portfolio_value(positions, values):
                 team_name = CIX_NAME_CONVERSIONS.get(team, team)
                 value = values[team_name]
             except KeyError:
-                print 'missing team ' + team
+                print('missing team ' + team)
                 value = Decimal(0)
             total_value += Decimal(value * count)
 
@@ -137,9 +137,9 @@ def get_team_portfolio_delta(positions, tournament, team,
 def calculate_team_pairwise_deltas(positive_values, negative_values):
     team_deltas = {}
 
-    for team, positive_value in positive_values.iteritems():
+    for team, positive_value in positive_values.items():
         negative_value = negative_values[team]
-        #print team, positive_value, negative_value
+        #print(team, positive_value, negative_value)
         share_delta = positive_value - negative_value
         team_deltas[team] = share_delta
 
@@ -165,7 +165,7 @@ def get_all_team_deltas(positions, tournament, point_delta=Decimal(1)):
         pairwise_deltas[team] = calculate_team_pairwise_deltas(positive_values,
                 negative_values)
 
-        print 'computed deltas for {0}'.format(team)
+        print('computed deltas for {0}'.format(team))
 
     return team_deltas, pairwise_deltas
 
@@ -174,4 +174,4 @@ if __name__ == '__main__':
     with open(sys.argv[1], 'r') as values_file:
         values = read_values(values_file)
 
-    print get_portfolio_value(positions, values)
+    print(get_portfolio_value(positions, values))

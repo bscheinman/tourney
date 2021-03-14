@@ -4,63 +4,70 @@ from bs4 import BeautifulSoup
 from math import sqrt
 import re
 import sys
-import urllib2
+import requests
 
-RATINGS_URL = 'http://kenpom.com/'
-BRACKET_URL = 'http://espn.go.com/ncb/bracketology'
-GAMEPREDICT_URL = 'http://gamepredict.us/teams/matchup_table?team_a={0}&team_b={1}&neutral=true'
-ODDS_URL = 'http://www.vegasinsider.com/college-basketball/odds/las-vegas/money/'
-CHROME_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+RATINGS_URL = "http://kenpom.com/"
+BRACKET_URL = "http://espn.go.com/ncb/bracketology"
+GAMEPREDICT_URL = "http://gamepredict.us/teams/matchup_table?team_a={0}&team_b={1}&neutral=true"
+ODDS_URL = "http://www.vegasinsider.com/college-basketball/odds/las-vegas/money/"
+CHROME_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
 
 NAME_CONVERSIONS = {
-    'Miami': 'Miami FL',
-    'Southern Cal': 'USC',
-    'St. Mary\'s (ca)': 'Saint Mary\'s',
-    'Virginia Commonwealth': 'VCU',
-    'Miami (fl)': 'Miami FL',
-    'Middle Tennessee St.': 'Middle Tennessee',
-    'Se Louisiana': 'Southeastern Louisiana',
-    'Arkansas-pine Bluff': 'Arkansas Pine Bluff',
-    'Louisiana': 'Louisiana Lafayette',
-    'Charleston': 'College of Charleston',
-    'Nc St.': 'North Carolina St.',
-    'Texas A&m;': 'Texas A&M;',
-    'Loyola-chicago': 'Loyola Chicago',
-    'Cs Fullerton': 'Cal St. Fullerton',
-    'Suny-buffalo': 'Buffalo',
-    'Md-baltimore County': 'UMBC',
-    'Texas Am': 'Texas A&M;',
-    'Pennsylvania': 'Penn',
-    'College Of Charleston': 'College of Charleston',
-    'Texas Christian': 'TCU',
-    'Ole Miss': 'Mississippi',
-    'Gardner-webb': 'Gardner Webb',
+    "Miami": "Miami FL",
+    "Southern Cal": "USC",
+    "St. Mary's (ca)": "Saint Mary's",
+    "Virginia Commonwealth": "VCU",
+    "Miami (fl)": "Miami FL",
+    "Middle Tennessee St.": "Middle Tennessee",
+    "Se Louisiana": "Southeastern Louisiana",
+    "Arkansas-pine Bluff": "Arkansas Pine Bluff",
+    "Louisiana": "Louisiana Lafayette",
+    "Charleston": "College of Charleston",
+    "Nc St.": "North Carolina St.",
+    "Texas A&m;": "Texas A&M;",
+    "Loyola-chicago": "Loyola Chicago",
+    "Cs Fullerton": "Cal St. Fullerton",
+    "Suny-buffalo": "Buffalo",
+    "Md-baltimore County": "UMBC",
+    "Texas Am": "Texas A&M;",
+    "Pennsylvania": "Penn",
+    "College Of Charleston": "College of Charleston",
+    "Texas Christian": "TCU",
+    "Ole Miss": "Mississippi",
+    "Gardner-webb": "Gardner Webb",
+    "Texas So.": "Texas Southern",
+    "UCSB": "UC Santa Barbara",
+    "E. Washington": "Eastern Washington",
+    "Uconn": "Connecticut",
+    "Uncg": "UNC Greensboro",
 }
 
 WORD_ABBREVS = set([
-    'Unc',
-    'Ucla',
-    'Smu',
-    'Vcu',
-    'Uc',
-    'Tcu',
-    'Liu',
-    'Usc',
-    'A&m',
-    'A&m;',
-    'Lsu',
-    'Ucf',
+    "Unc",
+    "Ucla",
+    "Smu",
+    "Vcu",
+    "Uc",
+    "Tcu",
+    "Liu",
+    "Usc",
+    "A&m",
+    "A&m;",
+    "Lsu",
+    "Ucf",
+    "Ucsb",
+    "Byu",
 ])
 
 WORD_CONVERSIONS = {
-    'State': 'St.',
-    'St': 'St.',
-    'Marys': 'Mary\'s',
+    "State": "St.",
+    "St": "St.",
+    "Marys": "Mary's",
 }
 
 def clean_name(s):
     words = s.split()
-    for i in xrange(len(words)):
+    for i in range(len(words)):
         word = words[i].lower()
         word = word[0].upper() + word[1:].lower()
         if word in WORD_ABBREVS:
@@ -71,15 +78,17 @@ def clean_name(s):
     return NAME_CONVERSIONS.get(cleaned, cleaned)
 
 def get_bracket(out_file):
-    html = urllib2.urlopen(BRACKET_URL).read()
-    soup = BeautifulSoup(html, 'html.parser')
-    bracket = soup.find('div', { 'class': 'bracket' })
-    for entry in bracket.find_all('div', {'class': 'team'}):
-        team_names = [clean_name(link.string) for link in entry.find_all('a')]
-        out_file.write('{0}\n'.format(','.join(team_names)))
+    #html = requests.get(BRACKET_URL).text
+    with open("bracket.html", "r") as bracket_file:
+        html = bracket_file.read()
+    soup = BeautifulSoup(html, "html.parser")
+    bracket = soup.find("div", { "class": "bracket__region" })
+    for entry in bracket.find_all("a", {"class": "bracket__link"}):
+        team_names = [clean_name(name) for name in entry.text.split("/")]
+        out_file.write("{0}\n".format(",".join(team_names)))
 
 def get_ratings(out_file):
-    html = urllib2.urlopen(RATINGS_URL).read()
+    html = requests.get(RATINGS_URL).text
     soup = BeautifulSoup(html, 'html.parser')
     ratings = soup.find('table', { 'id': 'ratings-table' })
     ratings = ratings.tbody
@@ -95,7 +104,7 @@ def get_ratings(out_file):
         out_file.write('{0}\n'.format('|'.join((team_name, offense, defense, tempo))))
 
 def get_pairwise_prob(a, b):
-    html = urllib2.urlopen(GAMEPREDICT_URL.format(urllib2.quote(a), urllib2.quote(b))).read()
+    html = requests.get(GAMEPREDICT_URL.format(urllib3.quote(a), urllib3.quote(b))).read()
     soup = BeautifulSoup(html, 'html.parser')
     cols = soup.find_all('div', {'class': 'col-xs-6'})
     perc_str = cols[2].find_all('p')[0].string.strip()
@@ -103,8 +112,8 @@ def get_pairwise_prob(a, b):
 
 # Start with the lazy approach of scraping all probs from gamepredict
 def get_pairwise_probs(teams, out_file):
-    for i in xrange(len(teams)):
-        for j in xrange(i + 1, len(teams)):
+    for i in range(len(teams)):
+        for j in range(i + 1, len(teams)):
             try:
                 prob = get_pairwise_prob(teams[i], teams[j])
                 out_file.write('{0}\n'.format(','.join((teams[i], teams[j], str(prob)))))
@@ -126,8 +135,7 @@ def convert_american_odds(odds_str):
         assert False
 
 def get_overrides(overrides_file):
-    req = urllib2.Request(ODDS_URL, headers={'User-Agent': CHROME_UA})
-    html = urllib2.urlopen(req).read()
+    html = requests.get(ODDS_URL, headers={'User-Agent': CHROME_UA})
     #with open('odds.html', 'r') as html_file:
         #html = html_file.read()
     soup = BeautifulSoup(html, 'html.parser')
@@ -154,7 +162,7 @@ def get_overrides(overrides_file):
 
         odds = extract_odds(odds_links[0].text)
         if len(odds) == 0:
-            print road_team, home_team
+            print(road_team, home_team)
         assert len(odds) == 2
 
         road_win = convert_american_odds(odds[0])
@@ -187,4 +195,4 @@ if __name__ == '__main__':
         with open('odds.txt', 'w') as overrides_file:
             get_overrides(overrides_file)
     else:
-        print 'unrecognized data type {}'.format(sys.argv[1])
+        print('unrecognized data type {}'.format(sys.argv[1]))

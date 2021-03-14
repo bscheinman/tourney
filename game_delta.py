@@ -9,7 +9,7 @@ def bracket_games(bracket, overrides):
     games = list(bracket)
     while games:
         new_games = []
-        for i in xrange(len(games) / 2):
+        for i in range(len(games) / 2):
             team1, team2 = tuple(games[i*2 : (i+1)*2])
             prob = overrides.get_override(team1, team2)
             if prob >= Decimal(1):
