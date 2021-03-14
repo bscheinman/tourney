@@ -82,7 +82,7 @@ class OverridesMap:
         return override
 
 
-def game_transform_prob(child1, child2, teams, overrides):
+def game_transform_prob(child1, child2, teams, overrides, forfeit_prob):
     parent = defaultdict(lambda: Decimal(0))
 
     for team_name1, win1 in child1.items():
@@ -90,20 +90,31 @@ def game_transform_prob(child1, child2, teams, overrides):
         for team_name2, win2 in child2.items():
             team2 = teams[team_name2]
             game_prob = win1 * win2
-            p1 = calculate_win_prob(team1, team2, overrides)
+            p1 = calculate_win_prob(team1, team2, overrides, forfeit_prob)
             parent[team_name1] += game_prob * p1
             parent[team_name2] += game_prob * (1 - p1)
 
     return parent
 
 
-def game_transform_sim(child1, child2, teams, overrides):
+def game_transform_sim(child1, child2, teams, overrides, forfeit_prob):
     assert len(child1) == 1 and len(child2) == 1
     team_name1 = child1.keys()[0]
     team_name2 = child2.keys()[0]
 
     team1 = teams[team_name1]
     team2 = teams[team_name2]
+
+    team1_forfeit = random.random() < forfeit_prob
+    team2_forfeit = random.random() < forfeit_prob
+
+    if team1_forfeit:
+        if team2_forfeit:
+            return { None: Decimal(1) }
+        else:
+            return { team_name2 : Decimal(1) }
+    if team2_forfeit:
+        return {team_name1: Decimal(1) }
 
     prob = calculate_win_prob(team1, team2, overrides)
     winner = team_name1 if random.random() < prob else team_name2
@@ -112,12 +123,12 @@ def game_transform_sim(child1, child2, teams, overrides):
 
 
 class TournamentState:
-    def __init__(self, bracket, ratings, scoring, overrides=OverridesMap()):
+    def __init__(self, bracket, ratings, scoring, overrides=OverridesMap(), forfeit_prob=0.0):
         self.bracket = bracket
         self.ratings = ratings
         self.scoring = scoring
         self.overrides = overrides
-
+        self.forfeit_prob = forfeit_prob
 
     def calculate_scores(self, game_transform=game_transform_prob):
         tourney_round = 0
@@ -128,7 +139,7 @@ class TournamentState:
             for i in range(len(games) // 2):
                 child1, child2 = games[2 * i: 2 * i + 2]
                 parent = game_transform(child1, child2, self.ratings,
-                        self.overrides)
+                        self.overrides, self.forfeit_prob)
                 for team_name, win_prob in parent.items():
                     total_scores[team_name] += \
                         win_prob * self.scoring[tourney_round]
@@ -223,7 +234,7 @@ def calculate_win_prob(team1, team2, overrides=None):
     return (win1 * (1 - win2)) / ((win1 * (1 - win2)) + ((1 - win1) * win2))
 '''
 
-def calculate_win_prob(team1, team2, overrides=None):
+def calculate_win_prob(team1, team2, overrides=None, forfeit_prob=0.0):
     if overrides:
         override = overrides.get_override(team1.name, team2.name)
         if override is not None:
@@ -258,7 +269,16 @@ def calculate_win_prob(team1, team2, overrides=None):
             (tempo / AVG_TEMPO) * SCORING_STDDEV
     
     # find probability that actual point diff will be positive
-    return Decimal(norm.cdf(float(point_diff / stddev)))
+    # this is the probability that team 1 will win if the game actually occurs
+    # (e.g. if neither team forfeits)
+    game_win_prob = norm.cdf(float(point_diff / stddev))
+
+    forfeit_win_prob = forfeit_prob * (1.0 - forfeit_prob)
+    forfeit_loss_prob = forfeit_prob * (1.0 - forfeit_prob)
+    forfeit_tie_prob = forfeit_prob * forfeit_prob
+    game_play_prob = 1.0 - (forfeit_win_prob + forfeit_loss_prob + forfeit_tie_prob)
+
+    return Decimal(forfeit_win_prob + (0.5 * forfeit_tie_prob) + (game_play_prob * game_win_prob))
 
 def get_bracket_teams(bracket):
     for game in bracket:

@@ -18,6 +18,7 @@ if __name__ == "__main__":
     parser.add_argument("--sort", action="store", default="name", choices=["name", "score"])
     parser.add_argument("--calcutta", action="store_true")
     parser.add_argument("--simulations", action="store", type=int, default=10000)
+    parser.add_argument("--forfeit_prob", action="store", type=float, default=0.0)
     args = parser.parse_args()
 
     if args.sort == "name":
@@ -34,6 +35,10 @@ if __name__ == "__main__":
     else:
         adjustments = {}
 
+    if args.forfeit_prob < 0.0 or args.forfeit_prob >= 1.0:
+        sys.stderr.write("invalid forfeit probability\n")
+        exit(1)
+
     with open(args.ratings_file, "r") as ratings_file:
         ratings = tourney.read_ratings_file(ratings_file, adjustments)
 
@@ -49,7 +54,7 @@ if __name__ == "__main__":
     games = tourney.read_games_from_file(args.bracket_file, ratings, overrides)
 
     state = tourney.TournamentState(bracket=games, ratings=ratings,
-            scoring=scoring, overrides=overrides)
+            scoring=scoring, overrides=overrides, forfeit_prob=args.forfeit_prob)
 
     if args.operation == "expected":
         team_scores = state.calculate_scores_prob()
