@@ -135,7 +135,7 @@ def convert_american_odds(odds_str):
         assert False
 
 def get_overrides(overrides_file):
-    html = requests.get(ODDS_URL, headers={'User-Agent': CHROME_UA})
+    html = requests.get(ODDS_URL, headers={'User-Agent': CHROME_UA}).text
     #with open('odds.html', 'r') as html_file:
         #html = html_file.read()
     soup = BeautifulSoup(html, 'html.parser')
