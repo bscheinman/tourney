@@ -1,64 +1,71 @@
-Duke
-North Carolina Central,North Dakota St.
-VCU
-UCF
-Mississippi St.
-Liberty
-Virginia Tech
-Saint Louis
-Maryland
-Belmont,Temple
-LSU
-Yale
-Louisville
-Minnesota
-Michigan St.
-Bradley
 Gonzaga
-Fairleigh Dickinson,Prairie View A&M
-Syracuse
-Baylor
-Marquette
-Murray St.
-Florida St.
-Vermont
-Buffalo
-Arizona St.,St. John's
-Texas Tech
-Northern Kentucky
-Nevada
-Florida
-Michigan
-Montana
-Virginia
-Gardner Webb
-Mississippi
+Norfolk St.,Appalachian St.
 Oklahoma
-Wisconsin
-Oregon
-Kansas St.
-UC Irvine
-Villanova
-Saint Mary's
-Purdue
-Old Dominion
-Cincinnati
-Iowa
-Tennessee
-Colgate
-North Carolina
-Iona
-Utah St.
-Washington
-Auburn
-New Mexico St.
+Missouri
+Creighton
+UC Santa Barbara
+Virginia
+Ohio
+
+USC
+Wichita St.,Drake
 Kansas
-Northeastern
-Iowa St.
-Ohio St.
-Houston
-Georgia St.
-Wofford
-Seton Hall
-Kentucky
+Eastern Washington
+Oregon
+VCU
+Iowa
+Grand Canyon
+
+Michigan
+Mount St. Mary's,Texas Southern
+LSU
+St. Bonaventure
+Colorado
+Georgetown
+Florida St.
+UNC Greensboro
+
+BYU
+Michigan St.,UCLA
+Texas
 Abilene Christian
+Connecticut
+Maryland
+Alabama
+Iona
+
+Baylor
+Hartford
+North Carolina
+Wisconsin
+Villanova
+Winthrop
+Purdue
+North Texas
+
+Texas Tech
+Utah St.
+Arkansas
+Colgate
+Florida
+Virginia Tech
+Ohio St.
+Oral Roberts
+
+Illinois
+Drexel
+Loyola Chicago
+Georgia Tech
+Tennessee
+Oregon St.
+Oklahoma St.
+Liberty
+
+San Diego St.
+Syracuse
+West Virginia
+Morehead St.
+Clemson
+Rutgers
+Houston
+Cleveland St.

@@ -40,6 +40,7 @@ NAME_CONVERSIONS = {
     "E. Washington": "Eastern Washington",
     "Uconn": "Connecticut",
     "Uncg": "UNC Greensboro",
+    "Louisiana St.": "LSU",
 }
 
 WORD_ABBREVS = set([

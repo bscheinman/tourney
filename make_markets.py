@@ -90,18 +90,18 @@ if __name__ == '__main__':
         if values[team] == Decimal('0.0'):
             continue
         if args.print_deltas:
-            print '{team} delta: {delta}'.format(team=team,
-                    delta=portfolio.team_deltas[team])
+            print('{team} delta: {delta}'.format(team=team,
+                    delta=portfolio.team_deltas[team]))
         bid, ask = get_spread(team, values, portfolio,
                 base_margin=Decimal(args.spread_margin))
-        print '{team} market: {bid} - {ask} (value = {value})'.format(
-                team=team, bid=bid, ask=ask, value=values[team].quantize(Decimal('0.001')))
+        print('{team} market: {bid} - {ask} (value = {value})'.format(
+                team=team, bid=bid, ask=ask, value=values[team].quantize(Decimal('0.001'))))
         if not args.dry_run:
             if args.no_prompt:
                 do_order = True
             else:
-                print 'place orders?'
-                answer = raw_input()
+                print('place orders?')
+                answer = input()
                 do_order = answer[0].lower() == 'y'
             if do_order:
                 try:
@@ -109,4 +109,4 @@ if __name__ == '__main__':
                     client.make_market(order_name, bid=bid, bid_size=args.order_size,
                             ask=ask, ask_size=args.order_size)
                 except cix_client.ApiException as ex:
-                    print 'failed to make market: {}'.format(', '.join(ex.errors))
+                    print('failed to make market: {}'.format(', '.join(ex.errors)))

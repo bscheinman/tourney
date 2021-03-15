@@ -42,7 +42,7 @@ class OverridesMap:
 
     def read_from_file(self, filepath):
         global total_overrides
-        with open(filepath, 'rb') as overrides_file:
+        with open(filepath, "rt") as overrides_file:
             reader = csv.reader(overrides_file)
             for row in reader:
                 if not row:
