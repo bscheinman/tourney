@@ -15,6 +15,7 @@ APID = os.environ['CIX_APID']
 # use this to determine how much risk any additional trade would expose (across all teams in portfolio)
 
 def get_positions():
+    client = cix_client.CixClient(APID)
     return client.my_positions()
 
 def get_spread(team, values, portfolio, base_margin=Decimal('0.05')):
@@ -35,15 +36,20 @@ if __name__ == '__main__':
     parser.add_argument('teams', nargs='*', default=None)
     parser.add_argument('--overrides', action='append')
     parser.add_argument('--adjustments', action='store')
-    parser.add_argument('--point_delta', action='store', default='1.0')
+    parser.add_argument('--point_delta', action='store', type=float, default=1.0)
     parser.add_argument('--save_deltas', action='store')
     parser.add_argument('--load_deltas', action='store')
     parser.add_argument('--print_deltas', action='store_true')
-    parser.add_argument('--spread_margin', action='store', default='0.05')
+    parser.add_argument('--spread_margin', action='store', type=float, default=0.05)
     parser.add_argument('--order_size', action='store', type=int, default=5000)
+    parser.add_argument("--forfeit_prob", action="store", type=float, default=0.0)
     parser.add_argument('-d', '--dry_run', action='store_true')
     parser.add_argument('--no_prompt', action='store_true')
     args = parser.parse_args()
+
+    if args.forfeit_prob < 0.0 or args.forfeit_prob >= 1.0:
+        sys.stderr.write("invalid forfeit probability\n")
+        exit(1)
 
     if args.adjustments:
         with open(args.adjustments, 'r') as adjustments_file:
@@ -66,7 +72,8 @@ if __name__ == '__main__':
     point_delta = Decimal(args.point_delta)
 
     tourney_state = tourney.TournamentState(bracket=bracket, ratings=ratings,
-            overrides=overrides, scoring=tourney.ROUND_POINTS)
+            overrides=overrides, scoring=tourney.ROUND_POINTS,
+            forfeit_prob=args.forfeit_prob)
 
     values = tourney_state.calculate_scores_prob()
 

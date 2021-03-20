@@ -188,7 +188,7 @@ def read_ratings_file(in_file, adjustments=None):
     for line in in_file:
         fields = line.strip().split('|')
         name = fields[0]
-        ratings = map(Decimal, fields[1:])
+        ratings = list(map(Decimal, fields[1:]))
 
         if adjustments:
             try:

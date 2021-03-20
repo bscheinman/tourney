@@ -1,4 +1,4 @@
-#import cPickle as pickle
+from collections import namedtuple
 import pickle
 from decimal import Decimal
 import json
@@ -8,19 +8,22 @@ import tourney_utils as tourney
 
 # why do i do this to myself
 CIX_NAME_CONVERSIONS = {
-    'Michigan State' : 'Michigan St.',
-    'Southern California' : 'USC',
-    'Middle Tennessee State' : 'Middle Tennessee',
-    'Miami' : 'Miami FL',
-    'Iowa State' : 'Iowa St.',
-    'Kent State' : 'Kent St.',
-    'Nevada Reno' : 'Nevada',
-    'Virginia Commonwealth' : 'VCU',
-    'California Davis' : 'UC Davis',
-    'Wichita State' : 'Wichita St.',
-    'Florida State' : 'Florida St.',
+    "Michigan State" : "Michigan St.",
+    "Southern California" : "USC",
+    "Middle Tennessee State" : "Middle Tennessee",
+    "Miami" : "Miami FL",
+    "Iowa State" : "Iowa St.",
+    "Kent State" : "Kent St.",
+    "Nevada Reno" : "Nevada",
+    "Virginia Commonwealth" : "VCU",
+    "California Davis" : "UC Davis",
+    "Wichita State" : "Wichita St.",
+    "Florida State" : "Florida St.",
+    "Alabma": "Alabama",
+    "Abilene Chrsitian": "Abilene Christian",
 }
 
+REVERSE_NAME_CONVERSIONS = dict((v, k) for k, v in CIX_NAME_CONVERSIONS.items())
 
 class PortfolioState:
     def __init__(self, tournament, positions, point_delta=Decimal(1)):
@@ -79,6 +82,8 @@ def get_portfolio_value(positions, values):
 
     return total_value
 
+TeamDelta = namedtuple("TeamDelta", ["team", "position", "delta_per_share", "total_delta"])
+
 def game_delta(positions, tournament, team1, team2):
     original_override = tournament.overrides.get_override(team1, team2)
 
@@ -95,7 +100,18 @@ def game_delta(positions, tournament, team1, team2):
     else:
         tournament.overrides.remove_override(team1, team2)
 
-    return win_portfolio, loss_portfolio
+    team_deltas = list()
+    for team, value in sorted(win_values.items(), key=(lambda kv: kv[0])):
+        position = positions.get(REVERSE_NAME_CONVERSIONS.get(team, team), 0)
+        delta_per_share = value - loss_values[team]
+        team_deltas.append(TeamDelta(
+            team=team,
+            position=position,
+            delta_per_share= delta_per_share,
+            total_delta= delta_per_share * position
+        ))
+
+    return win_portfolio, loss_portfolio, team_deltas
 
 def get_team_delta(tournament, team, point_delta=Decimal(1)):
     point_adjustment = point_delta / tourney.AVG_SCORING

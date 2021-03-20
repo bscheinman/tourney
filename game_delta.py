@@ -30,6 +30,7 @@ if __name__ == '__main__':
     parser.add_argument('--adjustments', action='store')
     parser.add_argument('--sort', action='store', default='name')
     parser.add_argument('--calcutta', action='store_true')
+    parser.add_argument('--team_deltas', action='store_true')
     args = parser.parse_args()
 
     if args.adjustments:
@@ -59,9 +60,14 @@ if __name__ == '__main__':
     tournament = tourney.TournamentState(bracket=bracket, ratings=ratings,
             overrides=overrides, scoring=scoring)
 
-    win_value, loss_value = pv.game_delta(positions, tournament, args.team1,
+    win_value, loss_value, team_deltas = pv.game_delta(positions, tournament, args.team1,
             args.team2)
 
-    print 'If {0} wins: {1:.2f}'.format(args.team1, win_value)
-    print 'If {0} wins: {1:.2f}'.format(args.team2, loss_value)
-    print 'Delta: {0:.2f}'.format(win_value - loss_value)
+    print('If {0} wins: {1:.2f}'.format(args.team1, win_value))
+    print('If {0} wins: {1:.2f}'.format(args.team2, loss_value))
+    print('Delta: {0:.2f}'.format(win_value - loss_value))
+
+    if args.team_deltas:
+        for team in sorted(team_deltas, key=(lambda x: -1 * abs(x.total_delta))):
+            print(f"\tdelta for team {team.team} = {team.delta_per_share:.3f} * {team.position} = {team.total_delta:.0f}")
+

@@ -3,8 +3,13 @@ from collections import defaultdict
 from decimal import Decimal
 import sys
 
+import cix_client
 import portfolio_value as pv
 import tourney_utils as tourney
+
+def get_positions():
+    client = cix_client.CixClient(APID)
+    return client.my_positions()
 
 if __name__ == "__main__":
 
