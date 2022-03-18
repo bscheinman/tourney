@@ -21,6 +21,10 @@ CIX_NAME_CONVERSIONS = {
     "Florida State" : "Florida St.",
     "Alabma": "Alabama",
     "Abilene Chrsitian": "Abilene Christian",
+    "Ohio University": "Ohio",
+    "Brigham Young": "BYU",
+    "Oregon State": "Oregon St.",
+    "Oklahoma State": "Oklahoma St.",
 }
 
 REVERSE_NAME_CONVERSIONS = dict((v, k) for k, v in CIX_NAME_CONVERSIONS.items())

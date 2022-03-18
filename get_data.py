@@ -1,15 +1,22 @@
 #!/usr/bin/python
 
 from bs4 import BeautifulSoup
+from decimal import Decimal
 from math import sqrt
+import argparse
+import json
 import re
 import sys
 import requests
+#from selenium import webdriver
 
 RATINGS_URL = "http://kenpom.com/"
 BRACKET_URL = "http://espn.go.com/ncb/bracketology"
 GAMEPREDICT_URL = "http://gamepredict.us/teams/matchup_table?team_a={0}&team_b={1}&neutral=true"
-ODDS_URL = "http://www.vegasinsider.com/college-basketball/odds/las-vegas/money/"
+#ODDS_URL = "http://www.vegasinsider.com/college-basketball/odds/las-vegas/money/"
+ODDS_URL = "https://www.vegasinsider.com/college-basketball/odds/las-vegas/"
+ODDS_API_KEY = "XXX"
+ODDS_API_URL = "https://api.the-odds-api.com/v4/sports/basketball_ncaab/odds?apiKey={}&regions=us&oddsFormat=decimal".format(ODDS_API_KEY)
 CHROME_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
 
 NAME_CONVERSIONS = {
@@ -27,6 +34,7 @@ NAME_CONVERSIONS = {
     "Texas A&m;": "Texas A&M;",
     "Loyola-chicago": "Loyola Chicago",
     "Cs Fullerton": "Cal St. Fullerton",
+    "Csu Fullerton": "Cal St. Fullerton",
     "Suny-buffalo": "Buffalo",
     "Md-baltimore County": "UMBC",
     "Texas Am": "Texas A&M;",
@@ -41,6 +49,8 @@ NAME_CONVERSIONS = {
     "Uconn": "Connecticut",
     "Uncg": "UNC Greensboro",
     "Louisiana St.": "LSU",
+    "Texas A&m-cc": "Texas A&M Corpus Chris",
+    "Loyola (chi)": "Loyola Chicago",
 }
 
 WORD_ABBREVS = set([
@@ -58,6 +68,7 @@ WORD_ABBREVS = set([
     "Ucf",
     "Ucsb",
     "Byu",
+    "Uab",
 ])
 
 WORD_CONVERSIONS = {
@@ -77,6 +88,17 @@ def clean_name(s):
         words[i] = word
     cleaned = ' '.join(words)
     return NAME_CONVERSIONS.get(cleaned, cleaned)
+
+def clean_api_name(s):
+    words = s.split()
+
+    # remove at least one word of team name
+    words = words[:-1]
+
+    if words[-1] in ("Blue", "Tar", "Red", "Fighting", "Scarlet", "Horned", "Golden", "Crimson"):
+        words = words[:-1]
+
+    return clean_name(" ".join(words))
 
 def get_bracket(out_file):
     #html = requests.get(BRACKET_URL).text
@@ -135,10 +157,45 @@ def convert_american_odds(odds_str):
     else:
         assert False
 
+
+def get_odds():
+    raw_odds = json.loads(requests.get(ODDS_API_URL).text)
+    all_odds = {}
+
+    for game in raw_odds:
+        away_team = game["away_team"]
+        home_team = game["home_team"]
+
+        away_odds = []
+        home_odds = []
+
+        for book in game["bookmakers"]:
+            line = book["markets"][0]["outcomes"]
+            for side in line:
+                if side["name"] == away_team:
+                    away_odds.append(Decimal(side["price"]))
+                elif side["name"] == home_team:
+                    home_odds.append(Decimal(side["price"]))
+                else:
+                    assert False
+
+        away_price = sum(away_odds) / len(away_odds)
+        home_price = sum(home_odds) / len(home_odds)
+
+        away_win_prob = Decimal(1.0) / away_price
+        home_win_prob = Decimal(1.0) / home_price
+
+        mixed_win_prob = sqrt(float(away_win_prob * (Decimal(1.0) - home_win_prob)))
+
+        all_odds[(clean_api_name(away_team), clean_api_name(home_team))] = mixed_win_prob
+
+    return all_odds
+
+
 def get_overrides(overrides_file):
-    html = requests.get(ODDS_URL, headers={'User-Agent': CHROME_UA}).text
-    #with open('odds.html', 'r') as html_file:
-        #html = html_file.read()
+    #html = requests.get(ODDS_URL, headers={'User-Agent': CHROME_UA}).text
+    with open('odds.html', 'r') as html_file:
+        html = html_file.read()
     soup = BeautifulSoup(html, 'html.parser')
     odds_table = soup.find_all('table', {'class': 'frodds-data-tbl'})[0]
     rows = odds_table.find_all('tr')
@@ -180,20 +237,51 @@ def read_team_names(bracket_file):
             names += line.strip().split(',')
     return names
 
+def get_previous_odds():
+    odds = {}
+
+    try:
+        with open("odds.txt", "r") as odds_file:
+            for line in odds_file:
+                fields = line.strip().split(",")
+                assert(len(fields) == 3)
+
+                odds[tuple(fields[:2])] = float(fields[2])
+
+    except FileNotFoundError:
+        pass
+
+    return odds
+
 if __name__ == '__main__':
-    if sys.argv[1] == 'bracket':
+    parser = argparse.ArgumentParser()
+    parser.add_argument("data_type", choices=["bracket", "ratings", "probs", "odds"])
+    args = parser.parse_args()
+
+    if args.data_type == 'bracket':
         with open('bracket.txt', 'w') as bracket_file:
             get_bracket(bracket_file)
-    elif sys.argv[1] == 'ratings':
+    elif args.data_type == 'ratings':
         with open('ratings.txt', 'w') as ratings_file:
             get_ratings(ratings_file)
-    elif sys.argv[1] == 'probs':
+    elif args.data_type == 'probs':
         with open('bracket.txt', 'r') as bracket_file:
             all_teams = read_team_names(bracket_file)
         with open('probs.txt', 'w') as probs_file:
             get_pairwise_probs(all_teams, probs_file)
-    elif sys.argv[1] == 'odds':
+    elif args.data_type == 'odds':
+        old_odds = get_previous_odds()
+        new_odds = get_odds()
+
         with open('odds.txt', 'w') as overrides_file:
-            get_overrides(overrides_file)
+            for teams, win_prob in new_odds.items():
+                win_prob = round(win_prob, 3)
+
+                overrides_file.write("{}\n".format(",".join((teams[0],
+                    teams[1], str(win_prob)))))
+
+                old_win_prob = old_odds.get(teams, None)
+                if old_win_prob != win_prob:
+                    print("{0}-{1} {2} (was {3})".format(teams[0], teams[1], win_prob, old_win_prob))
     else:
-        print('unrecognized data type {}'.format(sys.argv[1]))
+        print('unrecognized data type {}'.format(args.data_type))

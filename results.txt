@@ -1,47 +1,15 @@
-Mount St. Mary's,Villanova,0.000
-Virginia Tech,Wisconsin,0.000
-Princeton,Notre Dame,0.000
-Bucknell,West Virginia,0.000
-UNC Wilmington,Virginia,0.000
-East Tennessee St.,Florida,0.000
-Florida Gulf Coast,Florida St.,0.000
-Xavier,Maryland,1.000
-Nevada,Iowa St.,0.000
-Vermont,Purdue,0.000
-Middle Tennessee,Minnesota,1.000
-Winthrop,Butler,0.000
-South Dakota St.,Gonzaga,0.000
-Vanderbilt,Northwestern,0.000
-North Dakota,Arizona,0.000
-VCU,Saint Mary's,0.000
-Oregon,Iona,1.000
-Rhode Island,Creighton,1.000
-USC,SMU,1.000
-North Carolina,Texas Southern,1.000
-Arkansas,Seton Hall,1.000
-Baylor,New Mexico St.,1.000
-Michigan,Oklahoma St.,1.000
-Louisville,Jacksonville St.,1.000
-Duke,Troy,1.000
-Kansas,UC Davis,1.000
-Cincinnati,Kansas St.,1.000
-Wichita St.,Dayton,1.000
-South Carolina,Marquette,1.000
-UCLA,Kent St.,1.000
-Kentucky,Northern Kentucky,1.000
-Michigan St.,Miami FL,1.000
-West Virginia,Notre Dame,1.000
-Villanova,Wisconsin,0.000
-Gonzaga,Northwestern,1.000
-Florida St.,Xavier,0.000
-Butler,Middle Tennessee,1.000
-Arizona,Saint Mary's,1.000
-Florida,Virginia,1.000
-Purdue,Iowa St.,1.000
-Louisville,Michigan,0.000
-Kentucky,Wichita St.,1.000
-Kansas,Michigan St.,1.000
-North Carolina,Arkansas,1.000
-Oregon,Rhode Island,1.000
-Baylor,USC,1.000
-South Carolina,Duke,1.000
+Indiana,Wyoming,1.000
+Texas Southern,Texas A&M Corpus Chris,1.000
+Bryant,Wright St.,0.000
+Notre Dame,Rutgers,1.000
+Memphis,Boise St.,1.000
+Colorado St.,Michigan,0.000
+Baylor,Norfolk St.,1.000
+Iowa,Richmond,0.000
+Tennessee,Longwood,1.000
+Providence,South Dakota St.,1.000
+Gonzaga,Georgia St.,1.000
+North Carolina,Marquette,1.000
+Kentucky,Saint Peter's,0.000
+Connecticut,New Mexico St.,0.000
+Saint Mary's,Indiana,1.000

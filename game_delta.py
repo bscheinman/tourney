@@ -69,5 +69,6 @@ if __name__ == '__main__':
 
     if args.team_deltas:
         for team in sorted(team_deltas, key=(lambda x: -1 * abs(x.total_delta))):
-            print(f"\tdelta for team {team.team} = {team.delta_per_share:.3f} * {team.position} = {team.total_delta:.0f}")
+            if abs(team.delta_per_share) >= 0.001 and team.position != 0:
+                print(f"\tdelta for team {team.team} = {team.delta_per_share:.3f} * {team.position} = {team.total_delta:.0f}")
 

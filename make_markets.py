@@ -29,6 +29,24 @@ def get_spread(team, values, portfolio, base_margin=Decimal('0.05')):
     return bid, ask
 
 
+def canonicalize_name(name):
+    name_overrides = {
+        "Miami FL": "Miami (FL)",
+        "Texas A&M Corpus Chris": "Texas A&M Corpus Christi",
+        "Cal St. Fullerton": "CSU Fullerton",
+    }
+
+    try:
+        return name_overrides[name]
+    except KeyError:
+        pass
+
+    name = re.sub("St\.$", "State", name)
+    name = re.sub("^Saint", "St.", name)
+
+    return name
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('bracket_file')
@@ -112,7 +130,7 @@ if __name__ == '__main__':
                 do_order = answer[0].lower() == 'y'
             if do_order:
                 try:
-                    order_name = re.sub('St\.$', 'State', team)
+                    order_name = canonicalize_name(team)
                     client.make_market(order_name, bid=bid, bid_size=args.order_size,
                             ask=ask, ask_size=args.order_size)
                 except cix_client.ApiException as ex:

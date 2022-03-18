@@ -64,9 +64,14 @@ if __name__ == "__main__":
     if args.operation == "expected":
         team_scores = state.calculate_scores_prob()
 
+        total_score = Decimal(0.0)
+
         for team, win_prob in sorted(team_scores.items(), key=sorter):
             #print(",".join((team, str(round(win_prob, 3)))))
             print("{team},{prob}".format(team=team, prob=str(round(win_prob, 3))))
+            total_score += win_prob
+
+        print(total_score)
     elif args.operation == "portfolio_simulate":
         positions = pv.get_positions(API_KEY)
         portfolio_values = []
