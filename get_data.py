@@ -59,6 +59,14 @@ NAME_CONVERSIONS = {
     "Louisiana St.": "LSU",
     "Texas A&m-cc": "Texas A&M Corpus Chris",
     "Loyola (chi)": "Loyola Chicago",
+    "Se Missourist.": "Southeast Missouri St.",
+    "Fdu": "Fairleigh Dickinson",
+    "Tamu-cc": "Texas A&M Corpus Chris",
+    "North Carolina St.": "N.C. State",
+    "College of Charleston": "Charleston",
+    "Louisiana Lafayette": "Louisiana",
+    "Fla. Atlantic": "Florida Atlantic",
+    "No. Kentucky": "Northern Kentucky",
 }
 
 WORD_ABBREVS = set(
