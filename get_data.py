@@ -6,6 +6,7 @@ from decimal import Decimal
 from math import sqrt
 import argparse
 import json
+import os
 import re
 import sys
 import requests
@@ -16,7 +17,7 @@ BRACKET_URL = "http://espn.go.com/ncb/bracketology"
 GAMEPREDICT_URL = (
     "http://gamepredict.us/teams/matchup_table?team_a={0}&team_b={1}&neutral=true"
 )
-ODDS_API_KEY = "XXX"
+ODDS_API_KEY = os.getenv("ODDS_API_KEY")
 ODDS_API_URL = "https://api.the-odds-api.com/v4/sports/basketball_ncaab/odds?apiKey={}&regions=us&oddsFormat=decimal".format(
     ODDS_API_KEY
 )
