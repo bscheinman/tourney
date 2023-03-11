@@ -9,16 +9,18 @@ import json
 import re
 import sys
 import requests
-#from selenium import webdriver
+import urllib3
 
 RATINGS_URL = "http://kenpom.com/"
 BRACKET_URL = "http://espn.go.com/ncb/bracketology"
-GAMEPREDICT_URL = "http://gamepredict.us/teams/matchup_table?team_a={0}&team_b={1}&neutral=true"
-#ODDS_URL = "http://www.vegasinsider.com/college-basketball/odds/las-vegas/money/"
-ODDS_URL = "https://www.vegasinsider.com/college-basketball/odds/las-vegas/"
+GAMEPREDICT_URL = (
+    "http://gamepredict.us/teams/matchup_table?team_a={0}&team_b={1}&neutral=true"
+)
 ODDS_API_KEY = "XXX"
-ODDS_API_URL = "https://api.the-odds-api.com/v4/sports/basketball_ncaab/odds?apiKey={}&regions=us&oddsFormat=decimal".format(ODDS_API_KEY)
-CHROME_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+ODDS_API_URL = "https://api.the-odds-api.com/v4/sports/basketball_ncaab/odds?apiKey={}&regions=us&oddsFormat=decimal".format(
+    ODDS_API_KEY
+)
+CHROME_UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"
 
 NAME_CONVERSIONS = {
     "Miami": "Miami FL",
@@ -54,29 +56,32 @@ NAME_CONVERSIONS = {
     "Loyola (chi)": "Loyola Chicago",
 }
 
-WORD_ABBREVS = set([
-    "Unc",
-    "Ucla",
-    "Smu",
-    "Vcu",
-    "Uc",
-    "Tcu",
-    "Liu",
-    "Usc",
-    "A&m",
-    "A&m;",
-    "Lsu",
-    "Ucf",
-    "Ucsb",
-    "Byu",
-    "Uab",
-])
+WORD_ABBREVS = set(
+    [
+        "Unc",
+        "Ucla",
+        "Smu",
+        "Vcu",
+        "Uc",
+        "Tcu",
+        "Liu",
+        "Usc",
+        "A&m",
+        "A&m;",
+        "Lsu",
+        "Ucf",
+        "Ucsb",
+        "Byu",
+        "Uab",
+    ]
+)
 
 WORD_CONVERSIONS = {
     "State": "St.",
     "St": "St.",
     "Marys": "Mary's",
 }
+
 
 def clean_name(s):
     s = s.replace("aq - ", "").replace(" - aq", "")
@@ -88,8 +93,9 @@ def clean_name(s):
             word = word.upper()
         word = WORD_CONVERSIONS.get(word, word)
         words[i] = word
-    cleaned = ' '.join(words)
+    cleaned = " ".join(words)
     return NAME_CONVERSIONS.get(cleaned, cleaned)
+
 
 def clean_api_name(s):
     words = s.split()
@@ -97,43 +103,57 @@ def clean_api_name(s):
     # remove at least one word of team name
     words = words[:-1]
 
-    if words[-1] in ("Blue", "Tar", "Red", "Fighting", "Scarlet", "Horned", "Golden", "Crimson"):
+    if words[-1] in (
+        "Blue",
+        "Tar",
+        "Red",
+        "Fighting",
+        "Scarlet",
+        "Horned",
+        "Golden",
+        "Crimson",
+    ):
         words = words[:-1]
 
     return clean_name(" ".join(words))
 
+
 def get_bracket(out_file):
-    #html = requests.get(BRACKET_URL).text
-    with open("bracket.html", "r") as bracket_file:
-        html = bracket_file.read()
+    html = requests.get(BRACKET_URL).text
     soup = BeautifulSoup(html, "html.parser")
-    bracket = soup.find("div", { "class": "bracket__region" })
+    bracket = soup.find("div", {"class": "bracket__region"})
     for entry in bracket.find_all("a", {"class": "bracket__link"}):
         team_names = [clean_name(name) for name in entry.text.split("/")]
         out_file.write("{0}\n".format(",".join(team_names)))
 
+
 def get_ratings(out_file):
-    html = requests.get(RATINGS_URL).text
-    soup = BeautifulSoup(html, 'html.parser')
-    ratings = soup.find('table', { 'id': 'ratings-table' })
+    headers = {"User-Agent": CHROME_UA}
+    html = requests.get(RATINGS_URL, headers=headers).text
+    soup = BeautifulSoup(html, "html.parser")
+    ratings = soup.find("table", {"id": "ratings-table"})
     ratings = ratings.tbody
-    for row in ratings.find_all('tr'):
-        columns = row.find_all('td')
-        data_columns = row.find_all('td', {'class': 'td-left'})
+    for row in ratings.find_all("tr"):
+        columns = row.find_all("td")
+        data_columns = row.find_all("td", {"class": "td-left"})
         if not columns or not data_columns or len(data_columns) < 3:
             continue
         team_name = columns[1].a.string
         offense = data_columns[0].string
         defense = data_columns[1].string
         tempo = data_columns[2].string
-        out_file.write('{0}\n'.format('|'.join((team_name, offense, defense, tempo))))
+        out_file.write("{0}\n".format("|".join((team_name, offense, defense, tempo))))
+
 
 def get_pairwise_prob(a, b):
-    html = requests.get(GAMEPREDICT_URL.format(urllib3.quote(a), urllib3.quote(b))).read()
-    soup = BeautifulSoup(html, 'html.parser')
-    cols = soup.find_all('div', {'class': 'col-xs-6'})
-    perc_str = cols[2].find_all('p')[0].string.strip()
+    html = requests.get(
+        GAMEPREDICT_URL.format(urllib3.quote(a), urllib3.quote(b))
+    ).read()
+    soup = BeautifulSoup(html, "html.parser")
+    cols = soup.find_all("div", {"class": "col-xs-6"})
+    perc_str = cols[2].find_all("p")[0].string.strip()
     return int(perc_str[:-1]) / 100.0
+
 
 # Start with the lazy approach of scraping all probs from gamepredict
 def get_pairwise_probs(teams, out_file):
@@ -141,20 +161,28 @@ def get_pairwise_probs(teams, out_file):
         for j in range(i + 1, len(teams)):
             try:
                 prob = get_pairwise_prob(teams[i], teams[j])
-                out_file.write('{0}\n'.format(','.join((teams[i], teams[j], str(prob)))))
+                out_file.write(
+                    "{0}\n".format(",".join((teams[i], teams[j], str(prob))))
+                )
             except:
-                sys.stderr.write('prob failed for teams {0}, {1}\n'.format(teams[i], teams[j]))
+                sys.stderr.write(
+                    "prob failed for teams {0}, {1}\n".format(teams[i], teams[j])
+                )
                 raise
 
-ODDS_REGEX = re.compile('[-+][1-9][0-9]{2,}')
+
+ODDS_REGEX = re.compile("[-+][1-9][0-9]{2,}")
+
+
 def extract_odds(cell_str):
     return ODDS_REGEX.findall(cell_str)
 
+
 def convert_american_odds(odds_str):
     num_comp = int(odds_str[1:])
-    if odds_str[0] == '-':
+    if odds_str[0] == "-":
         return num_comp / (100.0 + num_comp)
-    elif odds_str[0] == '+':
+    elif odds_str[0] == "+":
         return 100.0 / (100.0 + num_comp)
     else:
         assert False
@@ -192,55 +220,20 @@ def get_odds():
 
         mixed_win_prob = sqrt(float(away_win_prob * (Decimal(1.0) - home_win_prob)))
 
-        all_odds[(clean_api_name(away_team), clean_api_name(home_team))] = mixed_win_prob
+        all_odds[
+            (clean_api_name(away_team), clean_api_name(home_team))
+        ] = mixed_win_prob
 
     return all_odds
 
-
-def get_overrides(overrides_file):
-    #html = requests.get(ODDS_URL, headers={'User-Agent': CHROME_UA}).text
-    with open('odds.html', 'r') as html_file:
-        html = html_file.read()
-    soup = BeautifulSoup(html, 'html.parser')
-    odds_table = soup.find_all('table', {'class': 'frodds-data-tbl'})[0]
-    rows = odds_table.find_all('tr')
-    for row in rows:
-        cells = row.find_all('td')
-        if len(cells) < 3:
-            continue
-
-        matchup_cell = cells[0]
-        odds_cell = cells[2]
-
-        team_links = matchup_cell.find_all('a')
-        if len(team_links) != 2:
-            continue
-
-        road_team = team_links[0].string
-        home_team = team_links[1].string
-
-        odds_links = odds_cell.find_all('a')
-        if not odds_links:
-            continue
-
-        odds = extract_odds(odds_links[0].text)
-        if len(odds) == 0:
-            print(road_team, home_team)
-        assert len(odds) == 2
-
-        road_win = convert_american_odds(odds[0])
-        home_win = convert_american_odds(odds[1])
-        avg_win = sqrt(road_win * (1 - home_win))
-
-        overrides_file.write('{0}\n'.format(','.join((clean_name(road_team),
-            clean_name(home_team), str(round(avg_win, 3))))))
 
 def read_team_names(bracket_file):
     names = []
     for line in bracket_file:
         if line.strip():
-            names += line.strip().split(',')
+            names += line.strip().split(",")
     return names
+
 
 def get_previous_odds():
     odds = {}
@@ -249,7 +242,7 @@ def get_previous_odds():
         with open("odds.txt", "r") as odds_file:
             for line in odds_file:
                 fields = line.strip().split(",")
-                assert(len(fields) == 3)
+                assert len(fields) == 3
 
                 odds[tuple(fields[:2])] = float(fields[2])
 
@@ -258,35 +251,41 @@ def get_previous_odds():
 
     return odds
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("data_type", choices=["bracket", "ratings", "probs", "odds"])
     args = parser.parse_args()
 
-    if args.data_type == 'bracket':
-        with open('bracket.txt', 'w') as bracket_file:
+    if args.data_type == "bracket":
+        with open("bracket.txt", "w") as bracket_file:
             get_bracket(bracket_file)
-    elif args.data_type == 'ratings':
-        with open('ratings.txt', 'w') as ratings_file:
+    elif args.data_type == "ratings":
+        with open("ratings.txt", "w") as ratings_file:
             get_ratings(ratings_file)
-    elif args.data_type == 'probs':
-        with open('bracket.txt', 'r') as bracket_file:
+    elif args.data_type == "probs":
+        with open("bracket.txt", "r") as bracket_file:
             all_teams = read_team_names(bracket_file)
-        with open('probs.txt', 'w') as probs_file:
+        with open("probs.txt", "w") as probs_file:
             get_pairwise_probs(all_teams, probs_file)
-    elif args.data_type == 'odds':
+    elif args.data_type == "odds":
         old_odds = get_previous_odds()
         new_odds = get_odds()
 
-        with open('odds.txt', 'w') as overrides_file:
+        with open("odds.txt", "w") as overrides_file:
             for teams, win_prob in new_odds.items():
                 win_prob = round(win_prob, 3)
 
-                overrides_file.write("{}\n".format(",".join((teams[0],
-                    teams[1], str(win_prob)))))
+                overrides_file.write(
+                    "{}\n".format(",".join((teams[0], teams[1], str(win_prob))))
+                )
 
                 old_win_prob = old_odds.get(teams, None)
                 if old_win_prob != win_prob:
-                    print("{0}-{1} {2} (was {3})".format(teams[0], teams[1], win_prob, old_win_prob))
+                    print(
+                        "{0}-{1} {2} (was {3})".format(
+                            teams[0], teams[1], win_prob, old_win_prob
+                        )
+                    )
     else:
-        print('unrecognized data type {}'.format(args.data_type))
+        print("unrecognized data type {}".format(args.data_type))
