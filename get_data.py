@@ -1,16 +1,20 @@
 #!python
 #!/usr/bin/python
 
-from bs4 import BeautifulSoup
-from decimal import Decimal
-from math import sqrt
 import argparse
+from decimal import Decimal
 import json
+from math import sqrt
 import os
 import re
 import sys
 import requests
 import urllib3
+
+from bs4 import BeautifulSoup
+from dotenv import load_dotenv
+
+load_dotenv()
 
 RATINGS_URL = "http://kenpom.com/"
 BRACKET_URL = "http://espn.go.com/ncb/bracketology"
