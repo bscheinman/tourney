@@ -1,3 +1,4 @@
+#!python
 #!/usr/bin/python
 
 from bs4 import BeautifulSoup
@@ -78,6 +79,7 @@ WORD_CONVERSIONS = {
 }
 
 def clean_name(s):
+    s = s.replace("aq - ", "").replace(" - aq", "")
     words = s.split()
     for i in range(len(words)):
         word = words[i].lower()
@@ -178,6 +180,9 @@ def get_odds():
                     home_odds.append(Decimal(side["price"]))
                 else:
                     assert False
+
+        if len(away_odds) == 0 or len(home_odds) == 0:
+            continue
 
         away_price = sum(away_odds) / len(away_odds)
         home_price = sum(home_odds) / len(home_odds)
